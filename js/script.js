@@ -1,20 +1,20 @@
-window.addEventListener("scroll",()=>{
+// Jahr im Footer setzen
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const cards=document.querySelectorAll(".card")
+// Simple Reveal-Animation für Cards
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.18 }
+);
 
-cards.forEach(card=>{
-
-const position=card.getBoundingClientRect().top
-
-const screen=window.innerHeight
-
-if(position<screen-100){
-
-card.style.opacity="1"
-card.style.transform="translateY(0)"
-
-}
-
-})
-
-})
+document.querySelectorAll(".card, .showcase-grid img, .about-image-wrapper").forEach(el => {
+  el.classList.add("reveal");
+  observer.observe(el);
+});
