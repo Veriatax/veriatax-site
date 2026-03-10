@@ -1,9 +1,20 @@
-window.addEventListener("load",function(){
+window.addEventListener("scroll", () => {
 
-setTimeout(function(){
+const cards = document.querySelectorAll(".card")
 
-document.getElementById("intro").style.display="none"
+cards.forEach(card => {
 
-},2000)
+const position = card.getBoundingClientRect().top
+
+const screen = window.innerHeight
+
+if(position < screen){
+
+card.style.opacity = "1"
+card.style.transform = "translateY(0)"
+
+}
+
+})
 
 })
