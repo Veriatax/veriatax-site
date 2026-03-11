@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only With My Team – Veriatax Interactive</title>
+    <meta name="description" content="Only With My Team by Veriatax Interactive. Neon Cyberpunk EDM. Listen now on Spotify.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="music.song">
+    <meta property="og:title" content="Only With My Team – Veriatax Interactive">
+    <meta property="og:description" content="Neon Cyberpunk EDM — A crew rolling through neon-lit rain. Helmets off, city at their backs — loyalty">
+    <meta property="og:image" content="https://veriatax.com/images/only-with-my-team.jpg">
+    <meta property="og:url" content="https://veriatax.com/music/only-with-my-team/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Only With My Team – Veriatax Interactive">
+    <meta name="twitter:image" content="https://veriatax.com/images/only-with-my-team.jpg">
+
+    <meta name="theme-color" content="#070a12">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #06080f; --accent: #f0a030; --accent-cyan: #00d4ff; --accent-magenta: #ff3090;
+            --text: #eef2f7; --text-dim: rgba(238,242,247,0.6); --text-muted: rgba(238,242,247,0.3);
+            --glass: rgba(255,255,255,0.05); --border: rgba(255,255,255,0.07);
+        }
+        body {
+            font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text);
+            line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+        }
+        a { color: #f0a030; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
+        .ambient .orb {
+            position: absolute; border-radius: 50%; filter: blur(120px);
+            animation: drift 20s ease-in-out infinite;
+        }
+        .ambient .orb-1 { width: 400px; height: 400px; background: rgba(240,160,48,0.06); top: -5%; left: 5%; }
+        .ambient .orb-2 { width: 350px; height: 350px; background: rgba(255,48,144,0.04); bottom: 0; right: 5%; animation-delay: -8s; }
+        @keyframes drift {
+            0%,100% { transform: translate(0,0); }
+            50% { transform: translate(30px,-20px); }
+        }
+
+        .topbar {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(6,8,15,0.9); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 16px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .topbar-brand {
+            font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #f0a030, #ff3090);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .topbar-back { font-size: 14px; color: var(--text-dim); }
+        .topbar-back:hover { color: #f0a030; text-decoration: none; }
+
+        .page { max-width: 800px; margin: 0 auto; padding: 48px 24px 100px; }
+
+        .track-layout { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 40px; }
+
+        .track-cover {
+            width: 280px; height: 280px; flex-shrink: 0;
+            border-radius: 14px; overflow: hidden;
+            box-shadow: 0 16px 50px rgba(0,0,0,0.5), 0 0 60px rgba(240,160,48,0.08);
+        }
+        .track-cover img { width: 100%; height: 100%; object-fit: cover; }
+
+        .track-info { flex: 1; padding-top: 8px; }
+        .track-label {
+            font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+            background: linear-gradient(135deg, #f0a030, #ff3090);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            margin-bottom: 6px; display: block;
+        }
+        .track-title {
+            font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800; margin-bottom: 4px; line-height: 1.1;
+        }
+        .track-genre {
+            font-size: 15px; color: var(--accent-cyan); margin-bottom: 16px;
+        }
+        .track-desc {
+            font-size: 15px; color: var(--text-dim); line-height: 1.7; margin-bottom: 20px;
+        }
+        .track-meta {
+            font-size: 12px; color: var(--text-muted); margin-bottom: 24px;
+        }
+
+        .btn-spotify {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 12px 28px; background: #1db954; color: #fff;
+            font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600;
+            border-radius: 10px; text-decoration: none; transition: all 0.3s ease;
+        }
+        .btn-spotify:hover {
+            background: #1ed760; transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(29,185,84,0.3); text-decoration: none;
+        }
+
+        .coming-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 8px;
+            background: rgba(240,160,48,0.1); border: 1px solid rgba(240,160,48,0.2);
+            color: var(--accent); font-size: 13px; font-weight: 600;
+        }
+
+        /* Spotify Embed */
+        .embed-section {
+            margin-top: 48px;
+        }
+        .embed-section h3 {
+            font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 600;
+            margin-bottom: 16px; color: var(--text-dim);
+        }
+        .spotify-embed {
+            border-radius: 12px; overflow: hidden;
+            background: var(--glass); border: 1px solid var(--border);
+            padding: 16px;
+        }
+        .spotify-embed iframe {
+            border-radius: 12px;
+        }
+
+        /* More Tracks */
+        .more-section { margin-top: 60px; }
+        .more-section h3 {
+            font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 600;
+            margin-bottom: 16px; color: var(--text-dim);
+        }
+        .more-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .more-item {
+            display: flex; align-items: center; gap: 12px;
+            padding: 10px; border-radius: 10px;
+            background: var(--glass); border: 1px solid var(--border);
+            text-decoration: none; color: var(--text); transition: all 0.3s ease;
+        }
+        .more-item:hover {
+            border-color: rgba(240,160,48,0.12); transform: translateY(-2px);
+            text-decoration: none;
+        }
+        .more-item img {
+            width: 48px; height: 48px; border-radius: 6px; object-fit: cover;
+        }
+        .more-item span { font-size: 13px; font-weight: 500; }
+
+        @media (max-width: 640px) {
+            .track-layout { flex-direction: column; align-items: center; text-align: center; }
+            .track-cover { width: 220px; height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+</div>
+
+<div class="topbar">
+    <a href="../../" class="topbar-brand" style="text-decoration:none">VERIATAX</a>
+    <a href="../../#music" class="topbar-back">← All Music</a>
+</div>
+
+<div class="page">
+    <div class="track-layout">
+        <div class="track-cover">
+            <img src="../../images/only-with-my-team.jpg" alt="Only With My Team">
+        </div>
+        <div class="track-info">
+            <span class="track-label">Single</span>
+            <h1 class="track-title">Only With My Team</h1>
+            <p class="track-genre">Neon Cyberpunk EDM</p>
+            <p class="track-desc">A crew rolling through neon-lit rain. Helmets off, city at their backs — loyalty meets the night. Heavy synths, squad energy, and cyberpunk atmosphere.</p>
+            <p class="track-meta">Released: 2025 · Veriatax Interactive</p>
+            <a href="https://open.spotify.com/track/26E2aybcNMEQOpPJVQNK6T" target="_blank" rel="noopener" class="btn-spotify">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                Play on Spotify
+            </a>
+        </div>
+    </div>
+
+    <div class="embed-section">
+        <h3>Listen Now</h3>
+        <div class="spotify-embed">
+            <iframe src="https://open.spotify.com/embed/track/26E2aybcNMEQOpPJVQNK6T?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0" allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div class="more-section">
+        <h3>More from Veriatax Interactive</h3>
+        <div class="more-grid">
+            <a href="../golden-motion/" class="more-item"><img src="../../images/golden-motion.jpg" alt="Golden Motion"><span>Golden Motion</span></a>
+            <a href="../golden-pulse/" class="more-item"><img src="../../images/golden-pulse.jpg" alt="Golden Pulse"><span>Golden Pulse</span></a>
+            <a href="../neon-monsoon/" class="more-item"><img src="../../images/neon-monsoon.jpg" alt="Neon Monsoon"><span>Neon Monsoon</span></a>
+            <a href="../midnight-motorbike/" class="more-item"><img src="../../images/midnight-motorbike.jpg" alt="Midnight Motorbike"><span>Midnight Motorbike</span></a>
+            <a href="../saigon-sunrise/" class="more-item"><img src="../../images/saigon-sunrise.jpg" alt="Saigon Sunrise (You &amp; Me)"><span>Saigon Sunrise (You &amp; Me)</span></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
