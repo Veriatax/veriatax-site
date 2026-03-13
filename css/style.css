@@ -42,6 +42,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body {
@@ -51,6 +52,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
 }
 
 a {
@@ -340,6 +342,7 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     gap: 48px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -475,6 +478,7 @@ a {
 /* --- Sections --- */
 .section {
     padding: 100px 24px;
+    overflow: hidden;
 }
 
 .section-alt {
@@ -484,6 +488,7 @@ a {
 .section-inner {
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .section-header {
@@ -934,6 +939,7 @@ a.music-card-compact {
 
 .about-text {
     padding: 40px;
+    overflow: hidden;
 }
 
 .about-logo-badge {
