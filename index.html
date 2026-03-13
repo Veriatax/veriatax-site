@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veriatax Interactive – Games · Music · Tools</title>
+    <meta name="description" content="Veriatax Interactive creates mobile games, electronic music, and privacy-focused tools. Explore Flame Leap Lion, MindForge, and our music releases.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Veriatax Interactive – Games · Music · Tools">
+    <meta property="og:description" content="Independent studio from Germany. Mobile games, electronic music, and privacy-focused tools.">
+    <meta property="og:image" content="https://veriatax.com/images/hero-banner.jpg">
+    <meta property="og:url" content="https://veriatax.com/">
+    <meta property="og:site_name" content="Veriatax Interactive">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Veriatax Interactive – Games · Music · Tools">
+    <meta name="twitter:description" content="Independent studio from Germany. Mobile games, electronic music, and privacy-focused tools.">
+    <meta name="twitter:image" content="https://veriatax.com/images/hero-banner.jpg">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#070a12">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-ring"></div>
+        <div class="loading-text">VERIATAX</div>
+    </div>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Floating Glass Shapes -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo" onclick="scrollToTop(event)">
+                <img src="images/logo.png" alt="Veriatax Interactive" class="logo-img">
+                <span class="logo-text">VERIATAX</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#games" class="nav-link" data-i18n="nav.games">Games</a>
+                <a href="#music" class="nav-link" data-i18n="nav.music">Music</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+                <button class="lang-toggle" id="langToggle" onclick="toggleLang()" title="Sprache / Language">DE</button>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge glass-subtle" data-i18n="hero.badge">Independent Studio · Germany</div>
+            <h1 class="hero-title">
+                Veriatax
+                <span class="hero-title-accent">Interactive</span>
+            </h1>
+            <p class="hero-tagline" data-i18n="hero.tagline">Games · Music · Tools</p>
+            <p class="hero-description" data-i18n="hero.desc">Crafting mobile games, producing electronic music, and building privacy-focused tools — all from a one-person indie studio in Germany.</p>
+            <div class="hero-cta">
+                <a href="#games" class="btn btn-primary" data-i18n="hero.cta1">Explore Games</a>
+                <a href="#music" class="btn btn-ghost" data-i18n="hero.cta2">Listen Now</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="images/hero-banner.jpg" alt="Veriatax Interactive — Games, Music, Tools" class="hero-banner-img">
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="section" id="games">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-badge">01</span>
+                <h2 class="section-title" data-i18n="games.title">Games</h2>
+                <p class="section-subtitle" data-i18n="games.subtitle">Mobile arcade & puzzle experiences on Google Play</p>
+            </div>
+            <div class="game-grid">
+                <a class="game-card glass" href="games/flame-leap-lion/">
+                    <div class="game-card-top">
+                        <div class="game-icon">🦁</div>
+                        <span class="game-status dev" data-i18n="status.dev">In Dev</span>
+                    </div>
+                    <h3 class="game-title">Flame Leap Lion</h3>
+                    <p class="game-genre" data-i18n="fll.genre">Arcade Platform Game</p>
+                    <p class="game-desc" data-i18n="fll.desc">Guide a blazing lion through rings of fire in this fast-paced arcade skill game. Time your jumps, chain combos, and climb the leaderboard.</p>
+                    <div class="game-tags">
+                        <span class="tag">Arcade</span>
+                        <span class="tag">Skill</span>
+                        <span class="tag">Android</span>
+                    </div>
+                    <div class="game-cta" data-i18n="fll.cta">View Details →</div>
+                </a>
+
+                <div class="game-card glass">
+                    <div class="game-card-top">
+                        <div class="game-icon">🧠</div>
+                        <span class="game-status dev">In Dev</span>
+                    </div>
+                    <h3 class="game-title">MindForge</h3>
+                    <p class="game-genre" data-i18n="mf.genre">Puzzle & Logic Game</p>
+                    <p class="game-desc" data-i18n="mf.desc">Train your brain with Sudoku variants, word puzzles, and logic challenges. Bilingual DE/EN with expanding content.</p>
+                    <div class="game-tags">
+                        <span class="tag">Puzzle</span>
+                        <span class="tag">Brain</span>
+                        <span class="tag">Android</span>
+                    </div>
+                </div>
+
+                <div class="game-card glass">
+                    <div class="game-card-top">
+                        <div class="game-icon">💻</div>
+                        <span class="game-status planned" data-i18n="status.planned">Planned</span>
+                    </div>
+                    <h3 class="game-title">Signal Breach</h3>
+                    <p class="game-genre" data-i18n="sb.genre">Hacker Puzzle Game</p>
+                    <p class="game-desc" data-i18n="sb.desc">Decode encrypted signals, break through firewalls, and unravel a digital conspiracy in this hacker-themed puzzle adventure.</p>
+                    <div class="game-tags">
+                        <span class="tag">Puzzle</span>
+                        <span class="tag">Hacker</span>
+                        <span class="tag">Story</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="section section-alt" id="music">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-badge">02</span>
+                <h2 class="section-title" data-i18n="music.title">Music</h2>
+                <p class="section-subtitle" data-i18n="music.subtitle">Electronic music releases — tropical vibes, melodic house, synthwave & neon-lit EDM</p>
+            </div>
+
+            <!-- Featured Releases -->
+            <div class="music-featured">
+                <a class="music-card-featured glass music-coming-soon" href="music/golden-motion/">
+                    <div class="music-cover">
+                        <img src="images/golden-motion.jpg" alt="Golden Motion" loading="lazy">
+                        <div class="music-cover-badge">Coming 03.04.</div>
+                    </div>
+                    <div class="music-info">
+                        <span class="music-label" data-i18n="music.coming">Coming Soon</span>
+                        <h3 class="music-title">Golden Motion</h3>
+                        <p class="music-genre">Tropical House / Melodic EDM</p>
+                        <p class="music-desc" data-i18n="gm.desc">Sun-drenched synths over a driving tropical rhythm. A golden road stretching to the horizon — pure motion energy.</p>
+                        <span class="music-platform" data-i18n="gm.release">Releasing April 3, 2026</span>
+                    </div>
+                </a>
+                <a class="music-card-featured glass" href="music/golden-pulse/">
+                    <div class="music-cover">
+                        <img src="images/golden-pulse.jpg" alt="Golden Pulse" loading="lazy">
+                        <div class="music-cover-play">▶</div>
+                    </div>
+                    <div class="music-info">
+                        <span class="music-label" data-i18n="music.featured">Featured</span>
+                        <h3 class="music-title">Golden Pulse</h3>
+                        <p class="music-genre">Melodic House</p>
+                        <p class="music-desc" data-i18n="gp.desc">Warm pulsing energy meets a city skyline at sunset. Featured on multiple editorial playlists with significant streams.</p>
+                        <span class="music-platform" data-i18n="music.listen">Listen on Spotify →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- More Releases Grid -->
+            <h3 class="music-grid-heading" data-i18n="music.more">More Releases</h3>
+            <div class="music-grid">
+                <a class="music-card-compact glass" href="music/neon-monsoon/">
+                    <img src="images/neon-monsoon.jpg" alt="Neon Monsoon" class="music-thumb" loading="lazy">
+                    <div class="music-card-text">
+                        <h4>Neon Monsoon</h4>
+                        <p>Synthwave / Dark EDM</p>
+                    </div>
+                    <span class="music-card-arrow">→</span>
+                </a>
+                <a class="music-card-compact glass" href="music/only-with-my-team/">
+                    <img src="images/only-with-my-team.jpg" alt="Only With My Team" class="music-thumb" loading="lazy">
+                    <div class="music-card-text">
+                        <h4>Only With My Team</h4>
+                        <p>Neon Cyberpunk EDM</p>
+                    </div>
+                    <span class="music-card-arrow">→</span>
+                </a>
+                <a class="music-card-compact glass" href="music/midnight-motorbike/">
+                    <img src="images/midnight-motorbike.jpg" alt="Midnight Motorbike" class="music-thumb" loading="lazy">
+                    <div class="music-card-text">
+                        <h4>Midnight Motorbike</h4>
+                        <p>Night Drive / Chillwave</p>
+                    </div>
+                    <span class="music-card-arrow">→</span>
+                </a>
+                <a class="music-card-compact glass" href="music/saigon-sunrise/">
+                    <img src="images/saigon-sunrise.jpg" alt="Saigon Sunrise (You &amp; Me)" class="music-thumb" loading="lazy">
+                    <div class="music-card-text">
+                        <h4>Saigon Sunrise (You &amp; Me)</h4>
+                        <p>Tropical Melodic</p>
+                    </div>
+                    <span class="music-card-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- <span data-i18n="music.follow">Follow on Spotify</span> -->
+            <div class="spotify-follow">
+                <a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" class="btn-spotify">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Follow on Spotify
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="section" id="tools">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-badge">03</span>
+                <h2 class="section-title" data-i18n="tools.title">Tools</h2>
+                <p class="section-subtitle" data-i18n="tools.subtitle">Privacy-focused utilities built with care</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card glass">
+                    <div class="tool-icon">🔒</div>
+                    <h3 class="tool-title">Veriatax Tools</h3>
+                    <p class="tool-desc" data-i18n="tools.desc">A growing collection of privacy-respecting utility apps and web tools. No tracking, no ads — just useful software.</p>
+                    <span class="tool-status" data-i18n="tools.soon">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-alt" id="about">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-badge">04</span>
+                <h2 class="section-title" data-i18n="about.title">About</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">The studio behind the pixels and beats</p>
+            </div>
+            <div class="about-layout">
+                <div class="about-text glass">
+                    <div class="about-logo-badge">
+                        <img src="images/logo.png" alt="Veriatax Interactive" class="about-logo-img">
+                    </div>
+                    <h3 data-i18n="about.heading">One Person. Many Passions.</h3>
+                    <p><span data-i18n="about.p1">Veriatax Interactive is an independent creative studio based in Germany, founded by Sven Laschke. What started as a game development project has grown into a multi-discipline brand spanning mobile games, electronic music production, and software tools.</p>
+                    <p data-i18n="about.p2">Every game, every track, and every tool is crafted with attention to quality and a genuine love for building things. No corporate committee — just direct creator-to-user experiences.</p>
+                    <div class="about-stack">
+                        <span class="stack-label" data-i18n="about.built">Built with</span>
+                        <div class="stack-marquee">
+                            <div class="stack-track">
+                                <span>React</span>
+                                <span>Capacitor</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                                <span>AdMob</span>
+                                <span>FL Studio</span>
+                                <span>HTML/CSS</span>
+                                <span>React</span>
+                                <span>Capacitor</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card glass">
+                        <div class="stat-value" data-target="3">0</div>
+                        <div class="stat-label" data-i18n="stat.games">Games in Pipeline</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-value" data-target="6">0</div>
+                        <div class="stat-label" data-i18n="stat.music">Music Releases</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-value">1</div>
+                        <div class="stat-label" data-i18n="stat.dev">Indie Developer</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label" data-i18n="stat.ideas">Ideas in the Queue</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Veriatax Interactive" class="footer-logo-img">
+                    <span>VERIATAX INTERACTIVE</span>
+                </div>
+                <p class="footer-tagline" data-i18n="footer.tagline">Games · Music · Tools — Made in Germany</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.explore">Explore</h4>
+                    <a href="#games">Games</a>
+                    <a href="#music">Music</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#about">About</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <a href="privacy/">Privacy Policy</a>
+                    <a href="impressum/">Impressum</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contact & Social</h4>
+                    <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>
+                    <a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener">Spotify</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Veriatax Interactive. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
