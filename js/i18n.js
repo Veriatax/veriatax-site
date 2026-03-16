@@ -5,7 +5,7 @@
 const translations = {
     de: {
         // Navigation
-        "nav.games": "Spiele",
+        "nav.home": "Startseite", "nav.games": "Spiele",
         "nav.music": "Musik",
         "nav.about": "Über uns",
 
@@ -68,7 +68,7 @@ const translations = {
     },
 
     en: {
-        "nav.games": "Games",
+        "nav.home": "Home", "nav.games": "Games",
         "nav.music": "Music",
         "nav.about": "About",
 
