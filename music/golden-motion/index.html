@@ -52,21 +52,10 @@
             50% { transform: translate(30px,-20px); }
         }
 
-        .topbar {
-            position: sticky; top: 0; z-index: 100;
-            background: rgba(6,8,15,0.9); backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.04);
-            padding: 0 24px;
-        }
-        .topbar-brand {
-            font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700;
-            letter-spacing: 3px;
-            background: linear-gradient(135deg, #f0a030, #ff3090);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .topbar-back { font-size: 14px; color: rgba(238,242,247,0.5); text-decoration: none; transition: color 0.3s ease; }
-        .topbar-back:hover { color: #f0a030; text-decoration: none; }
+        
+        
+        
+        
 
         .page { max-width: 800px; margin: 0 auto; padding: 48px 24px 100px; }
 
@@ -163,6 +152,62 @@
             .track-layout { flex-direction: column; align-items: center; text-align: center; }
             .track-cover { width: 220px; height: 220px; }
         }
+    
+        /* Navbar - matches main page */
+        .navbar {
+            position: sticky; top: 0; z-index: 100;
+            padding: 0 24px;
+            background: rgba(6,8,15,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-img { width: 38px; height: 38px; object-fit: contain; border-radius: 6px; }
+        .logo-text {
+            font-family: 'Rajdhani', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 3px;
+            background: linear-gradient(135deg, #f0a030, #ff3090);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-link {
+            font-size: 14px; font-weight: 400; color: rgba(238,242,247,0.5);
+            letter-spacing: 0.5px; transition: color 0.3s ease; text-decoration: none; position: relative;
+        }
+        .nav-link:hover { color: #f0a030; }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+            background: linear-gradient(135deg, #f0a030, #ff6a00); transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .lang-toggle {
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(238,242,247,0.5); font-family: 'Rajdhani', sans-serif;
+            font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 5px 12px;
+            border-radius: 6px; cursor: pointer; transition: all 0.3s ease;
+        }
+        .lang-toggle:hover { color: #f0a030; background: rgba(240,160,48,0.08); border-color: rgba(240,160,48,0.2); }
+        .nav-toggle {
+            display: none; flex-direction: column; gap: 5px;
+            background: none; border: none; cursor: pointer; padding: 4px;
+        }
+        .nav-toggle span { width: 24px; height: 2px; background: #eef2f7; border-radius: 2px; transition: 0.3s ease; }
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none; position: absolute; top: 72px; left: 0; right: 0;
+                background: rgba(6,8,15,0.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+                flex-direction: column; padding: 16px 24px; gap: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.06); z-index: 999;
+            }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: flex; }
+            .nav-link { padding: 14px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+            .nav-link::after { display: none; }
+            .lang-toggle { align-self: flex-start; margin: 12px 0 4px 0; padding: 8px 20px; font-size: 12px; }
+        }
     </style>
 </head>
 <body>
@@ -172,12 +217,25 @@
     <div class="orb orb-2"></div>
 </div>
 
-<div class="topbar">
-    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;width:100%">
-    <a href="../../" class="topbar-brand" style="text-decoration:none">VERIATAX</a>
-    <div style="display:flex;align-items:center;gap:10px"><a href="../../#music" class="topbar-back" data-i18n="back">← All Music</a><button id="langToggle" onclick="toggleLang()" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(238,242,247,0.5);font-family:Rajdhani,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:6px;cursor:pointer;transition:color 0.3s ease">DE</button></div>
-</div>
-</div>
+<header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../../" class="logo">
+                <img src="../../images/logo.png" alt="Veriatax Interactive" class="logo-img">
+                <span class="logo-text">VERIATAX</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../../" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="../../#games" class="nav-link" data-i18n="nav.games">Games</a>
+                <a href="../../#music" class="nav-link" data-i18n="nav.music">Music</a>
+                <a href="../../#tools" class="nav-link">Tools</a>
+                <a href="../../#about" class="nav-link" data-i18n="nav.about">About</a>
+                <button class="lang-toggle" id="langToggle" onclick="toggleLang()" title="Sprache / Language">DE</button>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
 
 <div class="page">
     <div class="track-layout">
@@ -253,6 +311,14 @@ function applyLang(lang) {
     const btn = document.getElementById('langToggle');
     if (btn) { btn.textContent = lang === 'en' ? 'DE' : 'EN'; }
     document.documentElement.lang = lang;
+}
+
+// Mobile nav
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (navToggle) {
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 }
 document.addEventListener('DOMContentLoaded', initLang);
 </script>
