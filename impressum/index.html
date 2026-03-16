@@ -201,12 +201,12 @@
 <a href="../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Privacy</a>
 <a href="../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
 </div>
-<p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive</p>
+<p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive. All rights reserved.</p>
 </footer>
 <script>
 const pageTrans = {
-    de: {"back": "\u2190 Zur\u00fcck zur Startseite"},
-    en: {"back": "\u2190 Back to Home"}
+    de: {"nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "back": "\u2190 Zur\u00fcck zur Startseite"},
+    en: {"nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "back": "\u2190 Back to Home"}
 };
 let currentLang="en";
 function initLang(){try{const s=localStorage.getItem("veriatax-lang");if(s==="de"||s==="en")currentLang=s;else currentLang=(navigator.language||"").startsWith("de")?"de":"en"}catch(e){currentLang="en"}applyLang(currentLang)}
