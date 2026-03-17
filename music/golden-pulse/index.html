@@ -23,9 +23,9 @@
 
     <meta name="theme-color" content="#070a12">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    
+    <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -106,22 +106,7 @@
             color: var(--accent); font-size: 13px; font-weight: 600;
         }
 
-        /* Spotify Embed */
-        .embed-section {
-            margin-top: 48px;
-        }
-        .embed-section h3 {
-            font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 600;
-            margin-bottom: 16px; color: var(--text-dim);
-        }
-        .spotify-embed {
-            border-radius: 12px; overflow: hidden;
-            background: var(--glass); border: 1px solid var(--border);
-            padding: 16px;
-        }
-        .spotify-embed iframe {
-            border-radius: 12px;
-        }
+        
 
         /* More Tracks */
         .more-section { margin-top: 60px; }
@@ -255,15 +240,7 @@
         </div>
     </div>
 
-    <div class="embed-section">
-        <h3 data-i18n="listen">Listen Now</h3>
-        <div class="spotify-embed">
-            <iframe src="https://open.spotify.com/embed/track/0nmbtBR1yJ4WoTTTi3lpNV?utm_source=generator&theme=0"
-                width="100%" height="152" frameBorder="0" allowfullscreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-        </div>
-    </div>
+    
 
     <div class="more-section">
         <h3 data-i18n="more">More from Veriatax Interactive</h3>
@@ -279,16 +256,24 @@
 
 
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
-<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px">
+<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
 <img src="../../images/logo.png" alt="Veriatax" style="width:24px;height:24px;border-radius:4px">
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
-<div style="display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
+<div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
 <a href="../../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Home</a>
 <a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Privacy</a>
 <a href="../../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
 </div>
+<div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
+<a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Spotify</a>
+<a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Apple Music</a>
+<a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Amazon Music</a>
+<a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Instagram</a>
+<a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">YouTube</a>
+</div>
 <p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive. All rights reserved.</p>
+<p style="font-size:11px;color:rgba(238,242,247,0.2);margin-top:6px">🔒 This website uses no cookies.</p>
 </footer>
 <script>
 const pageTrans = {
