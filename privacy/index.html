@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <meta name="theme-color" content="#070a12">
     <link rel="preconnect" href="https://fonts.bunny.net">
-    
     <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg: #070a12; --bg-card: rgba(255,255,255,0.04);
-            --border: rgba(255,255,255,0.08); --accent: #f0a030; --accent-cyan: #00d4ff; --accent-warm: #ff6a00;
+            --border: rgba(255,255,255,0.08); --accent: #f0a030; --accent-cyan: #00d4ff;
             --text: #eaf0f6; --text-dim: rgba(234,240,246,0.6); --text-muted: rgba(234,240,246,0.35);
         }
         html { scroll-behavior: smooth; }
@@ -25,46 +24,28 @@
         a { color: #f0a030; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        
-        
-        
-        
-
-        .content {
-            max-width: 800px; margin: 0 auto; padding: 60px 24px 80px;
-        }
-        h1 {
-            font-family: 'Rajdhani', sans-serif; font-size: 32px; font-weight: 700;
-            margin-bottom: 8px;
-        }
-        h2 {
-            font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 600;
-            margin-top: 40px; margin-bottom: 12px; color: #f0a030;
-        }
-        h3 {
-            font-size: 16px; font-weight: 600; margin-top: 20px; margin-bottom: 8px;
-        }
+        .content { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+        h1 { font-family: 'Rajdhani', sans-serif; font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+        h2 { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 600; margin-top: 40px; margin-bottom: 12px; color: #f0a030; }
+        h3 { font-size: 16px; font-weight: 600; margin-top: 20px; margin-bottom: 8px; }
         p { color: var(--text-dim); margin-bottom: 12px; font-size: 15px; }
         ul { margin: 8px 0 16px 20px; }
         li { color: var(--text-dim); font-size: 14px; margin-bottom: 4px; }
-        hr {
-            border: none; border-top: 1px solid rgba(255,255,255,0.06);
-            margin: 60px 0;
-        }
         .updated { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
         .contact-block { font-size: 14px; color: var(--text-dim); line-height: 1.8; }
-    
-        /* Navbar - matches main page */
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        /* Navbar */
         .navbar {
-            position: sticky; top: 0; z-index: 100;
-            padding: 0 24px;
+            position: sticky; top: 0; z-index: 100; padding: 0 24px;
             background: rgba(6,8,15,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,255,255,0.04);
         }
         .nav-inner {
             max-width: 1200px; margin: 0 auto;
-            display: flex; align-items: center; justify-content: space-between;
-            height: 72px;
+            display: flex; align-items: center; justify-content: space-between; height: 72px;
         }
         .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
         .logo-img { width: 38px; height: 38px; object-fit: contain; border-radius: 6px; }
@@ -114,200 +95,209 @@
 <body>
 
 <header class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="../" class="logo">
-                <img src="../images/logo.png" alt="Veriatax Interactive" class="logo-img">
-                <span class="logo-text">VERIATAX</span>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="../" class="nav-link" data-i18n="nav.home">Home</a>
-                <a href="../#games" class="nav-link" data-i18n="nav.games">Games</a>
-                <a href="../#music" class="nav-link" data-i18n="nav.music">Music</a>
-                <a href="../#tools" class="nav-link">Tools</a>
-                <a href="../#about" class="nav-link" data-i18n="nav.about">About</a>
-                <button class="lang-toggle" id="langToggle" onclick="toggleLang()" title="Sprache / Language">DE</button>
-            </nav>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+    <div class="nav-inner">
+        <a href="../" class="logo">
+            <img src="../images/logo.png" alt="Veriatax Interactive" class="logo-img">
+            <span class="logo-text">VERIATAX</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="../" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="../#games" class="nav-link" data-i18n="nav.games">Games</a>
+            <a href="../#music" class="nav-link" data-i18n="nav.music">Music</a>
+            <a href="../#tools" class="nav-link">Tools</a>
+            <a href="../#about" class="nav-link" data-i18n="nav.about">About</a>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLang()" title="Sprache / Language">DE</button>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
 
 <div class="content">
 
-<h1>Privacy Policy</h1>
-<p class="updated"><strong>Last updated:</strong> 24.02.2026</p>
+    <!-- ENGLISH -->
+    <div id="content-en" class="lang-content active">
 
-<p>Veriatax Interactive (operated by Sven Martin Laschke, sole proprietor) develops and publishes mobile games and applications. We are committed to protecting your privacy and handling data transparently and responsibly.</p>
+        <h1>Privacy Policy</h1>
+        <p class="updated"><strong>Last updated:</strong> 24.02.2026</p>
 
-<p>This privacy policy applies to our mobile applications and games. This website (veriatax.com) serves informational purposes only and does not collect personal data for analytics or advertising.</p>
+        <p>Veriatax Interactive (operated by Sven Martin Laschke, sole proprietor) develops and publishes mobile games and applications. We are committed to protecting your privacy and handling data transparently and responsibly.</p>
 
-<h2>1. Information We Collect</h2>
+        <p>This privacy policy applies to our mobile applications and games. This website (veriatax.com) serves informational purposes only and does not collect personal data for analytics or advertising.</p>
 
-<h3>Technical Information</h3>
-<ul>
-    <li>Device model</li>
-    <li>Operating system version</li>
-    <li>App version</li>
-    <li>Crash logs</li>
-    <li>Performance diagnostics</li>
-</ul>
+        <h2>1. Information We Collect</h2>
 
-<h3>Usage Data</h3>
-<ul>
-    <li>Session duration</li>
-    <li>Gameplay events</li>
-    <li>Feature interactions</li>
-    <li>App activity</li>
-</ul>
+        <h3>Technical Information</h3>
+        <ul>
+            <li>Device model</li>
+            <li>Operating system version</li>
+            <li>App version</li>
+            <li>Crash logs</li>
+            <li>Performance diagnostics</li>
+        </ul>
 
-<h3>Advertising Data</h3>
-<p>Our apps use <strong>Google AdMob</strong> to display advertisements. The following data may be processed:</p>
-<ul>
-    <li>Google Advertising ID (Android Advertising ID)</li>
-    <li>IP address</li>
-    <li>Approximate location (country/region level)</li>
-    <li>Device information</li>
-</ul>
-<p>Advertisements may be personalized based on user interests. Users located in the European Economic Area (EEA) may be asked to provide consent before personalized ads are displayed.</p>
-<p>Users can reset or disable the Advertising ID and manage ad personalization settings within their Google account or device settings.</p>
+        <h3>Usage Data</h3>
+        <ul>
+            <li>Session duration</li>
+            <li>Gameplay events</li>
+            <li>Feature interactions</li>
+            <li>App activity</li>
+        </ul>
 
-<h3>Analytics Services</h3>
-<ul>
-    <li>Google Firebase Analytics</li>
-    <li>Firebase Remote Config</li>
-    <li>Google Play Games Services</li>
-</ul>
+        <h3>Advertising Data</h3>
+        <p>Our apps use <strong>Google AdMob</strong> to display advertisements. The following data may be processed:</p>
+        <ul>
+            <li>Google Advertising ID (Android Advertising ID)</li>
+            <li>IP address</li>
+            <li>Approximate location (country/region)</li>
+            <li>Device information</li>
+        </ul>
+        <p>Ads may be personalized. Users in the European Economic Area (EEA) may be asked for consent before receiving personalized advertisements.</p>
+        <p>Users can reset or disable the Advertising ID and manage ad personalization settings within their Google account or device settings.</p>
 
-<h2>2. Legal Basis (EU Users)</h2>
-<ul>
-    <li>Art. 6(1)(f) GDPR – Legitimate interest</li>
-    <li>User consent where required</li>
-</ul>
+        <h3>Analytics Services</h3>
+        <ul>
+            <li>Google Firebase Analytics</li>
+            <li>Firebase Remote Config</li>
+            <li>Google Play Games Services</li>
+        </ul>
 
-<h2>3. Data Sharing</h2>
-<p>We do not sell personal data. Data may be shared with:</p>
-<ul>
-    <li>Google AdMob</li>
-    <li>Google Firebase</li>
-    <li>Google Play Games Services</li>
-</ul>
+        <h2>2. Legal Basis (EU Users)</h2>
+        <ul>
+            <li>Art. 6(1)(f) GDPR (legitimate interest)</li>
+            <li>Consent, where required</li>
+        </ul>
 
-<p>Further information on how Google processes personal data can be found in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+        <h2>3. Data Sharing</h2>
+        <p>We do not sell personal data. Data may be shared with:</p>
+        <ul>
+            <li>Google AdMob</li>
+            <li>Google Firebase</li>
+            <li>Google Play Games Services</li>
+        </ul>
 
-<h3>External Fonts (Website)</h3>
-<p>For consistent display of fonts, this website uses Bunny Fonts, a service by BunnyWay d.o.o. Fonts are served from EU-based servers without tracking and without storing cookies. No personal data is transmitted to third parties through this service.</p>
+        <p>Further information on how Google processes personal data can be found in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
-<h2>4. International Data Transfers</h2>
-<p>Data may be processed on servers located outside the European Union in accordance with applicable data protection laws.</p>
+        <h3>External Fonts (Website)</h3>
+        <p>For consistent display of fonts, this website uses Bunny Fonts, a service by BunnyWay d.o.o. Fonts are served from EU-based servers without tracking and without storing cookies. No personal data is transmitted to third parties through this service.</p>
 
-<h2>5. Data Retention</h2>
-<p>Data is retained only as long as necessary for operational purposes or as required by law.</p>
+        <h2>4. International Data Transfers</h2>
+        <p>Data may be processed on servers located outside the European Union in accordance with applicable data protection laws.</p>
 
-<h2>6. Children's Privacy</h2>
-<p>Our applications are not directed at children under 13 unless explicitly stated.</p>
+        <h2>5. Data Retention</h2>
+        <p>Data is retained only as long as necessary for operational purposes or as required by law.</p>
 
-<h2>7. Your Rights</h2>
-<p>You may request access, correction, or deletion of your data. Requests can be sent to the contact email listed below.</p>
+        <h2>6. Children's Privacy</h2>
+        <p>Our applications are not directed at children under 13 unless explicitly stated.</p>
 
-<h2>8. Controller / Contact</h2>
-<p class="contact-block">
-    Sven Martin Laschke – Veriatax Interactive<br>
-    c/o flexdienst – #20292<br>
-    Kurt-Schumacher-Straße 76<br>
-    67663 Kaiserslautern<br>
-    Deutschland<br>
-    Email: <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>
-</p>
+        <h2>7. Your Rights</h2>
+        <p>You may request access, correction, or deletion of your data. Requests can be sent to the contact email listed below.</p>
 
-<hr>
+        <h2>8. Controller / Contact</h2>
+        <p class="contact-block">
+            Sven Martin Laschke – Veriatax Interactive<br>
+            c/o flexdienst – #20292<br>
+            Kurt-Schumacher-Straße 76<br>
+            67663 Kaiserslautern<br>
+            Deutschland<br>
+            Email: <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>
+        </p>
 
-<h1>Datenschutzerklärung</h1>
-<p class="updated"><strong>Letzte Aktualisierung:</strong> 24.02.2026</p>
+    </div>
 
-<p>Veriatax Interactive (Inhaber: Sven Martin Laschke, Einzelunternehmer) entwickelt und veröffentlicht mobile Spiele und Anwendungen.</p>
+    <!-- DEUTSCH -->
+    <div id="content-de" class="lang-content">
 
-<p>Diese Datenschutzerklärung gilt für unsere mobilen Anwendungen und Spiele. Diese Website (veriatax.com) dient ausschließlich zu Informationszwecken und verarbeitet keine personenbezogenen Daten zu Analyse- oder Werbezwecken.</p>
+        <h1>Datenschutzerklärung</h1>
+        <p class="updated"><strong>Letzte Aktualisierung:</strong> 24.02.2026</p>
 
-<h2>1. Erhobene Daten</h2>
+        <p>Veriatax Interactive (Inhaber: Sven Martin Laschke, Einzelunternehmer) entwickelt und veröffentlicht mobile Spiele und Anwendungen.</p>
 
-<h3>Technische Informationen</h3>
-<ul>
-    <li>Gerätetyp</li>
-    <li>Betriebssystemversion</li>
-    <li>App-Version</li>
-    <li>Absturzberichte</li>
-    <li>Leistungsdaten</li>
-</ul>
+        <p>Diese Datenschutzerklärung gilt für unsere mobilen Anwendungen und Spiele. Diese Website (veriatax.com) dient ausschließlich zu Informationszwecken und verarbeitet keine personenbezogenen Daten zu Analyse- oder Werbezwecken.</p>
 
-<h3>Nutzungsdaten</h3>
-<ul>
-    <li>Sitzungsdauer</li>
-    <li>Gameplay-Ereignisse</li>
-    <li>Funktionsnutzung</li>
-    <li>App-Interaktionen</li>
-</ul>
+        <h2>1. Erhobene Daten</h2>
 
-<h3>Werbedaten</h3>
-<p>Unsere Anwendungen verwenden <strong>Google AdMob</strong>. Dabei können folgende Daten verarbeitet werden:</p>
-<ul>
-    <li>Google Werbe-ID (Android Advertising ID)</li>
-    <li>IP-Adresse</li>
-    <li>Ungefähre Standortdaten (Land/Region)</li>
-    <li>Geräteinformationen</li>
-</ul>
-<p>Werbung kann personalisiert erfolgen. Nutzer im Europäischen Wirtschaftsraum (EWR) werden gegebenenfalls um Einwilligung gebeten, bevor personalisierte Werbung angezeigt wird.</p>
-<p>Die Werbe-ID kann in den Geräteeinstellungen zurückgesetzt oder deaktiviert werden. Einstellungen zur Personalisierung sind auch im Google-Konto möglich.</p>
+        <h3>Technische Informationen</h3>
+        <ul>
+            <li>Gerätetyp</li>
+            <li>Betriebssystemversion</li>
+            <li>App-Version</li>
+            <li>Absturzberichte</li>
+            <li>Leistungsdaten</li>
+        </ul>
 
-<h3>Analyse-Dienste</h3>
-<ul>
-    <li>Google Firebase Analytics</li>
-    <li>Firebase Remote Config</li>
-    <li>Google Play Games Services</li>
-</ul>
+        <h3>Nutzungsdaten</h3>
+        <ul>
+            <li>Sitzungsdauer</li>
+            <li>Gameplay-Ereignisse</li>
+            <li>Funktionsnutzung</li>
+            <li>App-Interaktionen</li>
+        </ul>
 
-<h2>2. Rechtsgrundlage</h2>
-<ul>
-    <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
-    <li>Einwilligung, sofern erforderlich</li>
-</ul>
+        <h3>Werbedaten</h3>
+        <p>Unsere Anwendungen verwenden <strong>Google AdMob</strong>. Dabei können folgende Daten verarbeitet werden:</p>
+        <ul>
+            <li>Google Werbe-ID (Android Advertising ID)</li>
+            <li>IP-Adresse</li>
+            <li>Ungefähre Standortdaten (Land/Region)</li>
+            <li>Geräteinformationen</li>
+        </ul>
+        <p>Werbung kann personalisiert erfolgen. Nutzer im Europäischen Wirtschaftsraum (EWR) werden gegebenenfalls um Einwilligung gebeten, bevor personalisierte Werbung angezeigt wird.</p>
+        <p>Die Werbe-ID kann in den Geräteeinstellungen zurückgesetzt oder deaktiviert werden. Einstellungen zur Personalisierung sind auch im Google-Konto möglich.</p>
 
-<h2>3. Weitergabe von Daten</h2>
-<p>Daten werden ausschließlich an notwendige Drittanbieter weitergegeben:</p>
-<ul>
-    <li>Google AdMob</li>
-    <li>Google Firebase</li>
-    <li>Google Play Games Services</li>
-</ul>
+        <h3>Analyse-Dienste</h3>
+        <ul>
+            <li>Google Firebase Analytics</li>
+            <li>Firebase Remote Config</li>
+            <li>Google Play Games Services</li>
+        </ul>
 
-<p>Weitere Informationen zur Datenverarbeitung durch Google finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.</p>
+        <h2>2. Rechtsgrundlage</h2>
+        <ul>
+            <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
+            <li>Einwilligung, sofern erforderlich</li>
+        </ul>
 
-<h3>Externe Schriftarten (Website)</h3>
-<p>Zur einheitlichen Darstellung von Schriftarten nutzt diese Website Bunny Fonts, einen Dienst der BunnyWay d.o.o. Die Schriftarten werden von Servern innerhalb der EU bereitgestellt, ohne Tracking und ohne Speicherung von Cookies. Es werden keine personenbezogenen Daten an Dritte übermittelt.</p>
+        <h2>3. Weitergabe von Daten</h2>
+        <p>Daten werden ausschließlich an notwendige Drittanbieter weitergegeben:</p>
+        <ul>
+            <li>Google AdMob</li>
+            <li>Google Firebase</li>
+            <li>Google Play Games Services</li>
+        </ul>
 
-<h2>4. Datenübermittlung in Drittländer</h2>
-<p>Eine Verarbeitung kann auf Servern außerhalb der Europäischen Union erfolgen.</p>
+        <p>Weitere Informationen zur Datenverarbeitung durch Google finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.</p>
 
-<h2>5. Speicherdauer</h2>
-<p>Daten werden nur so lange gespeichert, wie dies erforderlich ist.</p>
+        <h3>Externe Schriftarten (Website)</h3>
+        <p>Zur einheitlichen Darstellung von Schriftarten nutzt diese Website Bunny Fonts, einen Dienst der BunnyWay d.o.o. Die Schriftarten werden von Servern innerhalb der EU bereitgestellt, ohne Tracking und ohne Speicherung von Cookies. Es werden keine personenbezogenen Daten an Dritte übermittelt.</p>
 
-<h2>6. Datenschutz von Kindern</h2>
-<p>Unsere Anwendungen richten sich nicht gezielt an Kinder unter 13 Jahren.</p>
+        <h2>4. Datenübermittlung in Drittländer</h2>
+        <p>Eine Verarbeitung kann auf Servern außerhalb der Europäischen Union erfolgen.</p>
 
-<h2>7. Ihre Rechte</h2>
-<p>Sie haben das Recht auf Auskunft, Berichtigung oder Löschung Ihrer Daten. Anfragen können an die unten angegebene Kontaktadresse gerichtet werden.</p>
+        <h2>5. Speicherdauer</h2>
+        <p>Daten werden nur so lange gespeichert, wie dies erforderlich ist.</p>
 
-<h2>8. Verantwortlicher</h2>
-<p class="contact-block">
-    Sven Martin Laschke – Veriatax Interactive<br>
-    c/o flexdienst – #20292<br>
-    Kurt-Schumacher-Straße 76<br>
-    67663 Kaiserslautern<br>
-    Deutschland<br>
-    E-Mail: <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>
-</p>
+        <h2>6. Datenschutz von Kindern</h2>
+        <p>Unsere Anwendungen richten sich nicht gezielt an Kinder unter 13 Jahren.</p>
+
+        <h2>7. Ihre Rechte</h2>
+        <p>Sie haben das Recht auf Auskunft, Berichtigung oder Löschung Ihrer Daten. Anfragen können an die unten angegebene Kontaktadresse gerichtet werden.</p>
+
+        <h2>8. Verantwortlicher</h2>
+        <p class="contact-block">
+            Sven Martin Laschke – Veriatax Interactive<br>
+            c/o flexdienst – #20292<br>
+            Kurt-Schumacher-Straße 76<br>
+            67663 Kaiserslautern<br>
+            Deutschland<br>
+            E-Mail: <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>
+        </p>
+
+    </div>
 
 </div>
+
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
 <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
 <img src="../images/logo.png" alt="Veriatax" style="width:24px;height:24px;border-radius:4px">
@@ -328,15 +318,45 @@
 <p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive. All rights reserved.</p>
 <p style="font-size:11px;color:rgba(238,242,247,0.2);margin-top:6px">🔒 This website uses no cookies.</p>
 </footer>
+
 <script>
-const pageTrans = {
-    de: {"nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "back": "\u2190 Zur\u00fcck zur Startseite"},
-    en: {"nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "back": "\u2190 Back to Home"}
-};
-let currentLang="en";
-function initLang(){try{const s=localStorage.getItem("veriatax-lang");if(s==="de"||s==="en")currentLang=s;else currentLang=(navigator.language||"").startsWith("de")?"de":"en"}catch(e){currentLang="en"}applyLang(currentLang)}
-function toggleLang(){currentLang=currentLang==="en"?"de":"en";applyLang(currentLang);try{localStorage.setItem("veriatax-lang",currentLang)}catch(e){}}
-function applyLang(lang){const d=pageTrans[lang];if(!d)return;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");if(d[k])el.textContent=d[k]});const btn=document.getElementById("langToggle");if(btn){btn.textContent=lang==="en"?"DE":"EN"}document.documentElement.lang=lang}
+let currentLang = 'en';
+
+function initLang() {
+    try {
+        const s = localStorage.getItem('veriatax-lang');
+        if (s === 'de' || s === 'en') currentLang = s;
+        else currentLang = (navigator.language || '').startsWith('de') ? 'de' : 'en';
+    } catch(e) { currentLang = 'en'; }
+    applyLang(currentLang);
+}
+
+function toggleLang() {
+    currentLang = currentLang === 'en' ? 'de' : 'en';
+    applyLang(currentLang);
+    try { localStorage.setItem('veriatax-lang', currentLang); } catch(e) {}
+}
+
+function applyLang(lang) {
+    document.getElementById('content-en').classList.toggle('active', lang === 'en');
+    document.getElementById('content-de').classList.toggle('active', lang === 'de');
+
+    const navTrans = {
+        de: {"nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "\u00dcber uns"},
+        en: {"nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About"}
+    };
+    const d = navTrans[lang];
+    if (d) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const k = el.getAttribute('data-i18n');
+            if (d[k]) el.textContent = d[k];
+        });
+    }
+
+    const btn = document.getElementById('langToggle');
+    if (btn) btn.textContent = lang === 'en' ? 'DE' : 'EN';
+    document.documentElement.lang = lang;
+}
 
 // Mobile nav
 const navToggle = document.getElementById('navToggle');
@@ -345,7 +365,8 @@ if (navToggle) {
     navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 }
-document.addEventListener("DOMContentLoaded",initLang);
+
+document.addEventListener('DOMContentLoaded', initLang);
 </script>
 </body>
 </html>
