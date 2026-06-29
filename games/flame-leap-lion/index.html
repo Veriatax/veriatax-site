@@ -66,6 +66,12 @@
             color: var(--text-muted);
         }
         .badge.dev { background: rgba(240,160,48,0.1); border-color: rgba(240,160,48,0.2); color: #f0a030; }
+        .badge.live { background: rgba(29,185,84,0.1); border-color: rgba(29,185,84,0.2); color: #1db954; }
+
+        .subtitle {
+            font-family: 'Rajdhani', sans-serif; font-size: clamp(18px,2.5vw,24px);
+            font-weight: 400; color: var(--text-dim); margin-top: -4px; margin-bottom: 8px;
+        }
 
         .play-btn {
             display: inline-flex; align-items: center; gap: 10px;
@@ -179,51 +185,53 @@
     <div class="game-hero">
         <span class="game-emoji">🦁</span>
         <h1>Flame Leap Lion</h1>
-        <p class="genre" data-i18n="genre">Arcade Platform Skill Game</p>
-        <p class="desc" data-i18n="desc">Guide a blazing lion through rings of fire. Time your jumps perfectly, chain insane combos, collect power-ups, and climb the global leaderboard. Simple to learn, hard to master.</p>
+        <p class="subtitle">Circus Run</p>
+        <p class="genre" data-i18n="genre">One-Tap Arcade Game</p>
+        <p class="desc" data-i18n="desc">Tap to make your circus lion leap through blazing fire rings — the better your timing, the higher your score! Easy to learn but tough to master, every run is a new chance to beat your high score.</p>
 
         <div class="badge-row">
-            <span class="badge dev" data-i18n="status">In Development</span>
+            <span class="badge live" data-i18n="status">Available Now</span>
             <span class="badge">Android</span>
             <span class="badge" data-i18n="f2p">Free to Play</span>
             <span class="badge">Leaderboards</span>
+            <span class="badge" data-i18n="badge.ages">All Ages</span>
         </div>
 
         <a href="https://play.google.com/store/apps/details?id=com.veriatax.flameleaplion" class="play-btn" target="_blank" rel="noopener">
-            <span data-i18n="cta">▶ Coming Soon on Google Play</span>
+            <span data-i18n="cta">▶ Get it on Google Play</span>
         </a>
     </div>
 
     <div class="features">
         <div class="feature">
             <div class="feature-icon">🔥</div>
-            <h3 data-i18n="f1t">Ring Jump Action</h3>
-            <p data-i18n="f1d">Leap through flaming rings at ever-increasing speed. Every jump counts — miss one and it's game over.</p>
+            <h3 data-i18n="f1t">One-Tap Controls</h3>
+            <p data-i18n="f1d">Simple tap to jump through fire rings. Aim for the center, build combos, and watch your score soar. Four difficulty levels from beginner to expert.</p>
         </div>
         <div class="feature">
-            <div class="feature-icon">💥</div>
-            <h3 data-i18n="f2t">Combo System</h3>
-            <p data-i18n="f2d">Chain perfect jumps for massive combo multipliers. The higher the streak, the bigger your score boost.</p>
+            <div class="feature-icon">🦁</div>
+            <h3 data-i18n="f2t">5 Characters</h3>
+            <p data-i18n="f2d">Unlock and play as a lion, tiger, panther, white tiger, and a fiery phoenix. Collect coins to unlock them all.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🏆</div>
-            <h3 data-i18n="f3t">Leaderboards</h3>
-            <p data-i18n="f3d">Compete globally via Google Play Games. See how you rank against players worldwide.</p>
+            <h3 data-i18n="f3t">Leaderboards & Achievements</h3>
+            <p data-i18n="f3d">Climb the global leaderboards via Google Play Games and unlock achievements as you master the game.</p>
         </div>
         <div class="feature">
-            <div class="feature-icon">🎁</div>
-            <h3 data-i18n="f4t">Daily Rewards</h3>
-            <p data-i18n="f4d">Log in daily for bonus rewards. Consistency pays off with special power-ups and multipliers.</p>
+            <div class="feature-icon">💥</div>
+            <h3 data-i18n="f4t">Power-Ups & Boss Rings</h3>
+            <p data-i18n="f4d">Shield, slow, magnet, rainbow rush, and ghost mode. Take on challenging boss rings as the action speeds up.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">⚡</div>
             <h3 data-i18n="f5t">Smooth Performance</h3>
-            <p data-i18n="f5d">Built with React + Capacitor for buttery smooth 60fps gameplay on modern Android devices.</p>
+            <p data-i18n="f5d">Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🎵</div>
             <h3 data-i18n="f6t">Original Music</h3>
-            <p data-i18n="f6d">Energetic soundtrack produced in-house, perfectly matching the high-octane gameplay.</p>
+            <p data-i18n="f6d">Energetic soundtrack produced in-house, perfectly matching the high-octane gameplay in a colorful circus world.</p>
         </div>
     </div>
 </div>
@@ -252,45 +260,45 @@
 const pageTrans = {
     de: {
         "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns",
-        "back": "← Alle Spiele",
-        "genre": "Arcade-Plattform-Geschicklichkeitsspiel",
-        "desc": "Steuere einen flammenden Löwen durch Feuerringe. Perfektes Timing, irre Combos, Power-Ups sammeln und die globale Bestenliste erklimmen. Einfach zu lernen, schwer zu meistern.",
-        "status": "In Entwicklung",
+        "genre": "Ein-Tipp-Arcade-Spiel",
+        "desc": "Tippe, damit dein Zirkuslöwe durch lodernde Feuerringe springt — je besser dein Timing, desto höher dein Punktestand! Leicht zu erlernen, aber schwer zu meistern — jeder Durchlauf ist eine neue Chance, deinen Highscore zu knacken.",
+        "status": "Jetzt verfügbar",
         "f2p": "Free to Play",
-        "cta": "▶ Demnächst auf Google Play",
-        "f1t": "Ringsprung-Action",
-        "f1d": "Springe durch Flammenringe bei immer höherer Geschwindigkeit. Jeder Sprung zählt — ein Fehler und es ist vorbei.",
-        "f2t": "Combo-System",
-        "f2d": "Verkette perfekte Sprünge für massive Combo-Multiplikatoren. Je höher die Serie, desto größer der Score-Boost.",
-        "f3t": "Bestenlisten",
-        "f3d": "Tritt weltweit über Google Play Games an. Sieh wo du im globalen Ranking stehst.",
-        "f4t": "Tägliche Belohnungen",
-        "f4d": "Melde dich täglich an für Bonus-Belohnungen. Regelmäßigkeit zahlt sich aus mit speziellen Power-Ups und Multiplikatoren.",
+        "badge.ages": "Für alle Altersgruppen",
+        "cta": "▶ Jetzt auf Google Play",
+        "f1t": "Ein-Tipp-Steuerung",
+        "f1d": "Einfaches Tippen zum Springen durch Feuerringe. Ziele auf die Mitte, baue Kombos auf und sieh deinen Score steigen. Vier Schwierigkeitsgrade vom Einsteiger bis zum Profi.",
+        "f2t": "5 Charaktere",
+        "f2d": "Schalte frei und spiele als Löwe, Tiger, Panther, Weißer Tiger und feuriger Phönix. Sammle Münzen, um alle freizuschalten.",
+        "f3t": "Bestenlisten & Erfolge",
+        "f3d": "Klettere in den globalen Bestenlisten über Google Play Games und schalte Erfolge frei, je besser du wirst.",
+        "f4t": "Power-Ups & Boss-Ringe",
+        "f4d": "Schild, Langsam, Magnet, Regenbogen und Geistermodus. Stelle dich herausfordernden Boss-Ringen, während das Tempo anzieht.",
         "f5t": "Flüssige Performance",
-        "f5d": "Gebaut mit React + Capacitor für butterweiche 60fps auf modernen Android-Geräten.",
+        "f5d": "Gebaut mit React + Capacitor für butterweiche 60fps auf modernen Android-Geräten. Kurze Runden, perfekt für zwischendurch.",
         "f6t": "Eigene Musik",
-        "f6d": "Energiegeladener Soundtrack aus eigener Produktion, perfekt passend zum rasanten Gameplay."
+        "f6d": "Energiegeladener Soundtrack aus eigener Produktion, perfekt passend zum rasanten Gameplay in einer farbenfrohen Zirkuswelt."
     },
     en: {
         "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
-        "back": "← All Games",
-        "genre": "Arcade Platform Skill Game",
-        "desc": "Guide a blazing lion through rings of fire. Time your jumps perfectly, chain insane combos, collect power-ups, and climb the global leaderboard. Simple to learn, hard to master.",
-        "status": "In Development",
+        "genre": "One-Tap Arcade Game",
+        "desc": "Tap to make your circus lion leap through blazing fire rings — the better your timing, the higher your score! Easy to learn but tough to master, every run is a new chance to beat your high score.",
+        "status": "Available Now",
         "f2p": "Free to Play",
-        "cta": "▶ Coming Soon on Google Play",
-        "f1t": "Ring Jump Action",
-        "f1d": "Leap through flaming rings at ever-increasing speed. Every jump counts — miss one and it's game over.",
-        "f2t": "Combo System",
-        "f2d": "Chain perfect jumps for massive combo multipliers. The higher the streak, the bigger your score boost.",
-        "f3t": "Leaderboards",
-        "f3d": "Compete globally via Google Play Games. See how you rank against players worldwide.",
-        "f4t": "Daily Rewards",
-        "f4d": "Log in daily for bonus rewards. Consistency pays off with special power-ups and multipliers.",
+        "badge.ages": "All Ages",
+        "cta": "▶ Get it on Google Play",
+        "f1t": "One-Tap Controls",
+        "f1d": "Simple tap to jump through fire rings. Aim for the center, build combos, and watch your score soar. Four difficulty levels from beginner to expert.",
+        "f2t": "5 Characters",
+        "f2d": "Unlock and play as a lion, tiger, panther, white tiger, and a fiery phoenix. Collect coins to unlock them all.",
+        "f3t": "Leaderboards & Achievements",
+        "f3d": "Climb the global leaderboards via Google Play Games and unlock achievements as you master the game.",
+        "f4t": "Power-Ups & Boss Rings",
+        "f4d": "Shield, slow, magnet, rainbow rush, and ghost mode. Take on challenging boss rings as the action speeds up.",
         "f5t": "Smooth Performance",
-        "f5d": "Built with React + Capacitor for buttery smooth 60fps gameplay on modern Android devices.",
+        "f5d": "Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.",
         "f6t": "Original Music",
-        "f6d": "Energetic soundtrack produced in-house, perfectly matching the high-octane gameplay."
+        "f6d": "Energetic soundtrack produced in-house, perfectly matching the high-octane gameplay in a colorful circus world."
     }
 };
 let currentLang = 'en';
