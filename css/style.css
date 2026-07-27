@@ -859,18 +859,22 @@ a.music-card-compact {
     text-decoration: none;
     color: inherit;
 }
-/* Spotify Follow CTA */
-.spotify-follow {
-    text-align: center;
+/* Artist Follow CTAs */
+.spotify-follow,
+.artist-follow {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
     margin-top: 48px;
 }
 
-.btn-spotify {
+.btn-spotify,
+.btn-apple {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 12px 28px;
-    background: #1db954;
     color: #fff;
     font-family: var(--font-body);
     font-size: 14px;
@@ -880,13 +884,28 @@ a.music-card-compact {
     transition: all 0.3s ease;
 }
 
+.btn-spotify {
+    background: #1db954;
+}
+
 .btn-spotify:hover {
     background: #1ed760;
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(29, 185, 84, 0.3);
 }
 
-.btn-spotify svg {
+.btn-apple {
+    background: linear-gradient(135deg, #fb5c74, #fa233b);
+}
+
+.btn-apple:hover {
+    background: linear-gradient(135deg, #fc7183, #fb3a50);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(250, 35, 59, 0.3);
+}
+
+.btn-spotify svg,
+.btn-apple svg {
     flex-shrink: 0;
 }
 
@@ -1331,8 +1350,11 @@ a.music-card-compact {
     .music-card-text h4 { font-size: 14px; }
     .music-card-text p { font-size: 11px; }
 
-    .spotify-follow { margin-top: 28px; }
-    .btn-spotify { font-size: 13px; padding: 10px 22px; }
+    .spotify-follow, .artist-follow { margin-top: 28px; gap: 10px; }
+    .btn-spotify, .btn-apple {
+        font-size: 13px; padding: 11px 22px;
+        width: 100%; justify-content: center;
+    }
 
     /* Tools */
     .tools-grid { max-width: 100%; }
