@@ -32,7 +32,7 @@ const translations = {
 
         // Music
         "music.title": "Musik",
-        "music.subtitle": "Elektronische Musikveröffentlichungen — tropische Vibes, Melodic House, Synthwave & Neon-EDM",
+        "music.subtitle": "Elektronische Musikveröffentlichungen — Tropical House, Melodic Chill, Synthwave & Neon-EDM",
         "music.coming": "Demnächst",
         "music.featured": "Empfohlen",
         "music.latest": "Neueste Veröffentlichung",
