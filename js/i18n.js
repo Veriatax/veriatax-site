@@ -37,7 +37,7 @@ const translations = {
         "music.featured": "Empfohlen",
         "music.latest": "Neueste Veröffentlichung",
         "rl.desc": "Volleyball am Ufer, kalte Dosen im Sand, jemand zündet den Grill an, während der Rhein golden wird. Ende Juli, keiner schaut auf die Uhr.",
-        "rl.release": "Erscheint am 7. August 2026",
+        "rl.release": "Jetzt vormerken →",
         "oms.desc": "Goldenes Licht über den Wellen und niemand spricht vom Abschied. Eine warme, ruhige Bitte, den Tag noch etwas offen zu halten.",
         "music.listen": "Jetzt anhören →",
         "music.more": "Weitere Releases",
@@ -46,9 +46,9 @@ const translations = {
 
         // Tools
         "tools.title": "Tools",
-        "tools.subtitle": "Datenschutzfreundliche Werkzeuge mit Sorgfalt gebaut",
-        "tools.desc": "Eine wachsende Sammlung privatsphärefreundlicher Apps und Web-Tools. Kein Tracking, keine Werbung — einfach nützliche Software.",
-        "tools.soon": "Demnächst",
+        "tools.subtitle": "Wohin sich Veriatax Interactive als Nächstes entwickelt",
+        "tools.desc": "Privatsphärefreundliche Apps und Web-Tools sind das nächste Kapitel für das Studio. Gleiches Prinzip wie überall hier — kein Tracking, keine Werbung, einfach nützliche Software.",
+        "tools.soon": "In Planung",
 
         // About
         "about.title": "Über uns",
@@ -100,7 +100,7 @@ const translations = {
         "music.featured": "Featured",
         "music.latest": "Latest Release",
         "rl.desc": "Volleyball by the shore, cold cans in the sand, somebody lighting the grill while the Rhine turns to gold. Late July, nobody checking the time.",
-        "rl.release": "Releasing August 7, 2026",
+        "rl.release": "Pre-save now →",
         "oms.desc": "Golden light across the waves and nobody talking about goodbye. A warm, unhurried plea to hold the day open a little longer.",
         "music.listen": "Listen now →",
         "music.more": "More Releases",
@@ -108,9 +108,9 @@ const translations = {
         "music.apple": "Follow on Apple Music",
 
         "tools.title": "Tools",
-        "tools.subtitle": "Privacy-focused utilities built with care",
-        "tools.desc": "A growing collection of privacy-respecting utility apps and web tools. No tracking, no ads — just useful software.",
-        "tools.soon": "Coming Soon",
+        "tools.subtitle": "Where Veriatax Interactive is heading next",
+        "tools.desc": "Privacy-respecting utility apps and web tools are the next chapter for the studio. Same principle as everything else here — no tracking, no ads, just useful software.",
+        "tools.soon": "In Planning",
 
         "about.title": "About",
         "about.subtitle": "The studio behind the pixels and beats",
