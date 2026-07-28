@@ -11,6 +11,48 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     
     <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Flame Leap Lion: Circus Run",
+  "url": "https://veriatax.com/games/flame-leap-lion/",
+  "image": "https://veriatax.com/images/hero-banner.jpg",
+  "description": "Tap to make your circus lion leap through blazing fire rings. Free one-tap arcade game with five characters, global leaderboards, power-ups and boss rings.",
+  "applicationCategory": "GameApplication",
+  "genre": [
+    "Arcade",
+    "Casual"
+  ],
+  "operatingSystem": "Android",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.veriatax.flameleaplion",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Veriatax Interactive",
+    "url": "https://veriatax.com/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "screenshot": [
+    "https://veriatax.com/images/fll/shot-1-start.jpg",
+    "https://veriatax.com/images/fll/shot-2-rings.jpg",
+    "https://veriatax.com/images/fll/shot-3-powerup.jpg",
+    "https://veriatax.com/images/fll/shot-4-boss.jpg",
+    "https://veriatax.com/images/fll/shot-5-characters.jpg"
+  ],
+  "trailer": {
+    "@type": "VideoObject",
+    "name": "Flame Leap Lion: Circus Run — Gameplay",
+    "description": "Gameplay footage showing the lion leaping through fire rings.",
+    "thumbnailUrl": "https://veriatax.com/videos/fll-poster.jpg",
+    "contentUrl": "https://veriatax.com/videos/fll-gameplay.mp4",
+    "uploadDate": "2026-07-28"
+  }
+}
+    </script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -42,10 +84,12 @@
         
         
 
-        .page { max-width: 900px; margin: 0 auto; padding: 60px 24px 100px; }
+        .page { max-width: 980px; margin: 0 auto; padding: 60px 24px 100px; }
 
-        .game-hero { text-align: center; margin-bottom: 60px; }
-        .game-emoji { font-size: 72px; margin-bottom: 20px; display: block; }
+        .game-hero {
+            display: grid; grid-template-columns: 1fr 270px;
+            gap: 48px; align-items: center; margin-bottom: 64px;
+        }
         .game-hero h1 {
             font-family: 'Rajdhani', sans-serif; font-size: clamp(36px,5vw,52px);
             font-weight: 800; margin-bottom: 8px;
@@ -55,11 +99,64 @@
             letter-spacing: 1px; margin-bottom: 16px;
         }
         .game-hero .desc {
-            font-size: 16px; color: var(--text-dim); max-width: 560px;
-            margin: 0 auto 28px; line-height: 1.7;
+            font-size: 16px; color: var(--text-dim);
+            margin: 0 0 28px; line-height: 1.7;
         }
 
-        .badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+        /* Gameplay-Video im Telefonrahmen */
+        .phone-frame {
+            border-radius: 20px; overflow: hidden; line-height: 0; background: #05070d;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 22px 60px rgba(0,0,0,0.55), 0 0 70px rgba(240,160,48,0.09);
+        }
+        .phone-frame video { width: 100%; height: auto; display: block; }
+
+        /* Screenshot-Galerie */
+        .shots { margin-top: 8px; }
+        .shots h3 {
+            font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 600;
+            color: var(--text-dim); margin-bottom: 16px;
+        }
+        .shots-scroll {
+            display: flex; gap: 14px; overflow-x: auto; padding-bottom: 14px;
+            scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+        }
+        .shots-scroll::-webkit-scrollbar { height: 6px; }
+        .shots-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 3px; }
+        .shots-scroll::-webkit-scrollbar-thumb { background: rgba(240,160,48,0.25); border-radius: 3px; }
+        .shots-scroll::-webkit-scrollbar-thumb:hover { background: rgba(240,160,48,0.4); }
+        .shot {
+            flex: 0 0 auto; width: 176px; scroll-snap-align: start;
+            border-radius: 12px; overflow: hidden; cursor: zoom-in;
+            border: 1px solid var(--border); background: #05070d;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .shot:hover { transform: translateY(-3px); border-color: rgba(240,160,48,0.22); }
+        .shot img { width: 100%; height: auto; display: block; }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 1000;
+            background: rgba(4,6,12,0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            display: none; align-items: center; justify-content: center;
+            padding: 40px 20px; cursor: zoom-out;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: min(360px, 88vw); max-height: 88vh; width: auto; height: auto;
+            border-radius: 14px; border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.6);
+        }
+        .lightbox-close {
+            position: absolute; top: 16px; right: 20px;
+            background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+            color: var(--text); font-size: 22px; line-height: 1;
+            width: 40px; height: 40px; border-radius: 10px; cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .lightbox-close:hover { color: #f0a030; border-color: rgba(240,160,48,0.3); }
+
+        .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
         .badge {
             font-size: 12px; padding: 5px 14px; border-radius: 20px;
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
@@ -139,7 +236,22 @@
             background: none; border: none; cursor: pointer; padding: 4px;
         }
         .nav-toggle span { width: 24px; height: 2px; background: #eef2f7; border-radius: 2px; transition: 0.3s ease; }
+
+        /* Hero stapelt sich, bevor es eng wird */
+        @media (max-width: 760px) {
+            .game-hero {
+                grid-template-columns: 1fr; gap: 32px;
+                text-align: center; margin-bottom: 48px;
+            }
+            .game-hero .desc { max-width: 560px; margin: 0 auto 28px; }
+            .badge-row { justify-content: center; }
+            .phone-frame { max-width: 260px; margin: 0 auto; }
+            .shot { width: 152px; }
+        }
+
         @media (max-width: 640px) {
+            .page { padding: 40px 16px 70px; }
+            .features { grid-template-columns: 1fr; }
             .nav-links {
                 display: none; position: absolute; top: 72px; left: 0; right: 0;
                 background: rgba(6,8,15,0.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -183,23 +295,42 @@
 
 <div class="page">
     <div class="game-hero">
-        <span class="game-emoji">🦁</span>
-        <h1>Flame Leap Lion</h1>
-        <p class="subtitle">Circus Run</p>
-        <p class="genre" data-i18n="genre">One-Tap Arcade Game</p>
-        <p class="desc" data-i18n="desc">Tap to make your circus lion leap through blazing fire rings — the better your timing, the higher your score! Easy to learn but tough to master, every run is a new chance to beat your high score.</p>
+        <div class="hero-text">
+            <h1>Flame Leap Lion</h1>
+            <p class="subtitle">Circus Run</p>
+            <p class="genre" data-i18n="genre">One-Tap Arcade Game</p>
+            <p class="desc" data-i18n="desc">Tap to make your circus lion leap through blazing fire rings — the better your timing, the higher your score! Easy to learn but tough to master, every run is a new chance to beat your high score.</p>
 
-        <div class="badge-row">
-            <span class="badge live" data-i18n="status">Available Now</span>
-            <span class="badge">Android</span>
-            <span class="badge" data-i18n="f2p">Free to Play</span>
-            <span class="badge">Leaderboards</span>
-            <span class="badge" data-i18n="badge.ages">All Ages</span>
+            <div class="badge-row">
+                <span class="badge live" data-i18n="status">Available Now</span>
+                <span class="badge">Android</span>
+                <span class="badge" data-i18n="f2p">Free to Play</span>
+                <span class="badge">Leaderboards</span>
+                <span class="badge" data-i18n="badge.ages">All Ages</span>
+            </div>
+
+            <a href="https://play.google.com/store/apps/details?id=com.veriatax.flameleaplion" class="play-btn" target="_blank" rel="noopener">
+                <span data-i18n="cta">▶ Get it on Google Play</span>
+            </a>
         </div>
 
-        <a href="https://play.google.com/store/apps/details?id=com.veriatax.flameleaplion" class="play-btn" target="_blank" rel="noopener">
-            <span data-i18n="cta">▶ Get it on Google Play</span>
-        </a>
+        <div class="phone-frame">
+            <video id="gameplayVideo" autoplay loop muted playsinline preload="metadata"
+                   poster="../../videos/fll-poster.jpg" aria-label="Flame Leap Lion gameplay">
+                <source src="../../videos/fll-gameplay.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="shots">
+        <h3 data-i18n="shots">Screenshots</h3>
+        <div class="shots-scroll">
+            <div class="shot"><img src="../../images/fll/shot-1-start.jpg" alt="Tap to leap — the lion waits on the circus pedestal" loading="lazy"></div>
+            <div class="shot"><img src="../../images/fll/shot-2-rings.jpg" alt="The lion leaps through a blazing fire ring" loading="lazy"></div>
+            <div class="shot"><img src="../../images/fll/shot-3-powerup.jpg" alt="Rainbow power-up active during an 8x combo" loading="lazy"></div>
+            <div class="shot"><img src="../../images/fll/shot-4-boss.jpg" alt="A boss ring blocks the way" loading="lazy"></div>
+            <div class="shot"><img src="../../images/fll/shot-5-characters.jpg" alt="Character selection with lion, tiger and panther" loading="lazy"></div>
+        </div>
     </div>
 
     <div class="features">
@@ -230,10 +361,15 @@
         </div>
         <div class="feature">
             <div class="feature-icon">🎵</div>
-            <h3 data-i18n="f6t">Original Music</h3>
-            <p data-i18n="f6d">Energetic soundtrack produced in-house, perfectly matching the high-octane gameplay in a colorful circus world.</p>
+            <h3 data-i18n="f6t">Original Soundtrack</h3>
+            <p data-i18n="f6d">An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist.</p>
         </div>
     </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="">
 </div>
 
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
@@ -265,6 +401,7 @@ const pageTrans = {
         "status": "Jetzt verfügbar",
         "f2p": "Free to Play",
         "badge.ages": "Für alle Altersgruppen",
+        "shots": "Bildschirmfotos",
         "cta": "▶ Jetzt auf Google Play",
         "f1t": "Ein-Tipp-Steuerung",
         "f1d": "Einfaches Tippen zum Springen durch Feuerringe. Ziele auf die Mitte, baue Kombos auf und sieh deinen Score steigen. Vier Schwierigkeitsgrade vom Einsteiger bis zum Profi.",
@@ -276,8 +413,8 @@ const pageTrans = {
         "f4d": "Schild, Langsam, Magnet, Regenbogen und Geistermodus. Stelle dich herausfordernden Boss-Ringen, während das Tempo anzieht.",
         "f5t": "Flüssige Performance",
         "f5d": "Gebaut mit React + Capacitor für butterweiche 60fps auf modernen Android-Geräten. Kurze Runden, perfekt für zwischendurch.",
-        "f6t": "Eigene Musik",
-        "f6d": "Energiegeladener Soundtrack aus eigener Produktion, perfekt passend zum rasanten Gameplay in einer farbenfrohen Zirkuswelt."
+        "f6t": "Eigener Soundtrack",
+        "f6d": "Ein instrumentaler Soundtrack im Zirkus-Thema, eigens für das Spiel komponiert — ohne Gesang, gemacht für die Manege statt für die Playlist."
     },
     en: {
         "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
@@ -286,6 +423,7 @@ const pageTrans = {
         "status": "Available Now",
         "f2p": "Free to Play",
         "badge.ages": "All Ages",
+        "shots": "Screenshots",
         "cta": "▶ Get it on Google Play",
         "f1t": "One-Tap Controls",
         "f1d": "Simple tap to jump through fire rings. Aim for the center, build combos, and watch your score soar. Four difficulty levels from beginner to expert.",
@@ -297,8 +435,8 @@ const pageTrans = {
         "f4d": "Shield, slow, magnet, rainbow rush, and ghost mode. Take on challenging boss rings as the action speeds up.",
         "f5t": "Smooth Performance",
         "f5d": "Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.",
-        "f6t": "Original Music",
-        "f6d": "Energetic soundtrack produced in-house, perfectly matching the high-octane gameplay in a colorful circus world."
+        "f6t": "Original Soundtrack",
+        "f6d": "An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist."
     }
 };
 let currentLang = 'en';
@@ -333,7 +471,43 @@ if (navToggle) {
     navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 }
+
+// Screenshot-Lightbox
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightboxImg');
+function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    lb.classList.remove('open');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+}
+document.querySelectorAll('.shot').forEach(el => {
+    el.addEventListener('click', () => {
+        const img = el.querySelector('img');
+        if (img) openLightbox(img.src, img.alt);
+    });
+});
+if (lb) lb.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+});
+
+// Wer reduzierte Bewegung bevorzugt, bekommt kein Autoplay
+const vid = document.getElementById('gameplayVideo');
+if (vid && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    vid.removeAttribute('autoplay');
+    vid.pause();
+    vid.setAttribute('controls', '');
+}
+
 document.addEventListener('DOMContentLoaded', initLang);
 </script>
+<script data-goatcounter="https://veriatax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
