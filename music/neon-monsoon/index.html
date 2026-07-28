@@ -16,6 +16,34 @@
     <meta name="theme-color" content="#06080f">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicRecording",
+  "name": "Neon Monsoon",
+  "url": "https://veriatax.com/music/neon-monsoon/",
+  "image": "https://veriatax.com/images/neon-monsoon.jpg",
+  "genre": "Synthwave / Dark EDM",
+  "description": "Monsoon rain hammering the avenue, lightning tearing across the sky, motorbikes moving in silver streams. The storm doesn't scatter anyone here — it pulls them together into one bright typhoon.",
+  "inLanguage": "en",
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Veriatax Interactive",
+    "url": "https://veriatax.com/",
+    "sameAs": [
+      "https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT",
+      "https://music.apple.com/de/artist/veriatax-interactive/1875692825",
+      "https://music.amazon.de/artists/B0GMD7WFGG",
+      "https://www.instagram.com/veriataxinteractive/",
+      "https://youtube.com/@veriataxinteractive"
+    ]
+  },
+  "sameAs": [
+    "https://open.spotify.com/track/6Ro5RZsmvYuEYaQwvJ22Ke",
+    "https://music.apple.com/de/song/neon-monsoon/1876280134"
+  ]
+}
+    </script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -83,6 +111,21 @@
             box-shadow: 0 8px 30px rgba(250,35,59,0.3); text-decoration: none;
         }
 
+        .btn-presave {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 13px 28px; color: #0a0a0a;
+            background: linear-gradient(135deg, #f0a030, #ff6a00, #ff3090);
+            font-family: 'Exo 2', sans-serif; font-size: 14px; font-weight: 700;
+            border-radius: 10px; text-decoration: none; transition: all 0.3s ease;
+        }
+        .btn-presave:hover {
+            transform: translateY(-2px); box-shadow: 0 8px 30px rgba(240,160,48,0.32);
+            text-decoration: none;
+        }
+        .presave-note {
+            font-size: 12px; color: var(--text-muted); margin-top: 12px; max-width: 380px;
+        }
+
         .coming-badge {
             display: inline-block; padding: 8px 20px; border-radius: 8px;
             background: rgba(240,160,48,0.1); border: 1px solid rgba(240,160,48,0.2);
@@ -115,7 +158,8 @@
             .track-layout { flex-direction: column; align-items: center; text-align: center; }
             .track-cover { width: 220px; height: 220px; }
             .listen-buttons { justify-content: center; }
-            .btn-spotify, .btn-apple { width: 100%; justify-content: center; }
+            .btn-spotify, .btn-apple, .btn-presave { width: 100%; justify-content: center; }
+            .presave-note { margin-left: auto; margin-right: auto; }
         }
 
         /* Navbar - matches main page */
@@ -281,7 +325,9 @@ const pageTrans = {
         "release": "Released: 2026 · Veriatax Interactive",
         "more": "More from Veriatax Interactive",
         "play": "Play on Spotify",
-        "apple": "Listen on Apple Music"
+        "apple": "Listen on Apple Music",
+        "presave": "Pre-Save on Spotify",
+        "presave.note": "Pre-save now and the track lands in your library the moment it drops."
     }
 };
 let currentLang = 'en';
@@ -318,5 +364,7 @@ if (navToggle) {
 }
 document.addEventListener('DOMContentLoaded', initLang);
 </script>
+<script data-goatcounter="https://veriatax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
