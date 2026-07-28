@@ -109,7 +109,7 @@
             border: 1px solid rgba(255,255,255,0.08);
             box-shadow: 0 22px 60px rgba(0,0,0,0.55), 0 0 70px rgba(240,160,48,0.09);
         }
-        .phone-frame video { width: 100%; height: auto; display: block; }
+        .phone-frame video { width: 100%; height: auto; display: block; aspect-ratio: 540 / 960; }
 
         /* Screenshot-Galerie */
         .shots { margin-top: 8px; }
@@ -316,6 +316,7 @@
 
         <div class="phone-frame">
             <video id="gameplayVideo" autoplay loop muted playsinline preload="metadata"
+                   width="540" height="960"
                    poster="../../videos/fll-poster.jpg" aria-label="Flame Leap Lion gameplay">
                 <source src="../../videos/fll-gameplay.mp4" type="video/mp4">
             </video>
@@ -499,10 +500,19 @@ document.addEventListener('keydown', e => {
 
 // Wer reduzierte Bewegung bevorzugt, bekommt kein Autoplay
 const vid = document.getElementById('gameplayVideo');
-if (vid && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    vid.removeAttribute('autoplay');
-    vid.pause();
-    vid.setAttribute('controls', '');
+if (vid) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        vid.removeAttribute('autoplay');
+        vid.pause();
+        vid.setAttribute('controls', '');
+    }
+    // Lässt sich das Video nicht laden, Rahmen ausblenden statt leeren Kasten zeigen
+    vid.addEventListener('error', hideFrame, true);
+    vid.querySelectorAll('source').forEach(s => s.addEventListener('error', hideFrame));
+    function hideFrame() {
+        const frame = vid.closest('.phone-frame');
+        if (frame) frame.style.display = 'none';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', initLang);
