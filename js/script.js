@@ -73,7 +73,13 @@ function animateStats() {
             if (entry.isIntersecting) {
                 const el = entry.target;
                 const target = parseInt(el.dataset.target);
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    el.textContent = target;
+                    observer.unobserve(el);
+                    return;
+                }
                 let current = 0;
+                el.textContent = '0';
                 const increment = Math.max(1, target / 30);
                 const timer = setInterval(() => {
                     current += increment;
