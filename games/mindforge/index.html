@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindForge – Veriatax Interactive</title>
+    <title>MindForge – Sudoku, Crossmath & Crossword for Android</title>
     <meta name="description" content="MindForge — three puzzle types in one Android app: Sudoku, Crossmath and Crossword. With a daily challenge, achievements and Google Play leaderboards.">
 
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
@@ -176,6 +176,31 @@
             color: #0a0a0a; transition: all 0.3s ease; text-decoration: none;
         }
         .play-btn:hover { box-shadow: 0 0 30px rgba(240,160,48,0.3); transform: translateY(-2px); }
+
+
+        /* Abschluss-Aufruf unter den Feature-Karten */
+        .cta-end {
+            margin-top: 56px; padding-top: 40px; text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .cta-end p {
+            font-size: 15px; color: var(--text-dim); margin-bottom: 20px;
+        }
+        .cta-end .play-btn { justify-content: center; }
+        .cta-alt {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 28px; border-radius: 10px;
+            background: var(--glass); border: 1px solid var(--border);
+            color: var(--text-dim); font-size: 14px; font-weight: 600;
+            text-decoration: none; transition: all 0.3s ease;
+        }
+        .cta-alt:hover {
+            color: #f0a030; border-color: rgba(240,160,48,0.25);
+            transform: translateY(-2px); text-decoration: none;
+        }
+        @media (max-width: 640px) {
+            .cta-end .play-btn, .cta-alt { width: 100%; }
+        }
 
         .features {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
@@ -373,6 +398,13 @@
             <p data-i18n="f7d">The whole app runs in either language — menus, clues and puzzle names included. Crossmath is called Mathe-Rätsel on the German side.</p>
         </div>
     </div>
+
+    <div class="cta-end">
+        <p data-i18n="end.line">MindForge is still in development. In the meantime, our arcade game is out now:</p>
+        <a href="../flame-leap-lion/" class="cta-alt">
+            <span data-i18n="end.cta">🦁 Play Flame Leap Lion →</span>
+        </a>
+    </div>
 </div>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot">
@@ -430,7 +462,9 @@ const pageTrans = {
         "f6t": "Münzen & Hinweise",
         "f6d": "Münzen aus Erfolgen sammeln und in Hinweise investieren, wenn ein Rätsel partout nicht aufgehen will.",
         "f7t": "Deutsch & Englisch",
-        "f7d": "Die komplette App läuft in beiden Sprachen — Menüs, Hinweise und Rätselnamen inklusive."
+        "f7d": "Die komplette App läuft in beiden Sprachen — Menüs, Hinweise und Rätselnamen inklusive.",
+        "end.line": "MindForge ist noch in Entwicklung. Bis dahin — unser Arcade-Spiel ist bereits da:",
+        "end.cta": "\ud83e\udd81 Flame Leap Lion spielen →"
     },
     en: {
         "nav.home": "Home",
@@ -459,7 +493,9 @@ const pageTrans = {
         "f6t": "Coins & Hints",
         "f6d": "Earn coins from achievements and spend them on hints when a puzzle refuses to budge.",
         "f7t": "German & English",
-        "f7d": "The whole app runs in either language — menus, clues and puzzle names included. Crossmath is called Mathe-Rätsel on the German side."
+        "f7d": "The whole app runs in either language — menus, clues and puzzle names included. Crossmath is called Mathe-Rätsel on the German side.",
+        "end.line": "MindForge is still in development. In the meantime, our arcade game is out now:",
+        "end.cta": "\ud83e\udd81 Play Flame Leap Lion →"
     }
 };
 let currentLang = 'en';
