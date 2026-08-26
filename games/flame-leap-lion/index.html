@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flame Leap Lion: Circus Run – Veriatax Interactive</title>
+    <title>Flame Leap Lion: Circus Run – Free One-Tap Arcade Game</title>
     <meta name="description" content="Tap to make your circus lion leap through blazing fire rings. Free one-tap arcade game for Android with five characters, global leaderboards, power-ups and boss rings.">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
@@ -186,6 +186,31 @@
             color: var(--bg); transition: all 0.3s ease;
         }
         .play-btn:hover { box-shadow: 0 0 30px rgba(240,160,48,0.3); transform: translateY(-2px); }
+
+
+        /* Abschluss-Aufruf unter den Feature-Karten */
+        .cta-end {
+            margin-top: 56px; padding-top: 40px; text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .cta-end p {
+            font-size: 15px; color: var(--text-dim); margin-bottom: 20px;
+        }
+        .cta-end .play-btn { justify-content: center; }
+        .cta-alt {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 28px; border-radius: 10px;
+            background: var(--glass); border: 1px solid var(--border);
+            color: var(--text-dim); font-size: 14px; font-weight: 600;
+            text-decoration: none; transition: all 0.3s ease;
+        }
+        .cta-alt:hover {
+            color: #f0a030; border-color: rgba(240,160,48,0.25);
+            transform: translateY(-2px); text-decoration: none;
+        }
+        @media (max-width: 640px) {
+            .cta-end .play-btn, .cta-alt { width: 100%; }
+        }
 
         .features {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
@@ -375,6 +400,13 @@
             <p data-i18n="f6d">An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist.</p>
         </div>
     </div>
+
+    <div class="cta-end">
+        <p data-i18n="end.line">Free to play, no account required — just tap and leap.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.veriatax.flameleaplion" class="play-btn" target="_blank" rel="noopener">
+            <span data-i18n="cta">▶ Get it on Google Play</span>
+        </a>
+    </div>
 </div>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot">
@@ -424,7 +456,8 @@ const pageTrans = {
         "f5t": "Flüssige Performance",
         "f5d": "Gebaut mit React + Capacitor für butterweiche 60fps auf modernen Android-Geräten. Kurze Runden, perfekt für zwischendurch.",
         "f6t": "Eigener Soundtrack",
-        "f6d": "Ein instrumentaler Soundtrack im Zirkus-Thema, eigens für das Spiel komponiert — ohne Gesang, gemacht für die Manege statt für die Playlist."
+        "f6d": "Ein instrumentaler Soundtrack im Zirkus-Thema, eigens für das Spiel komponiert — ohne Gesang, gemacht für die Manege statt für die Playlist.",
+        "end.line": "Kostenlos spielbar, kein Konto nötig — einfach tippen und springen."
     },
     en: {
         "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
@@ -446,7 +479,8 @@ const pageTrans = {
         "f5t": "Smooth Performance",
         "f5d": "Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.",
         "f6t": "Original Soundtrack",
-        "f6d": "An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist."
+        "f6d": "An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist.",
+        "end.line": "Free to play, no account required — just tap and leap."
     }
 };
 let currentLang = 'en';
