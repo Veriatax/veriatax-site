@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindForge – Veriatax Interactive</title>
-    <meta name="description" content="MindForge — a puzzle and logic game for Android. Sudoku variants, word puzzles, and brain challenges. Bilingual DE/EN.">
+    <meta name="description" content="MindForge — three puzzle types in one Android app: Sudoku, Crossmath and Crossword. With a daily challenge, achievements and Google Play leaderboards.">
 
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MindForge – Veriatax Interactive">
-    <meta property="og:description" content="Puzzle & Logic Game — train your brain with Sudoku, word puzzles, and logic challenges.">
-    <meta property="og:image" content="https://veriatax.com/images/hero-banner.jpg">
+    <meta property="og:title" content="MindForge – Sudoku, Crossmath & Crossword">
+    <meta property="og:description" content="Three puzzle types in one app — Sudoku, Crossmath and Crossword — with a daily challenge, achievements and leaderboards.">
+    <meta property="og:image" content="https://veriatax.com/images/mf/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://veriatax.com/games/mindforge/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#070a12">
@@ -26,11 +28,12 @@
   "@type": "VideoGame",
   "name": "MindForge",
   "url": "https://veriatax.com/games/mindforge/",
-  "image": "https://veriatax.com/images/hero-banner.jpg",
-  "description": "Puzzle and logic game with Sudoku variants, word puzzles and logic challenges. Bilingual German and English.",
+  "image": "https://veriatax.com/images/mf/og-card.jpg",
+  "description": "Three puzzle types in one Android app: Sudoku, Crossmath and Crossword. Daily challenge, achievements and Google Play leaderboards.",
   "applicationCategory": "GameApplication",
   "genre": [
     "Puzzle",
+    "Word",
     "Educational"
   ],
   "operatingSystem": "Android",
@@ -43,7 +46,15 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "EUR"
-  }
+  },
+  "screenshot": [
+    "https://veriatax.com/images/mf/shot-1-menu.jpg",
+    "https://veriatax.com/images/mf/shot-2-sudoku.jpg",
+    "https://veriatax.com/images/mf/shot-3-crossmath.jpg",
+    "https://veriatax.com/images/mf/shot-4-crossword.jpg",
+    "https://veriatax.com/images/mf/shot-5-achievements.jpg",
+    "https://veriatax.com/images/mf/shot-6-leaderboard.jpg"
+  ]
 }
     </script>
     <style>
@@ -76,30 +87,87 @@
         
         
 
-        .page { max-width: 900px; margin: 0 auto; padding: 48px 24px 60px; }
+        .page { max-width: 980px; margin: 0 auto; padding: 60px 24px 100px; }
 
-        .game-hero { text-align: center; margin-bottom: 60px; }
-        .game-emoji { font-size: 72px; margin-bottom: 20px; display: block; }
+        .game-hero {
+            display: grid; grid-template-columns: 1fr 270px;
+            gap: 48px; align-items: center; margin-bottom: 64px;
+        }
         .game-hero h1 {
             font-family: 'Rajdhani', sans-serif; font-size: clamp(36px,5vw,52px);
-            font-weight: 700; margin-bottom: 8px; line-height: 1.1;
+            font-weight: 800; margin-bottom: 8px; line-height: 1.1;
         }
         .game-hero .genre {
             font-size: 16px; color: var(--accent-cyan); font-weight: 400;
             letter-spacing: 1px; margin-bottom: 16px;
         }
         .game-hero .desc {
-            font-size: 16px; color: var(--text-dim); max-width: 560px;
-            margin: 0 auto 28px; line-height: 1.7;
+            font-size: 16px; color: var(--text-dim);
+            margin: 0 0 28px; line-height: 1.7;
         }
 
-        .badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+        .phone-frame {
+            border-radius: 20px; overflow: hidden; line-height: 0; background: #05070d;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 22px 60px rgba(0,0,0,0.55), 0 0 70px rgba(0,212,255,0.07);
+        }
+        .phone-frame img { width: 100%; height: auto; display: block; }
+
+        .shots { margin-top: 8px; }
+        .shots h3 {
+            font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 600;
+            color: var(--text-dim); margin-bottom: 16px;
+        }
+        .shots-scroll {
+            display: flex; gap: 14px; overflow-x: auto; padding-bottom: 14px;
+            scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+        }
+        .shots-scroll::-webkit-scrollbar { height: 6px; }
+        .shots-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 3px; }
+        .shots-scroll::-webkit-scrollbar-thumb { background: rgba(240,160,48,0.25); border-radius: 3px; }
+        .shots-scroll::-webkit-scrollbar-thumb:hover { background: rgba(240,160,48,0.4); }
+        .shot {
+            flex: 0 0 auto; width: 176px; scroll-snap-align: start;
+            border-radius: 12px; overflow: hidden; cursor: zoom-in;
+            border: 1px solid var(--border); background: #05070d;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .shot:hover { transform: translateY(-3px); border-color: rgba(240,160,48,0.22); }
+        .shot img { width: 100%; height: auto; display: block; }
+
+        .lightbox {
+            position: fixed; inset: 0; z-index: 1000;
+            background: rgba(4,6,12,0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            display: none; align-items: center; justify-content: center;
+            padding: 40px 20px; cursor: zoom-out;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: min(360px, 88vw); max-height: 88vh; width: auto; height: auto;
+            border-radius: 14px; border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.6);
+        }
+        .lightbox-close {
+            position: absolute; top: 16px; right: 20px;
+            background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+            color: var(--text); font-size: 22px; line-height: 1;
+            width: 40px; height: 40px; border-radius: 10px; cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .lightbox-close:hover { color: #f0a030; border-color: rgba(240,160,48,0.3); }
+
+        .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
         .badge {
             font-size: 12px; padding: 5px 14px; border-radius: 20px;
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
             color: var(--text-muted);
         }
         .badge.dev { background: rgba(240,160,48,0.1); border-color: rgba(240,160,48,0.2); color: #f0a030; }
+
+        .subtitle {
+            font-family: 'Rajdhani', sans-serif; font-size: clamp(18px,2.5vw,24px);
+            font-weight: 400; color: var(--text-dim); margin-top: -4px; margin-bottom: 8px;
+        }
 
         .play-btn {
             display: inline-flex; align-items: center; gap: 10px;
@@ -125,9 +193,19 @@
         }
         .feature p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
+        @media (max-width: 760px) {
+            .game-hero {
+                grid-template-columns: 1fr; gap: 32px;
+                text-align: center; margin-bottom: 48px;
+            }
+            .game-hero .desc { max-width: 560px; margin: 0 auto 28px; }
+            .badge-row { justify-content: center; }
+            .phone-frame { max-width: 260px; margin: 0 auto; }
+            .shot { width: 152px; }
+        }
+
         @media (max-width: 640px) {
-            .page { padding: 32px 16px 40px; }
-            .game-emoji { font-size: 56px; }
+            .page { padding: 40px 16px 70px; }
             .game-hero .desc { font-size: 14px; }
             .features { grid-template-columns: 1fr; }
         }
@@ -218,55 +296,88 @@
 
 <div class="page">
     <div class="game-hero">
-        <span class="game-emoji">🧠</span>
-        <h1>MindForge</h1>
-        <p class="genre" data-i18n="genre">Puzzle & Logic Game</p>
-        <p class="desc" data-i18n="desc">Train your brain with Sudoku variants, word puzzles, and logic challenges. Bilingual DE/EN with expanding content. Track your progress and sharpen your mind.</p>
+        <div class="hero-text">
+            <h1>MindForge</h1>
+            <p class="subtitle" data-i18n="tagline">Train Your Brain</p>
+            <p class="genre" data-i18n="genre">Puzzle Collection — Sudoku, Crossmath & Crossword</p>
+            <p class="desc" data-i18n="desc">Three puzzle types in one app, each with its own level progression and three difficulty settings. Plus a daily challenge, achievements and Google Play leaderboards.</p>
 
-        <div class="badge-row">
-            <span class="badge dev" data-i18n="status">In Development</span>
-            <span class="badge">Android</span>
-            <span class="badge" data-i18n="f2p">Free to Play</span>
-            <span class="badge" data-i18n="bilingual">Bilingual DE/EN</span>
+            <div class="badge-row">
+                <span class="badge dev" data-i18n="status">In Development</span>
+                <span class="badge">Android</span>
+                <span class="badge" data-i18n="f2p">Free to Play</span>
+                <span class="badge" data-i18n="badge.modes">3 Puzzle Modes</span>
+                <span class="badge" data-i18n="badge.lang">German &amp; English</span>
+            </div>
+
+            <span class="play-btn" style="opacity:0.7;cursor:default">
+                <span data-i18n="cta">Coming Soon on Google Play</span>
+            </span>
         </div>
 
-        <span class="play-btn" style="opacity:0.7;cursor:default">
-            <span data-i18n="cta">Coming Soon on Google Play</span>
-        </span>
+        <div class="phone-frame">
+            <img id="heroShot" src="../../images/mf/shot-1-menu.jpg"
+                 data-src-en="../../images/mf/shot-1-menu.jpg"
+                 data-src-de="../../images/mf/shot-1-menu-de.jpg"
+                 alt="MindForge main menu with Sudoku, Crossmath and Crossword"
+                 width="540" height="1181">
+        </div>
+    </div>
+
+    <div class="shots">
+        <h3 data-i18n="shots">Screenshots</h3>
+        <div class="shots-scroll">
+            <div class="shot"><img src="../../images/mf/shot-2-sudoku.jpg" alt="Sudoku grid on medium difficulty with notes and undo" width="540" height="1181" loading="lazy"></div>
+            <div class="shot"><img src="../../images/mf/shot-3-crossmath.jpg" alt="Crossmath grid with numbers and operators" width="540" height="1181" loading="lazy"></div>
+            <div class="shot"><img src="../../images/mf/shot-4-crossword.jpg" alt="Crossword grid with in-cell clues and letter keyboard" width="540" height="1181" loading="lazy"></div>
+            <div class="shot"><img src="../../images/mf/shot-1-menu.jpg" alt="MindForge main menu" width="540" height="1181" loading="lazy"></div>
+            <div class="shot"><img src="../../images/mf/shot-5-achievements.jpg" alt="Achievements list with coin rewards" width="540" height="1181" loading="lazy"></div>
+            <div class="shot"><img src="../../images/mf/shot-6-leaderboard.jpg" alt="Leaderboards connected to Google Play Games" width="540" height="1181" loading="lazy"></div>
+        </div>
     </div>
 
     <div class="features">
         <div class="feature">
             <div class="feature-icon">🔢</div>
-            <h3 data-i18n="f1t">Sudoku Variants</h3>
-            <p data-i18n="f1d">Classic Sudoku plus creative twists and new rule sets that challenge even experienced puzzle solvers.</p>
+            <h3 data-i18n="f1t">Sudoku</h3>
+            <p data-i18n="f1d">Classic 9×9 grids with a notes mode, undo and redo. Three lives per round — every mistake counts.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">➕</div>
+            <h3 data-i18n="f2t">Crossmath</h3>
+            <p data-i18n="f2d">Arithmetic instead of letters: place numbers and operators so every row and column adds up.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">📝</div>
-            <h3 data-i18n="f2t">Word Puzzles</h3>
-            <p data-i18n="f2d">Expand your vocabulary with word challenges in both German and English. Find hidden words and solve anagrams.</p>
+            <h3 data-i18n="f3t">Crossword</h3>
+            <p data-i18n="f3d">Clues sit directly in the grid, with an on-screen keyboard built for one-handed solving.</p>
         </div>
         <div class="feature">
-            <div class="feature-icon">⚡</div>
-            <h3 data-i18n="f3t">Logic Challenges</h3>
-            <p data-i18n="f3d">Pattern recognition, sequence puzzles, and deduction tasks that train your analytical thinking.</p>
+            <div class="feature-icon">📅</div>
+            <h3 data-i18n="f4t">Daily Challenge</h3>
+            <p data-i18n="f4d">One new puzzle every day — the same one for everyone, with its own leaderboard and streak counter.</p>
         </div>
         <div class="feature">
-            <div class="feature-icon">📊</div>
-            <h3 data-i18n="f4t">Score Breakdown</h3>
-            <p data-i18n="f4d">Detailed performance stats after each session. See your accuracy, speed, and improvement over time.</p>
+            <div class="feature-icon">🏆</div>
+            <h3 data-i18n="f5t">Leaderboards & Achievements</h3>
+            <p data-i18n="f5d">Google Play Games integration: puzzles solved, hardcore ranking, daily streak and best times per mode.</p>
         </div>
         <div class="feature">
-            <div class="feature-icon">🎓</div>
-            <h3 data-i18n="f5t">Built-in Tutorials</h3>
-            <p data-i18n="f5d">Interactive guides that teach you each puzzle type step by step. Perfect for beginners and advanced players.</p>
+            <div class="feature-icon">🪙</div>
+            <h3 data-i18n="f6t">Coins & Hints</h3>
+            <p data-i18n="f6d">Earn coins from achievements and spend them on hints when a puzzle refuses to budge.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🌍</div>
-            <h3 data-i18n="f6t">Bilingual Content</h3>
-            <p data-i18n="f6d">Full German and English support with growing word databases in both languages.</p>
+            <h3 data-i18n="f7t">German &amp; English</h3>
+            <p data-i18n="f7d">The whole app runs in either language — menus, clues and puzzle names included. Crossmath is called Mathe-Rätsel on the German side.</p>
         </div>
     </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="">
 </div>
 
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
@@ -293,48 +404,62 @@
 <script>
 const pageTrans = {
     de: {
-        "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns",
-        "back": "← Alle Spiele",
-        "genre": "Puzzle- & Logikspiel",
-        "desc": "Trainiere dein Gehirn mit Sudoku-Varianten, Worträtseln und Logik-Herausforderungen. Zweisprachig DE/EN mit wachsendem Inhalt. Verfolge deinen Fortschritt und schärfe deinen Verstand.",
+        "nav.home": "Startseite",
+        "nav.games": "Spiele",
+        "nav.music": "Musik",
+        "nav.about": "Über uns",
+        "tagline": "Trainiere Dein Gehirn",
+        "genre": "Rätselsammlung — Sudoku, Mathe-Rätsel & Kreuzworträtsel",
+        "desc": "Drei Rätselarten in einer App, jede mit eigener Levelfolge und drei Schwierigkeitsgraden. Dazu eine tägliche Herausforderung, Erfolge und Google-Play-Bestenlisten.",
         "status": "In Entwicklung",
         "f2p": "Free to Play",
-        "bilingual": "Zweisprachig DE/EN",
+        "badge.modes": "3 Rätselarten",
+        "badge.lang": "Deutsch & Englisch",
         "cta": "Demnächst auf Google Play",
-        "f1t": "Sudoku-Varianten",
-        "f1d": "Klassisches Sudoku plus kreative Abwandlungen und neue Regelsätze, die selbst erfahrene Rätsel-Fans herausfordern.",
-        "f2t": "Worträtsel",
-        "f2d": "Erweitere deinen Wortschatz mit Wort-Herausforderungen auf Deutsch und Englisch. Finde versteckte Wörter und löse Anagramme.",
-        "f3t": "Logik-Aufgaben",
-        "f3d": "Mustererkennung, Sequenz-Rätsel und Deduktionsaufgaben, die dein analytisches Denken trainieren.",
-        "f4t": "Score-Aufschlüsselung",
-        "f4d": "Detaillierte Leistungsstatistiken nach jeder Runde. Sieh deine Genauigkeit, Geschwindigkeit und Verbesserung über die Zeit.",
-        "f5t": "Integrierte Tutorials",
-        "f5d": "Interaktive Anleitungen, die dir jeden Rätseltyp Schritt für Schritt beibringen. Perfekt für Anfänger und Fortgeschrittene.",
-        "f6t": "Zweisprachiger Inhalt",
-        "f6d": "Volle Unterstützung für Deutsch und Englisch mit wachsenden Wortdatenbanken in beiden Sprachen."
+        "shots": "Bildschirmfotos",
+        "f1t": "Sudoku",
+        "f1d": "Klassische 9×9-Gitter mit Notizmodus, Undo und Redo. Drei Leben pro Runde — jeder Fehler zählt.",
+        "f2t": "Mathe-Rätsel",
+        "f2d": "Rechnen statt Buchstaben: Zahlen und Operatoren so setzen, dass jede Zeile und Spalte aufgeht.",
+        "f3t": "Kreuzworträtsel",
+        "f3d": "Die Hinweise stehen direkt im Gitter, dazu eine Bildschirmtastatur fürs Lösen mit einer Hand.",
+        "f4t": "Tägliche Herausforderung",
+        "f4d": "Jeden Tag ein neues Rätsel — für alle dasselbe, mit eigener Bestenliste und Tagesserie.",
+        "f5t": "Bestenlisten & Erfolge",
+        "f5d": "Google Play Games ist angebunden: gelöste Rätsel, Hartgesotten-Wertung, Tagesserie und Bestzeiten pro Modus.",
+        "f6t": "Münzen & Hinweise",
+        "f6d": "Münzen aus Erfolgen sammeln und in Hinweise investieren, wenn ein Rätsel partout nicht aufgehen will.",
+        "f7t": "Deutsch & Englisch",
+        "f7d": "Die komplette App läuft in beiden Sprachen — Menüs, Hinweise und Rätselnamen inklusive."
     },
     en: {
-        "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
-        "back": "← All Games",
-        "genre": "Puzzle & Logic Game",
-        "desc": "Train your brain with Sudoku variants, word puzzles, and logic challenges. Bilingual DE/EN with expanding content. Track your progress and sharpen your mind.",
+        "nav.home": "Home",
+        "nav.games": "Games",
+        "nav.music": "Music",
+        "nav.about": "About",
+        "tagline": "Train Your Brain",
+        "genre": "Puzzle Collection — Sudoku, Crossmath & Crossword",
+        "desc": "Three puzzle types in one app, each with its own level progression and three difficulty settings. Plus a daily challenge, achievements and Google Play leaderboards.",
         "status": "In Development",
         "f2p": "Free to Play",
-        "bilingual": "Bilingual DE/EN",
+        "badge.modes": "3 Puzzle Modes",
+        "badge.lang": "German & English",
         "cta": "Coming Soon on Google Play",
-        "f1t": "Sudoku Variants",
-        "f1d": "Classic Sudoku plus creative twists and new rule sets that challenge even experienced puzzle solvers.",
-        "f2t": "Word Puzzles",
-        "f2d": "Expand your vocabulary with word challenges in both German and English. Find hidden words and solve anagrams.",
-        "f3t": "Logic Challenges",
-        "f3d": "Pattern recognition, sequence puzzles, and deduction tasks that train your analytical thinking.",
-        "f4t": "Score Breakdown",
-        "f4d": "Detailed performance stats after each session. See your accuracy, speed, and improvement over time.",
-        "f5t": "Built-in Tutorials",
-        "f5d": "Interactive guides that teach you each puzzle type step by step. Perfect for beginners and advanced players.",
-        "f6t": "Bilingual Content",
-        "f6d": "Full German and English support with growing word databases in both languages."
+        "shots": "Screenshots",
+        "f1t": "Sudoku",
+        "f1d": "Classic 9×9 grids with a notes mode, undo and redo. Three lives per round — every mistake counts.",
+        "f2t": "Crossmath",
+        "f2d": "Arithmetic instead of letters: place numbers and operators so every row and column adds up.",
+        "f3t": "Crossword",
+        "f3d": "Clues sit directly in the grid, with an on-screen keyboard built for one-handed solving.",
+        "f4t": "Daily Challenge",
+        "f4d": "One new puzzle every day — the same one for everyone, with its own leaderboard and streak counter.",
+        "f5t": "Leaderboards & Achievements",
+        "f5d": "Google Play Games integration: puzzles solved, hardcore ranking, daily streak and best times per mode.",
+        "f6t": "Coins & Hints",
+        "f6d": "Earn coins from achievements and spend them on hints when a puzzle refuses to budge.",
+        "f7t": "German & English",
+        "f7d": "The whole app runs in either language — menus, clues and puzzle names included. Crossmath is called Mathe-Rätsel on the German side."
     }
 };
 let currentLang = 'en';
@@ -357,6 +482,11 @@ function applyLang(lang) {
         const k = el.getAttribute('data-i18n');
         if (d[k]) el.textContent = d[k];
     });
+    const hs = document.getElementById('heroShot');
+    if (hs) {
+        const s = hs.getAttribute('data-src-' + lang);
+        if (s) hs.src = s;
+    }
     const btn = document.getElementById('langToggle');
     if (btn) { btn.textContent = lang === 'en' ? 'DE' : 'EN'; }
     document.documentElement.lang = lang;
@@ -369,6 +499,28 @@ if (navToggle) {
     navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 }
+
+// Screenshot-Lightbox
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightboxImg');
+function openLightbox(src, alt) {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    lb.classList.remove('open'); lbImg.src = ''; document.body.style.overflow = '';
+}
+document.querySelectorAll('.shot').forEach(el => {
+    el.addEventListener('click', () => {
+        const img = el.querySelector('img');
+        if (img) openLightbox(img.src, img.alt);
+    });
+});
+if (lb) lb.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+});
+
 document.addEventListener('DOMContentLoaded', initLang);
 </script>
 <script data-goatcounter="https://veriatax.goatcounter.com/count"
