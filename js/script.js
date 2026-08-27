@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 /* ============================================
    VERIATAX INTERACTIVE — Scripts
    ============================================ */
@@ -26,11 +28,12 @@ const navLinks = document.getElementById('navLinks');
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
     });
     navLinks.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
+            navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
         });
     });
 }
