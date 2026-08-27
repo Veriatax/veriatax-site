@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control the Night – Dark Synthwave | Veriatax</title>
-    <meta name="description" content="Midnight calling, engine low, no destination — just the road. Not a track about chasing the night but owning it: every move calculated, no second gues">
+    <meta name="description" content="Midnight calling, engine low, no destination — just the road. Not a track about chasing the night but owning it: every move calculated, no second guess, nothing left to prove.">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <meta property="og:type" content="music.song">
     <meta property="og:title" content="Control the Night – Veriatax Interactive">
-    <meta property="og:description" content="Midnight calling, engine low, no destination — just the road. Not a track about chasing the night but owning it: every move calculated, no second gues">
+    <meta property="og:description" content="Midnight calling, engine low, no destination — just the road. Not a track about chasing the night but owning it: every move calculated, no second guess, nothing left to prove.">
     <meta property="og:image" content="https://veriatax.com/images/control-the-night.jpg">
     <meta property="og:url" content="https://veriatax.com/music/control-the-night/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#06080f">
+    <link rel="canonical" href="https://veriatax.com/music/control-the-night/">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
@@ -41,7 +42,8 @@
   "sameAs": [
     "https://open.spotify.com/track/4Bgt8RmLC0arDYwUWYGcYZ",
     "https://music.apple.com/de/song/control-the-night/1892844954"
-  ]
+  ],
+  "datePublished": "2026"
 }
     </script>
     <style>
@@ -235,7 +237,7 @@
             <a href="../../#about" class="nav-link" data-i18n="nav.about">About</a>
             <button class="lang-toggle" id="langToggle" onclick="toggleLang()" title="Sprache / Language">DE</button>
         </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -362,8 +364,14 @@ function applyLang(lang) {
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 if (navToggle) {
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+    navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }));
 }
 document.addEventListener('DOMContentLoaded', initLang);
 </script>
