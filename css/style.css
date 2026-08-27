@@ -62,17 +62,19 @@ a {
 
 /* --- Loading Screen --- */
 .loading-screen {
+    display: none;          /* ohne JS niemals sichtbar */
     position: fixed;
     inset: 0;
     z-index: 9999;
     background: var(--bg-deep);
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 24px;
     transition: opacity 0.6s ease, visibility 0.6s ease;
 }
+
+.js .loading-screen { display: flex; }
 
 .loading-screen.hidden {
     opacity: 0;
@@ -1408,4 +1410,25 @@ a.music-card-compact {
     .btn { width: 100%; justify-content: center; }
     .music-card-featured { flex-direction: column; text-align: center; }
     .music-cover, .music-cover img { width: 140px; height: 140px; min-width: 140px; }
+}
+
+
+/* Wer im System "Bewegung reduzieren" aktiviert hat, bekommt die Seite ruhig */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .loader-ring,
+    .ambient .orb,
+    .bg-shapes .shape,
+    .stack-track {
+        animation: none !important;
+    }
 }
