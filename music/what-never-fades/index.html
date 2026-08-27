@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What Never Fades – Cinematic Chill | Veriatax</title>
-    <meta name="description" content="A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay — beca">
+    <meta name="description" content="A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay — because freedom isn't losing everything, it's knowing what to save.">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <meta property="og:type" content="music.song">
     <meta property="og:title" content="What Never Fades – Veriatax Interactive">
-    <meta property="og:description" content="A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay — beca">
+    <meta property="og:description" content="A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay — because freedom isn't losing everything, it's knowing what to save.">
     <meta property="og:image" content="https://veriatax.com/images/what-never-fades.jpg">
     <meta property="og:url" content="https://veriatax.com/music/what-never-fades/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#06080f">
+    <link rel="canonical" href="https://veriatax.com/music/what-never-fades/">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
@@ -232,7 +233,7 @@
             <a href="../../#about" class="nav-link" data-i18n="nav.about">About</a>
             <button class="lang-toggle" id="langToggle" onclick="toggleLang()" title="Sprache / Language">DE</button>
         </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -355,8 +356,14 @@ function applyLang(lang) {
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 if (navToggle) {
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+    navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }));
 }
 document.addEventListener('DOMContentLoaded', initLang);
 </script>
