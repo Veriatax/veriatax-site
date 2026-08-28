@@ -38,6 +38,15 @@
         p { color: var(--text-dim); margin-bottom: 12px; font-size: 15px; }
         ul { margin: 8px 0 16px 20px; }
         li { color: var(--text-dim); font-size: 14px; margin-bottom: 4px; }
+        .objection {
+            margin: 24px 0 8px; padding: 20px 22px;
+            border: 1px solid rgba(240,160,48,0.28);
+            border-left: 3px solid var(--accent);
+            border-radius: 10px;
+            background: rgba(240,160,48,0.05);
+        }
+        .objection h3 { margin-top: 0; color: var(--accent); }
+        .objection p:last-child { margin-bottom: 0; }
         code {
             font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
             font-size: 0.9em; padding: 1px 5px; border-radius: 4px;
@@ -140,7 +149,8 @@
 
         <p style="font-size:13px;color:var(--text-muted);font-style:italic">This privacy policy is available in German and English. In case of discrepancies, the German version shall prevail.</p>
 
-        <h2>1. Information We Collect</h2>
+        <h2>1. Information We Collect (Mobile Apps)</h2>
+        <p>The following applies to our Android apps only. What happens when you visit this website is described under section 3.</p>
 
         <h3>Technical Information</h3>
         <ul>
@@ -167,7 +177,9 @@
             <li>Approximate location (country/region)</li>
             <li>Device information</li>
         </ul>
-        <p>Ads may be personalized. Users in the European Economic Area (EEA) may be asked for consent before receiving personalized advertisements.</p>
+        <p>Before any advertising is shown, we ask for your decision through Google's consent form (User Messaging Platform). There you can consent, decline, or manage individual purposes. Without your consent, only non-personalised advertising is served.</p>
+
+        <p>You can change your decision at any time: the form can be reopened from the app's settings. The legal basis for personalised advertising is your consent under Art. 6(1)(a) GDPR.</p>
         <p>Users can reset or disable the Advertising ID and manage ad personalization settings within their Google account or device settings.</p>
 
         <h3>Analytics Services</h3>
@@ -180,22 +192,26 @@
 
         <h2>2. Legal Basis (EU Users)</h2>
         <ul>
-            <li>Art. 6(1)(f) GDPR (legitimate interest)</li>
-            <li>Art. 6(1)(a) GDPR (consent, where required)</li>
+            <li><strong>Art. 6(1)(a) GDPR (consent)</strong> — for personalised advertising, which you can allow through the consent form on first launch</li>
+            <li><strong>Art. 6(1)(f) GDPR (legitimate interest)</strong> — for crash reports, technical operation, security, and non-personalised advertising that funds the free app</li>
         </ul>
 
         <h2>3. Data Sharing</h2>
-        <p>We do not sell personal data. Data may be shared with:</p>
+        <p>We do not sell personal data. In the apps, data is shared with the following services:</p>
         <ul>
             <li>Google AdMob</li>
             <li>Google Firebase</li>
             <li>Google Play Games Services</li>
         </ul>
 
+        <p>If you consent to personalised advertising, Google's advertising partners may process data in addition to Google itself. The complete and current list of these partners is available directly in the app's consent form under "List of partners". If you decline, this sharing does not take place.</p>
+
         <p>Further information on how Google processes personal data can be found in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
         <h3>External Fonts (Website)</h3>
-        <p>For consistent display of fonts, this website uses Bunny Fonts, a service by BunnyWay d.o.o. Fonts are served from EU-based servers without tracking and without storing cookies. No personal data is transmitted to third parties through this service.</p>
+        <p>For consistent display of fonts, this website uses Bunny Fonts, a service by BunnyWay d.o.o. (Slovenia, EU). When a page loads, your browser fetches the font files from their servers. As with any external file, your IP address is transmitted to those servers in the process — there is no technical way to deliver the fonts otherwise.</p>
+
+        <p>The servers are located within the EU, so no third-country transfer takes place. According to the provider, no cookies are set, no access logs are kept and no user profiles are created. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in consistent and fast presentation).</p>
 
         <h3>Hosting & Infrastructure (Website)</h3>
         <p>This website is hosted on GitHub Pages and delivered via Cloudflare. When accessing this website, technical data such as IP address, browser type, and referrer URL are automatically processed by these services. This is technically required to ensure the security and reliability of the website (legal basis: Art. 6(1)(f) GDPR).</p>
@@ -206,16 +222,38 @@
         <p>This website uses GoatCounter, a privacy-focused analytics service, to measure how many people visit which pages. GoatCounter sets no cookies, stores nothing on your device, and does not track you across websites. It does not build user profiles and collects no data that identifies you personally. Recorded are the page visited, the referring page, approximate country, browser and screen size. IP addresses are used only transiently to derive the country and are not stored. Legal basis: Art. 6(1)(f) GDPR. Further information: <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener">GoatCounter Privacy Policy</a>.</p>
 
         <h2>4. International Data Transfers</h2>
-        <p>Data may be processed on servers located outside the European Union in accordance with applicable data protection laws.</p>
+        <p>The services we use — Google (apps), plus GitHub and Cloudflare (website) — may process personal data on servers outside the European Union, in particular in the United States.</p>
+
+        <p>These transfers rely on the <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener">EU-US Data Privacy Framework</a>, for which the European Commission adopted an adequacy decision on 10 July 2023, and / or on the European Commission's Standard Contractual Clauses (Art. 46(2)(c) GDPR). The linked list lets you check any provider's certification status at any time.</p>
+
+        <p>Bunny Fonts and GoatCounter run on servers within the EU; no third-country transfer takes place there.</p>
 
         <h2>5. Data Retention</h2>
-        <p>Data is retained only as long as necessary for operational purposes or as required by law.</p>
+        <p>We retain personal data only as long as necessary for the purposes described under sections 1 and 3, or as required by statutory retention periods. After that it is deleted or anonymised.</p>
+
+        <p>The actual duration depends on the service: crash reports are kept no longer than needed for debugging; technical infrastructure logs follow the retention periods of GitHub and Cloudflare; GoatCounter statistics contain no IP addresses in the first place. As we have no influence over our providers' retention periods, we refer you to their respective privacy notices.</p>
 
         <h2>6. Children's Privacy</h2>
         <p>Our applications are not directed at children under 13 unless explicitly stated.</p>
 
         <h2>7. Your Rights</h2>
-        <p>You may request access, correction, or deletion of your data. Requests can be sent to the contact email listed below.</p>
+        <p>You have the following rights in relation to us:</p>
+        <ul>
+            <li><strong>Access</strong> (Art. 15 GDPR) — what data we process about you</li>
+            <li><strong>Rectification</strong> (Art. 16 GDPR) — correction of inaccurate data</li>
+            <li><strong>Erasure</strong> (Art. 17 GDPR) — deletion of your data</li>
+            <li><strong>Restriction of processing</strong> (Art. 18 GDPR)</li>
+            <li><strong>Data portability</strong> (Art. 20 GDPR) — for data we process automatically based on your consent or a contract</li>
+            <li><strong>Withdrawal of consent</strong> (Art. 7(3) GDPR) — at any time with effect for the future; this does not affect the lawfulness of processing carried out beforehand</li>
+            <li><strong>Complaint to a supervisory authority</strong> (Art. 77 GDPR) — the authority responsible for us is the State Commissioner for Data Protection and Freedom of Information of Rhineland-Palatinate, Germany; you may also contact the authority where you live</li>
+        </ul>
+        <p>An informal email to <a href="mailto:contact@veriatax.com">contact@veriatax.com</a> is enough to exercise these rights.</p>
+
+        <div class="objection">
+            <h3>Right to object under Art. 21 GDPR</h3>
+            <p>Where we process your data on the basis of a legitimate interest (Art. 6(1)(f) GDPR) — which covers the operation of this website, the font delivery and the analytics — you have the right to object to that processing at any time on grounds relating to your particular situation.</p>
+            <p>We will then stop processing the data in question unless we can demonstrate compelling legitimate grounds that override your interests, rights and freedoms. An informal email is sufficient.</p>
+        </div>
 
         <h2>8. Controller / Contact</h2>
         <p class="contact-block">
@@ -241,7 +279,8 @@
 
         <p style="font-size:13px;color:var(--text-muted);font-style:italic">Diese Datenschutzerklärung ist in deutscher und englischer Sprache verfügbar. Im Zweifel gilt die deutsche Version.</p>
 
-        <h2>1. Erhobene Daten</h2>
+        <h2>1. Erhobene Daten (mobile Anwendungen)</h2>
+        <p>Die folgenden Angaben betreffen ausschließlich unsere Android-Apps. Was beim Besuch dieser Website verarbeitet wird, steht unter Punkt 3.</p>
 
         <h3>Technische Informationen</h3>
         <ul>
@@ -268,7 +307,9 @@
             <li>Ungefähre Standortdaten (Land/Region)</li>
             <li>Geräteinformationen</li>
         </ul>
-        <p>Werbung kann personalisiert erfolgen. Nutzer im Europäischen Wirtschaftsraum (EWR) werden gegebenenfalls um Einwilligung gebeten, bevor personalisierte Werbung angezeigt wird.</p>
+        <p>Vor der ersten Anzeige von Werbung fragen wir Ihre Entscheidung über eine Einwilligungsabfrage von Google (User Messaging Platform) ab. Dort können Sie einwilligen, ablehnen oder einzelne Zwecke einzeln verwalten. Ohne Ihre Einwilligung wird nur nicht-personalisierte Werbung ausgespielt.</p>
+
+        <p>Ihre Entscheidung können Sie jederzeit ändern: Die Abfrage lässt sich in den Einstellungen der App erneut aufrufen. Rechtsgrundlage für personalisierte Werbung ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.</p>
         <p>Die Werbe-ID kann in den Geräteeinstellungen zurückgesetzt oder deaktiviert werden. Einstellungen zur Personalisierung sind auch im Google-Konto möglich.</p>
 
         <h3>Analyse-Dienste</h3>
@@ -281,22 +322,26 @@
 
         <h2>2. Rechtsgrundlage</h2>
         <ul>
-            <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
-            <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, sofern erforderlich)</li>
+            <li><strong>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> — für personalisierte Werbung, die Sie über die Einwilligungsabfrage beim ersten Start freigeben können</li>
+            <li><strong>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</strong> — für Absturzberichte, technische Bereitstellung, Sicherheit sowie nicht-personalisierte Werbung zur Finanzierung des kostenlosen Angebots</li>
         </ul>
 
         <h2>3. Weitergabe von Daten</h2>
-        <p>Daten werden ausschließlich an notwendige Drittanbieter weitergegeben:</p>
+        <p>In den Apps werden Daten an folgende Dienste weitergegeben:</p>
         <ul>
             <li>Google AdMob</li>
             <li>Google Firebase</li>
             <li>Google Play Games Services</li>
         </ul>
 
+        <p>Willigen Sie in personalisierte Werbung ein, können neben Google auch dessen Werbepartner Daten verarbeiten. Die vollständige und jeweils aktuelle Liste dieser Partner ist direkt in der Einwilligungsabfrage der App unter „Liste der Partner“ abrufbar. Lehnen Sie ab, findet diese Weitergabe nicht statt.</p>
+
         <p>Weitere Informationen zur Datenverarbeitung durch Google finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.</p>
 
         <h3>Externe Schriftarten (Website)</h3>
-        <p>Zur einheitlichen Darstellung von Schriftarten nutzt diese Website Bunny Fonts, einen Dienst der BunnyWay d.o.o. Die Schriftarten werden von Servern innerhalb der EU bereitgestellt, ohne Tracking und ohne Speicherung von Cookies. Es werden keine personenbezogenen Daten an Dritte übermittelt.</p>
+        <p>Zur einheitlichen Darstellung von Schriftarten nutzt diese Website Bunny Fonts, einen Dienst der BunnyWay d.o.o. (Slowenien, EU). Beim Laden einer Seite ruft Ihr Browser die Schriftdateien von deren Servern ab. Wie bei jedem Abruf einer externen Datei wird dabei Ihre IP-Adresse an diese Server übertragen — technisch anders lassen sich die Schriften nicht ausliefern.</p>
+
+        <p>Die Server stehen innerhalb der EU, eine Übermittlung in ein Drittland findet also nicht statt. Nach Angaben des Anbieters werden dabei keine Cookies gesetzt, keine Zugriffsprotokolle geführt und keine Nutzerprofile gebildet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen und schnellen Darstellung).</p>
 
         <h3>Hosting & Infrastruktur (Website)</h3>
         <p>Diese Website wird über GitHub Pages gehostet und über Cloudflare ausgeliefert. Beim Aufruf dieser Website werden technische Daten wie IP-Adresse, Browsertyp und Referrer-URL automatisch durch diese Dienste verarbeitet. Dies ist technisch erforderlich, um die Sicherheit und Stabilität der Website zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO).</p>
@@ -307,16 +352,38 @@
         <p>Diese Website nutzt GoatCounter, einen datenschutzfreundlichen Analysedienst, um zu messen, wie viele Personen welche Seiten aufrufen. GoatCounter setzt keine Cookies, speichert nichts auf Ihrem Gerät und verfolgt Sie nicht über Websites hinweg. Es werden keine Nutzerprofile gebildet und keine Daten erhoben, die Sie persönlich identifizieren. Erfasst werden die aufgerufene Seite, die verweisende Seite, das ungefähre Land, Browser und Bildschirmgröße. IP-Adressen werden nur kurzzeitig zur Landesbestimmung verwendet und nicht gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener">Datenschutzerklärung von GoatCounter</a>.</p>
 
         <h2>4. Datenübermittlung in Drittländer</h2>
-        <p>Eine Verarbeitung kann auf Servern außerhalb der Europäischen Union erfolgen.</p>
+        <p>Die von uns eingesetzten Dienste — Google (Apps), sowie GitHub und Cloudflare (Website) — können personenbezogene Daten auf Servern außerhalb der Europäischen Union verarbeiten, insbesondere in den USA.</p>
+
+        <p>Diese Übermittlungen stützen sich auf den <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener">EU-US Data Privacy Framework</a>, für den die Europäische Kommission am 10. Juli 2023 einen Angemessenheitsbeschluss gefasst hat, und / oder auf die Standardvertragsklauseln der EU-Kommission (Art. 46 Abs. 2 lit. c DSGVO). Über die verlinkte Liste lässt sich der Zertifizierungsstatus eines Anbieters jederzeit prüfen.</p>
+
+        <p>Bunny Fonts und GoatCounter werden auf Servern innerhalb der EU betrieben; hier findet keine Drittlandübermittlung statt.</p>
 
         <h2>5. Speicherdauer</h2>
-        <p>Daten werden nur so lange gespeichert, wie dies erforderlich ist.</p>
+        <p>Wir speichern personenbezogene Daten nur so lange, wie es für die unter Punkt 1 und 3 genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen dies vorschreiben. Danach werden sie gelöscht oder anonymisiert.</p>
+
+        <p>Die konkrete Dauer richtet sich nach dem jeweiligen Dienst: Absturzberichte werden nicht länger aufbewahrt, als zur Fehleranalyse nötig; technische Protokolldaten der Infrastruktur unterliegen den Fristen von GitHub und Cloudflare; die Statistiken von GoatCounter enthalten von vornherein keine IP-Adressen. Da wir auf die Aufbewahrungsfristen der eingesetzten Anbieter keinen Einfluss haben, verweisen wir insoweit auf deren Datenschutzhinweise.</p>
 
         <h2>6. Datenschutz von Kindern</h2>
         <p>Unsere Anwendungen richten sich nicht gezielt an Kinder unter 13 Jahren.</p>
 
         <h2>7. Ihre Rechte</h2>
-        <p>Sie haben das Recht auf Auskunft, Berichtigung oder Löschung Ihrer Daten. Anfragen können an die unten angegebene Kontaktadresse gerichtet werden.</p>
+        <p>Ihnen stehen gegenüber uns die folgenden Rechte zu:</p>
+        <ul>
+            <li><strong>Auskunft</strong> (Art. 15 DSGVO) — welche Daten wir über Sie verarbeiten</li>
+            <li><strong>Berichtigung</strong> (Art. 16 DSGVO) — Korrektur unrichtiger Daten</li>
+            <li><strong>Löschung</strong> (Art. 17 DSGVO) — Entfernung Ihrer Daten</li>
+            <li><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+            <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO) — für Daten, die wir aufgrund Ihrer Einwilligung oder eines Vertrags automatisiert verarbeiten</li>
+            <li><strong>Widerruf einer Einwilligung</strong> (Art. 7 Abs. 3 DSGVO) — jederzeit mit Wirkung für die Zukunft; die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt</li>
+            <li><strong>Beschwerde bei einer Aufsichtsbehörde</strong> (Art. 77 DSGVO) — zuständig ist für uns der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz; Sie können sich aber auch an die Behörde Ihres Wohnorts wenden</li>
+        </ul>
+        <p>Zur Ausübung genügt eine formlose E-Mail an <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>.</p>
+
+        <div class="objection">
+            <h3>Widerspruchsrecht nach Art. 21 DSGVO</h3>
+            <p>Soweit wir Ihre Daten auf Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten — das betrifft den Betrieb dieser Website, die Schriftarten-Einbindung und die Reichweitenmessung — haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</p>
+            <p>Wir verarbeiten die betreffenden Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen. Ein Widerspruch genügt formlos per E-Mail.</p>
+        </div>
 
         <h2>8. Verantwortlicher</h2>
         <p class="contact-block">
