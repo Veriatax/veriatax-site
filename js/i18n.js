@@ -68,6 +68,8 @@ const translations = {
         "footer.tagline": "Spiele · Musik · Tools — Made in Germany",
         "footer.explore": "Entdecken",
         "footer.legal": "Rechtliches",
+        "footer.home": "Startseite",
+        "footer.privacy": "Datenschutz",
         "footer.contact": "Kontakt & Social",
         "footer.listen": "Anhören",
     },
@@ -130,6 +132,8 @@ const translations = {
         "footer.tagline": "Games · Music · Tools — Made in Germany",
         "footer.explore": "Explore",
         "footer.legal": "Legal",
+        "footer.home": "Home",
+        "footer.privacy": "Privacy Policy",
         "footer.contact": "Contact & Social",
         "footer.listen": "Listen",
     }
