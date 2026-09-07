@@ -10,7 +10,9 @@
     <meta property="og:type" content="music.song">
     <meta property="og:title" content="Riverside Light – Veriatax Interactive">
     <meta property="og:description" content="Volleyball by the shore, cold cans in the sand, somebody lighting the grill while the Rhine turns to gold. Late July, nobody checking the time — nothing planned, and somehow everything.">
-    <meta property="og:image" content="https://veriatax.com/images/riverside-light.jpg">
+    <meta property="og:image" content="https://veriatax.com/images/share/riverside-light.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://veriatax.com/music/riverside-light/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#06080f">
@@ -126,6 +128,24 @@
         .presave-note {
             font-size: 12px; color: var(--text-muted); margin-top: 12px; max-width: 380px;
         }
+        .follow-line {
+            margin-top: 22px; padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+        }
+        .follow-line > span { font-size: 13px; color: var(--text-muted); }
+        .btn-follow {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 9px 18px; border-radius: 8px;
+            background: rgba(29,185,84,0.08); border: 1px solid rgba(29,185,84,0.3);
+            color: #1db954; font-size: 13px; font-weight: 600;
+            text-decoration: none; transition: all 0.3s ease;
+        }
+        .btn-follow:hover {
+            background: rgba(29,185,84,0.14); border-color: rgba(29,185,84,0.5);
+            transform: translateY(-1px); text-decoration: none;
+        }
+
         .coming-badge {
             display: inline-block; padding: 8px 20px; border-radius: 8px;
             background: rgba(240,160,48,0.1); border: 1px solid rgba(240,160,48,0.2);
@@ -159,6 +179,8 @@
             .track-cover { width: 220px; height: 220px; }
             .listen-buttons { justify-content: center; }
             .btn-spotify, .btn-apple, .btn-presave { width: 100%; justify-content: center; }
+            .follow-line { flex-direction: column; align-items: stretch; text-align: center; }
+            .btn-follow { justify-content: center; }
             .presave-note { margin-left: auto; margin-right: auto; }
         }
 
@@ -264,19 +286,26 @@
                     <span data-i18n="apple">Listen on Apple Music</span>
                 </a>
             </div>
+
+            <div class="follow-line">
+                <span data-i18n="follow.lead">Like the track?</span>
+                <a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" class="btn-follow">
+                    <span data-i18n="follow.cta">+ Follow Veriatax on Spotify</span>
+                </a>
+            </div>
         </div>
     </div>
 
     <div class="more-section">
         <h3 data-i18n="more">More from Veriatax Interactive</h3>
         <div class="more-grid">
+            <a href="../move-with-me/" class="more-item"><img src="../../images/thumbs/move-with-me.jpg" alt="Move With Me" width="48" height="48" loading="lazy"><span>Move With Me</span></a>
+            <a href="../golden-pulse/" class="more-item"><img src="../../images/thumbs/golden-pulse.jpg" alt="Golden Pulse" width="48" height="48" loading="lazy"><span>Golden Pulse</span></a>
+            <a href="../golden-motion/" class="more-item"><img src="../../images/thumbs/golden-motion.jpg" alt="Golden Motion" width="48" height="48" loading="lazy"><span>Golden Motion</span></a>
+            <a href="../one-more-sunset/" class="more-item"><img src="../../images/thumbs/one-more-sunset.jpg" alt="One More Sunset" width="48" height="48" loading="lazy"><span>One More Sunset</span></a>
             <a href="../what-never-fades/" class="more-item"><img src="../../images/thumbs/what-never-fades.jpg" alt="What Never Fades" width="48" height="48" loading="lazy"><span>What Never Fades</span></a>
             <a href="../unshaken/" class="more-item"><img src="../../images/thumbs/unshaken.jpg" alt="Unshaken" width="48" height="48" loading="lazy"><span>Unshaken</span></a>
-            <a href="../one-more-sunset/" class="more-item"><img src="../../images/thumbs/one-more-sunset.jpg" alt="One More Sunset" width="48" height="48" loading="lazy"><span>One More Sunset</span></a>
-            <a href="../move-with-me/" class="more-item"><img src="../../images/thumbs/move-with-me.jpg" alt="Move With Me" width="48" height="48" loading="lazy"><span>Move With Me</span></a>
             <a href="../control-the-night/" class="more-item"><img src="../../images/thumbs/control-the-night.jpg" alt="Control the Night" width="48" height="48" loading="lazy"><span>Control the Night</span></a>
-            <a href="../golden-motion/" class="more-item"><img src="../../images/thumbs/golden-motion.jpg" alt="Golden Motion" width="48" height="48" loading="lazy"><span>Golden Motion</span></a>
-            <a href="../golden-pulse/" class="more-item"><img src="../../images/thumbs/golden-pulse.jpg" alt="Golden Pulse" width="48" height="48" loading="lazy"><span>Golden Pulse</span></a>
             <a href="../only-with-my-team/" class="more-item"><img src="../../images/thumbs/only-with-my-team.jpg" alt="Only With My Team" width="48" height="48" loading="lazy"><span>Only With My Team</span></a>
             <a href="../neon-monsoon/" class="more-item"><img src="../../images/thumbs/neon-monsoon.jpg" alt="Neon Monsoon" width="48" height="48" loading="lazy"><span>Neon Monsoon</span></a>
             <a href="../saigon-sunrise/" class="more-item"><img src="../../images/thumbs/saigon-sunrise.jpg" alt="Saigon Sunrise (You &amp; Me)" width="48" height="48" loading="lazy"><span>Saigon Sunrise (You &amp; Me)</span></a>
@@ -291,8 +320,8 @@
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
 <div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Home</a>
-<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Privacy</a>
+<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.home">Home</a>
+<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
 <a href="../../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
 </div>
 <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
@@ -312,6 +341,7 @@
 const pageTrans = {
     de: {
         "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "\u00dcber uns",
+        "footer.home": "Startseite", "footer.privacy": "Datenschutz",
         "label": "Single",
         "genre": "Summer House / Feel-Good EDM",
         "desc": "Volleyball am Ufer, kalte Dosen im Sand, jemand zündet den Grill an, während der Rhein golden wird. Ende Juli, keiner schaut auf die Uhr — nichts geplant, und irgendwie alles.",
@@ -321,10 +351,13 @@ const pageTrans = {
         "apple": "Auf Apple Music h\u00f6ren",
         "presave": "Auf Spotify vormerken",
         "presave.note": "Jetzt vormerken \u2014 der Track landet automatisch in deiner Bibliothek, sobald er ver\u00f6ffentlicht wird.",
-        "smartlink": "Auf allen Plattformen h\u00f6ren"
+        "smartlink": "Auf allen Plattformen h\u00f6ren",
+        "follow.lead": "Gef\u00e4llt dir der Track?",
+        "follow.cta": "+ Veriatax auf Spotify folgen"
     },
     en: {
         "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
+        "footer.home": "Home", "footer.privacy": "Privacy",
         "label": "Single",
         "genre": "Summer House / Feel-Good EDM",
         "desc": "Volleyball by the shore, cold cans in the sand, somebody lighting the grill while the Rhine turns to gold. Late July, nobody checking the time — nothing planned, and somehow everything.",
@@ -334,7 +367,9 @@ const pageTrans = {
         "apple": "Listen on Apple Music",
         "presave": "Pre-Save on Spotify",
         "presave.note": "Pre-save now and the track lands in your library the moment it drops.",
-        "smartlink": "Listen on all platforms"
+        "smartlink": "Listen on all platforms",
+        "follow.lead": "Like the track?",
+        "follow.cta": "+ Follow Veriatax on Spotify"
     }
 };
 let currentLang = 'en';
