@@ -211,8 +211,8 @@
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
 <div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Home</a>
-<a href="../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Privacy</a>
+<a href="../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.home">Home</a>
+<a href="../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
 <a href="../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
 </div>
 <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
@@ -227,8 +227,8 @@
 </footer>
 <script>
 const pageTrans = {
-    de: {"nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "back": "\u2190 Zur\u00fcck zur Startseite"},
-    en: {"nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "back": "\u2190 Back to Home"}
+    de: {"footer.home": "Startseite", "footer.privacy": "Datenschutz", "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "back": "\u2190 Zur\u00fcck zur Startseite"},
+    en: {"footer.home": "Home", "footer.privacy": "Privacy", "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "back": "\u2190 Back to Home"}
 };
 let currentLang="en";
 function initLang(){try{const s=localStorage.getItem("veriatax-lang");if(s==="de"||s==="en")currentLang=s;else currentLang=(navigator.language||"").startsWith("de")?"de":"en"}catch(e){currentLang="en"}applyLang(currentLang)}
