@@ -133,6 +133,10 @@
             border: 1px solid var(--border); background: #05070d;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
+        .shot:focus-visible {
+            outline: 2px solid var(--accent); outline-offset: 3px;
+            transform: translateY(-3px);
+        }
         .shot:hover { transform: translateY(-3px); border-color: rgba(240,160,48,0.22); }
         .shot img { width: 100%; height: auto; display: block; }
 
@@ -353,12 +357,12 @@
     <div class="shots">
         <h3 data-i18n="shots">Screenshots</h3>
         <div class="shots-scroll">
-            <div class="shot"><img src="../../images/mf/shot-2-sudoku.jpg" alt="Sudoku grid on medium difficulty with notes and undo" width="540" height="1063" loading="lazy"></div>
-            <div class="shot"><img src="../../images/mf/shot-3-crossmath.jpg" alt="Crossmath grid with numbers and operators" width="540" height="1063" loading="lazy"></div>
-            <div class="shot"><img src="../../images/mf/shot-4-crossword.jpg" alt="Crossword grid with in-cell clues and letter keyboard" width="540" height="1063" loading="lazy"></div>
-            <div class="shot"><img src="../../images/mf/shot-1-menu-de.jpg" alt="MindForge main menu in German — the app runs in both languages" width="540" height="1063" loading="lazy"></div>
-            <div class="shot"><img src="../../images/mf/shot-5-achievements.jpg" alt="Achievements list with coin rewards" width="540" height="1063" loading="lazy"></div>
-            <div class="shot"><img src="../../images/mf/shot-6-leaderboard.jpg" alt="Leaderboards connected to Google Play Games" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-2-sudoku.jpg" alt="Sudoku grid on medium difficulty with notes and undo" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-3-crossmath.jpg" alt="Crossmath grid with numbers and operators" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-4-crossword.jpg" alt="Crossword grid with in-cell clues and letter keyboard" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-1-menu-de.jpg" alt="MindForge main menu in German — the app runs in both languages" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-5-achievements.jpg" alt="Achievements list with coin rewards" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-6-leaderboard.jpg" alt="Leaderboards connected to Google Play Games" width="540" height="1063" loading="lazy"></div>
         </div>
     </div>
 
@@ -419,8 +423,8 @@
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
 <div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Home</a>
-<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Privacy</a>
+<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.home">Home</a>
+<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
 <a href="../../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
 </div>
 <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
@@ -437,7 +441,7 @@
 <script>
 const pageTrans = {
     de: {
-        "nav.home": "Startseite",
+        "footer.home": "Startseite", "footer.privacy": "Datenschutz", "nav.home": "Startseite",
         "nav.games": "Spiele",
         "nav.music": "Musik",
         "nav.about": "Über uns",
@@ -468,7 +472,7 @@ const pageTrans = {
         "end.cta": "\ud83e\udd81 Flame Leap Lion spielen →"
     },
     en: {
-        "nav.home": "Home",
+        "footer.home": "Home", "footer.privacy": "Privacy", "nav.home": "Home",
         "nav.games": "Games",
         "nav.music": "Music",
         "nav.about": "About",
@@ -548,9 +552,13 @@ function closeLightbox() {
     lb.classList.remove('open'); lbImg.src = ''; document.body.style.overflow = '';
 }
 document.querySelectorAll('.shot').forEach(el => {
-    el.addEventListener('click', () => {
+    const open = () => {
         const img = el.querySelector('img');
         if (img) openLightbox(img.src, img.alt);
+    };
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
     });
 });
 if (lb) lb.addEventListener('click', closeLightbox);
