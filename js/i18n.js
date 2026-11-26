@@ -71,6 +71,8 @@ const translations = {
         "footer.legal": "Rechtliches",
         "footer.home": "Startseite",
         "footer.privacy": "Datenschutz",
+        "footer.licenses": "Open-Source-Lizenzen",
+        "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.",
         "footer.contact": "Kontakt & Social",
         "footer.listen": "Anhören",
     },
@@ -136,6 +138,8 @@ const translations = {
         "footer.legal": "Legal",
         "footer.home": "Home",
         "footer.privacy": "Privacy Policy",
+        "footer.licenses": "Open-source licenses",
+        "footer.notrack": "No tracking or advertising cookies are used.",
         "footer.contact": "Contact & Social",
         "footer.listen": "Listen",
     }
