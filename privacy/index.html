@@ -55,6 +55,8 @@
         .updated { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
         .contact-block { font-size: 14px; color: var(--text-dim); line-height: 1.8; }
 
+        /* Sprungziel nicht unter der feststehenden Navigation verstecken */
+        [id^="meter-scout-"] { scroll-margin-top: 90px; }
         .lang-content { display: none; }
         .lang-content.active { display: block; }
 
@@ -141,7 +143,7 @@
     <div id="content-en" class="lang-content active">
 
         <h1>Privacy Policy</h1>
-        <p class="updated"><strong>Last updated:</strong> 02.09.2026</p>
+        <p class="updated"><strong>Last updated:</strong> 27.11.2026</p>
 
         <p>Veriatax Interactive (operated by Sven Martin Laschke, sole proprietor) develops and publishes mobile games and applications. We are committed to protecting your privacy and handling data transparently and responsibly.</p>
 
@@ -150,9 +152,28 @@
         <p style="font-size:13px;color:var(--text-muted);font-style:italic">This privacy policy is available in German and English. In case of discrepancies, the German version shall prevail.</p>
 
         <h2>1. Information We Collect (Mobile Apps)</h2>
-        <p>The following applies to our Android apps only. What happens when you visit this website is described under section 3.</p>
+        <p>The following applies to our Android apps only. For <strong>Meter Scout</strong>, only the <a href="#meter-scout-en">“Meter Scout”</a> subsection applies. The remaining subsections — statistics and crash reports, advertising data and other services — apply to our games only. What happens when you visit this website is described under section 3.</p>
 
-        <h3>Statistics and crash reports — only with your consent</h3>
+        <h3 id="meter-scout-en">Meter Scout</h3>
+        <p>Meter Scout is an Android app for recording meter readings and checking your monthly instalments. It works without an account, shows no ads and contains no analytics or crash reporting. Meter Scout does not use Firebase, AdMob or Google Play Games.</p>
+
+        <p><strong>Your data stays on your device.</strong> The app stores properties, meters, readings, notes, tariffs, instalments and settings in a local database on your device, and calculates consumption and costs there. Meter Scout does not send this data to us or to third parties and does not connect to Veriatax servers for that purpose. Storing data on your device is strictly necessary for the features you use (Section 25(2) no. 2 TDDDG).</p>
+
+        <p><strong>Android backup and switching devices.</strong> If backup is turned on in your Android settings, Android can back up the app&rsquo;s database to your Google account and restore it on a new device. This backup is an Android and Google feature. We do not run a service for it and have no access to the backup. You can turn it off in your Android settings.</p>
+
+        <p><strong>Export and import.</strong> A backup file (JSON) or CSV file is only created when you export it yourself. You choose the destination &mdash; a folder, cloud storage or an email, for example &mdash; using Android&rsquo;s share feature. The privacy terms of the provider you choose apply there. The app reads imported files only on your device.</p>
+
+        <p><strong>Reminders and widget.</strong> The app schedules the reading reminder as a local notification on your device and asks for notification permission to do so. So that a scheduled reminder survives a restart, the app registers for the system start event. The optional home screen widget shows the latest reading of the selected meter on your device. No data is transmitted.</p>
+
+        <p><strong>Buying Pro.</strong> Google Play handles the one-time &ldquo;Pro&rdquo; purchase. The app asks Google Play whether you have bought Pro and acknowledges successful purchases there. Google&rsquo;s purchase library may send technical information to Google when doing so. The app does not collect card or bank details, and we do not receive payment data. Google provides us with order information such as order number, date, product, price and country. We use it to handle orders, for example refunds, and for records required by law (Art. 6(1)(b) and (c) GDPR). Google&rsquo;s privacy policy applies to the payment.</p>
+
+        <p><strong>Reviews.</strong> After some use, the app may open Google Play&rsquo;s review dialog once. Google Play decides whether it appears. Reviews are voluntary, are submitted through Google Play and are published under your Google Play profile name. We can see reviews in the Play Console and reply to them. The app learns neither the star rating nor the review text from the dialog.</p>
+
+        <p><strong>Links and contact.</strong> Links in the app to this website, the Play Store or your email app open that app outside Meter Scout. Section 3 applies when you visit this website. If you email us, you provide the details contained in your message; we use them only to answer your request (Art. 6(1)(b) or (f) GDPR).</p>
+
+        <p><strong>Retention and deletion.</strong> Your data remains stored until you delete it in the app, clear the app&rsquo;s data or uninstall the app. Files you have already shared and existing Android backups are not deleted along with it; you manage a backup in your Google account. As we receive no meter data from Meter Scout, there is nothing for us to delete. Section 7 (your rights) and section 8 (controller) also apply to Meter Scout.</p>
+
+        <h3>Statistics and crash reports in our games — only with your consent</h3>
         <p>In the EEA, the UK and Switzerland this collection is switched off by default: it only starts once you explicitly agree on first launch. Outside those regions it may instead be active by default. Either way, you can switch it on and off at any time using the <strong>"Statistics &amp; crash reports"</strong> toggle in the app's settings.</p>
 
         <p><strong>Usage statistics</strong> (Google Firebase Analytics): session duration, which game modes are started, gameplay events, feature usage, app version, device model and operating system version.</p>
@@ -165,8 +186,8 @@
 
         <p>A note on how this works: when transmission is switched off, Crashlytics still records crash information <em>locally on your device</em>. If you enable the feature later, those earlier reports are transmitted retroactively. Your consent is in place at that point — but we want to state it explicitly so that "off" is not confused with "nothing is recorded".</p>
 
-        <h3>Advertising Data</h3>
-        <p>Our apps use <strong>Google AdMob</strong> to display advertisements. The following data may be processed:</p>
+        <h3>Advertising Data (games only)</h3>
+        <p>Our games use <strong>Google AdMob</strong> to display advertisements. The following data may be processed:</p>
         <ul>
             <li>Google Advertising ID (Android Advertising ID)</li>
             <li>IP address</li>
@@ -178,23 +199,27 @@
         <p>You can change your decision at any time: the form can be reopened from the app's settings. The legal basis for personalised advertising is your consent under Art. 6(1)(a) GDPR.</p>
         <p>Users can reset or disable the Advertising ID and manage ad personalization settings within their Google account or device settings.</p>
 
-        <h3>Other services used</h3>
+        <h3>Other services used in our games</h3>
         <p><strong>Firebase Remote Config</strong> retrieves the app's configuration, such as feature switches or the word database. No usage data is collected in the process.</p>
         <p><strong>Google Play Games Services</strong> manages leaderboards and achievements. Sign-in uses your Google account and is a separate Google feature.</p>
 
         <h2>2. Legal Basis (EU Users)</h2>
         <ul>
             <li><strong>Art. 6(1)(a) GDPR and § 25(1) TDDDG (consent)</strong> — for usage statistics and crash reports as well as for personalised advertising. In regions where consent is required we ask for both separately on first launch; both can be withdrawn at any time in the settings.</li>
-            <li><strong>Art. 6(1)(f) GDPR (legitimate interest)</strong> — for the technical operation and security of the apps, retrieving the configuration, and non-personalised advertising that funds the free app</li>
+            <li><strong>Art. 6(1)(f) GDPR (legitimate interest)</strong> — for the technical operation and security of our apps and for answering your enquiries; in our games additionally for retrieving the configuration and for non-personalised advertising that funds the free app</li>
+            <li><strong>Section 25(2) no. 2 TDDDG (strictly necessary)</strong> — for storing the data you record on your device in Meter Scout. No consent is required because the app cannot serve its purpose without this storage.</li>
+            <li><strong>Art. 6(1)(b) and (c) GDPR (contract, legal obligation)</strong> — for handling purchases through Google Play and retaining the associated order information</li>
         </ul>
 
         <h2>3. Data Sharing</h2>
-        <p>In the apps, data is shared with the following services:</p>
+        <p>In our games, data is shared with the following services:</p>
         <ul>
             <li>Google AdMob</li>
             <li>Google Firebase</li>
             <li>Google Play Games Services</li>
         </ul>
+
+        <p><strong>Meter Scout</strong> shares no data with these services. Google Play is involved only in the Pro purchase and the review dialog — see the <a href="#meter-scout-en">“Meter Scout”</a> subsection.</p>
 
         <p>If you consent to personalised advertising, Google's advertising partners may process data in addition to Google itself. The complete and current list of these partners is available directly in the app's consent form under "List of partners". If you decline, no data is shared with advertising partners for the purpose of personalised advertising.</p>
 
@@ -223,7 +248,7 @@
         <p>Bunny Fonts and GoatCounter run on servers within the EU; no third-country transfer takes place there.</p>
 
         <h2>5. Data Retention</h2>
-        <p>We retain personal data only as long as necessary for the purposes described under sections 1 and 3, or as required by statutory retention periods. After that it is deleted or anonymised.</p>
+        <p>We retain personal data only as long as necessary for the purposes described under sections 1 and 3, or as required by statutory retention periods. After that it is deleted or anonymised. The meter data recorded in Meter Scout is held solely on your device; how long it stays there is up to you.</p>
 
         <p>The actual duration depends on the service: crash reports are kept no longer than needed for debugging; technical infrastructure logs follow the retention periods of GitHub and Cloudflare; GoatCounter statistics contain no IP addresses in the first place. As we have no influence over our providers' retention periods, we refer you to their respective privacy notices.</p>
 
@@ -244,7 +269,7 @@
         <p>An informal email to <a href="mailto:contact@veriatax.com">contact@veriatax.com</a> is enough to exercise these rights.</p>
 
         <h3>Requesting deletion of app data</h3>
-        <p>If you want data held about you in one of our apps deleted, simply email <a href="mailto:contact@veriatax.com">contact@veriatax.com</a> naming the app. We will confirm receipt and delete the data as far as it is within our control. Saved progress, leaderboard entries and achievements are managed by Google Play Games and can additionally be removed through your Google account.</p>
+        <p>If you want data held about you in one of our apps deleted, simply email <a href="mailto:contact@veriatax.com">contact@veriatax.com</a> naming the app. We will confirm receipt and delete the data as far as it is within our control. Saved progress, leaderboard entries and achievements are managed by Google Play Games and can additionally be removed through your Google account. For Meter Scout we hold no meter data: you delete it in the app itself or through Android&rsquo;s app settings.</p>
 
         <h3>Privacy rights for users in the United States</h3>
         <p>In the United States, privacy laws exist at state level. Depending on your state of residence you may therefore have additional rights — in particular the right to opt out of personal information being shared for personalised advertising. The laws use different terms for this: California speaks of "sale" and "sharing", while Texas and most other states use "sale" and "targeted advertising".</p>
@@ -255,7 +280,7 @@
 
         <div class="objection">
             <h3>Right to object under Art. 21 GDPR</h3>
-            <p>Where we process your data on the basis of a legitimate interest (Art. 6(1)(f) GDPR) — which covers the operation of this website, the font delivery and the analytics — you have the right to object to that processing at any time on grounds relating to your particular situation.</p>
+            <p>Where we process your data on the basis of a legitimate interest (Art. 6(1)(f) GDPR) — which covers the operation of this website, the font delivery, the analytics and answering your enquiries — you have the right to object to that processing at any time on grounds relating to your particular situation.</p>
             <p>We will then stop processing the data in question unless we can demonstrate compelling legitimate grounds that override your interests, rights and freedoms. An informal email is sufficient.</p>
         </div>
 
@@ -275,7 +300,7 @@
     <div id="content-de" class="lang-content">
 
         <h1>Datenschutzerklärung</h1>
-        <p class="updated"><strong>Letzte Aktualisierung:</strong> 02.09.2026</p>
+        <p class="updated"><strong>Letzte Aktualisierung:</strong> 27.11.2026</p>
 
         <p>Veriatax Interactive (Inhaber: Sven Martin Laschke, Einzelunternehmer) entwickelt und veröffentlicht mobile Spiele und Anwendungen.</p>
 
@@ -284,9 +309,28 @@
         <p style="font-size:13px;color:var(--text-muted);font-style:italic">Diese Datenschutzerklärung ist in deutscher und englischer Sprache verfügbar. Im Zweifel gilt die deutsche Version.</p>
 
         <h2>1. Erhobene Daten (mobile Anwendungen)</h2>
-        <p>Die folgenden Angaben betreffen ausschließlich unsere Android-Apps. Was beim Besuch dieser Website verarbeitet wird, steht unter Punkt 3.</p>
+        <p>Die folgenden Angaben betreffen ausschließlich unsere Android-Apps. Für <strong>Meter Scout</strong> gilt allein der Unterabschnitt <a href="#meter-scout-de">„Meter Scout“</a>. Die übrigen Unterabschnitte — Statistik und Fehlerberichte, Werbedaten und weitere Dienste — betreffen nur unsere Spiele. Was beim Besuch dieser Website verarbeitet wird, steht unter Punkt 3.</p>
 
-        <h3>Statistik und Fehlerberichte — nur mit Ihrer Einwilligung</h3>
+        <h3 id="meter-scout-de">Meter Scout</h3>
+        <p>Meter Scout ist eine Android-App zum Erfassen von Zählerständen und zum Prüfen von Abschlägen. Die App funktioniert ohne Konto, zeigt keine Werbung und enthält keine Statistik- oder Fehlerberichtsdienste. Firebase, AdMob und Google Play Games setzt Meter Scout nicht ein.</p>
+
+        <p><strong>Ihre Daten bleiben auf Ihrem Gerät.</strong> Objekte, Zähler, Ablesungen, Notizen, Tarife, Abschläge und Einstellungen speichert die App in einer lokalen Datenbank auf Ihrem Gerät. Verbrauch und Kosten werden dort berechnet. Meter Scout überträgt diese Daten weder an uns noch an Dritte und stellt dafür keine Verbindung zu Servern von Veriatax her. Das Speichern auf dem Gerät ist für die von Ihnen genutzte Funktion unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG).</p>
+
+        <p><strong>Android-Sicherung und Gerätewechsel.</strong> Ist die Sicherung in den Android-Einstellungen eingeschaltet, kann Android die Datenbank der App in Ihrem Google-Konto sichern und auf einem neuen Gerät wiederherstellen. Diese Sicherung ist eine Funktion von Android und Google. Wir betreiben dafür keinen eigenen Dienst und haben auf die Sicherung keinen Zugriff. Sie können sie in den Android-Einstellungen abschalten.</p>
+
+        <p><strong>Export und Import.</strong> Eine Sicherungsdatei (JSON) oder eine CSV-Datei entsteht nur, wenn Sie selbst exportieren. Das Ziel — etwa einen Ordner, einen Cloud-Speicher oder eine E-Mail — wählen Sie über die Teilen-Funktion von Android. Dort gelten die Datenschutzbestimmungen des von Ihnen gewählten Anbieters. Importierte Dateien liest die App nur auf Ihrem Gerät.</p>
+
+        <p><strong>Erinnerungen und Widget.</strong> Die Ableseerinnerung plant die App als lokale Benachrichtigung auf Ihrem Gerät; dafür fragt sie die Berechtigung für Benachrichtigungen an. Damit eine geplante Erinnerung einen Neustart übersteht, meldet sich die App beim Systemstart an. Das optionale Startbildschirm-Widget zeigt den letzten Stand des gewählten Zählers auf Ihrem Gerät an. Dabei werden keine Daten übertragen.</p>
+
+        <p><strong>Kauf von Pro.</strong> Den Einmalkauf „Pro“ wickelt Google Play ab. Die App fragt bei Google Play ab, ob Sie Pro gekauft haben, und bestätigt erfolgreiche Käufe dort. Die Bibliothek von Google für die Kaufabwicklung kann dabei technische Angaben an Google übermitteln. Karten- oder Kontodaten erfasst die App nicht; Zahlungsdaten erhalten wir nicht. Von Google bekommen wir Angaben zu den Bestellungen, etwa Bestellnummer, Datum, Produkt, Preis und Land. Diese nutzen wir zur Abwicklung, etwa bei Erstattungen, und für gesetzlich vorgeschriebene Aufzeichnungen (Art. 6 Abs. 1 lit. b und c DSGVO). Für die Zahlung gelten die Datenschutzbestimmungen von Google.</p>
+
+        <p><strong>Bewertungen.</strong> Nach einiger Nutzungszeit kann die App einmal den Bewertungsdialog von Google Play aufrufen. Ob er erscheint, entscheidet Google Play. Eine Bewertung geben Sie freiwillig über Google Play ab; sie wird mit Ihrem Google-Play-Profilnamen veröffentlicht. Wir sehen Bewertungen in der Play Console und können darauf antworten. Die App erfährt über den Dialog weder die Sternezahl noch den Rezensionstext.</p>
+
+        <p><strong>Links und Kontakt.</strong> Links in der App zu dieser Website, zum Play Store oder zu Ihrem E-Mail-Programm öffnen die jeweilige App außerhalb von Meter Scout. Für den Besuch dieser Website gilt Punkt 3. Wenn Sie uns schreiben, übermitteln Sie die Angaben aus Ihrer Nachricht; wir verwenden sie nur, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO).</p>
+
+        <p><strong>Speicherdauer und Löschung.</strong> Die Daten bleiben gespeichert, bis Sie sie in der App löschen, die App-Daten löschen oder die App deinstallieren. Bereits von Ihnen geteilte Dateien und vorhandene Android-Sicherungen werden dadurch nicht automatisch mitgelöscht; eine Sicherung verwalten Sie in Ihrem Google-Konto. Da wir aus Meter Scout keine Zählerdaten erhalten, gibt es bei uns dazu nichts zu löschen. Punkt 7 (Ihre Rechte) und Punkt 8 (Verantwortlicher) gelten auch für Meter Scout.</p>
+
+        <h3>Statistik und Fehlerberichte in den Spielen — nur mit Ihrer Einwilligung</h3>
         <p>Im EWR, in Großbritannien und der Schweiz ist diese Erhebung standardmäßig ausgeschaltet: Sie greift erst, wenn Sie beim ersten Start ausdrücklich zustimmen. Außerhalb dieser Regionen kann sie stattdessen voreingestellt aktiv sein. In jedem Fall lässt sie sich jederzeit über den Schalter <strong>„Statistik &amp; Fehlerberichte“</strong> in den Einstellungen der App ein- und ausschalten.</p>
 
         <p><strong>Nutzungsstatistiken</strong> (Google Firebase Analytics): Sitzungsdauer, gestartete Spielmodi, Spielverlaufsereignisse, Funktionsnutzung, App-Version, Gerätetyp und Betriebssystemversion.</p>
@@ -299,8 +343,8 @@
 
         <p>Ein Hinweis zur Funktionsweise: Ist die Übermittlung ausgeschaltet, legt Crashlytics Absturzinformationen dennoch <em>lokal auf Ihrem Gerät</em> ab. Schalten Sie die Funktion später ein, werden diese zurückliegenden Berichte nachträglich übertragen. Zu diesem Zeitpunkt liegt Ihre Einwilligung vor — wir möchten es aber ausdrücklich erwähnen, damit „aus“ nicht mit „es entsteht nichts“ verwechselt wird.</p>
 
-        <h3>Werbedaten</h3>
-        <p>Unsere Anwendungen verwenden <strong>Google AdMob</strong>. Dabei können folgende Daten verarbeitet werden:</p>
+        <h3>Werbedaten (nur Spiele)</h3>
+        <p>Unsere Spiele verwenden <strong>Google AdMob</strong>. Dabei können folgende Daten verarbeitet werden:</p>
         <ul>
             <li>Google Werbe-ID (Android Advertising ID)</li>
             <li>IP-Adresse</li>
@@ -312,23 +356,27 @@
         <p>Ihre Entscheidung können Sie jederzeit ändern: Die Abfrage lässt sich in den Einstellungen der App erneut aufrufen. Rechtsgrundlage für personalisierte Werbung ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.</p>
         <p>Die Werbe-ID kann in den Geräteeinstellungen zurückgesetzt oder deaktiviert werden. Einstellungen zur Personalisierung sind auch im Google-Konto möglich.</p>
 
-        <h3>Weitere eingesetzte Dienste</h3>
+        <h3>Weitere Dienste in den Spielen</h3>
         <p><strong>Firebase Remote Config</strong> ruft die Konfiguration der App ab, etwa Schalter für Funktionen oder die Wortdatenbank. Dabei werden keine Nutzungsdaten erhoben.</p>
         <p><strong>Google Play Games Services</strong> verwaltet Bestenlisten und Erfolge. Die Anmeldung erfolgt über Ihr Google-Konto und ist eine eigenständige Google-Funktion.</p>
 
         <h2>2. Rechtsgrundlage</h2>
         <ul>
             <li><strong>Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (Einwilligung)</strong> — für Nutzungsstatistiken und Fehlerberichte sowie für personalisierte Werbung. In den einwilligungspflichtigen Regionen fragen wir beides beim ersten Start getrennt voneinander ab; widerrufen lässt sich beides jederzeit in den Einstellungen.</li>
-            <li><strong>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</strong> — für die technische Bereitstellung und Sicherheit der Apps, den Abruf der Konfiguration sowie nicht-personalisierte Werbung zur Finanzierung des kostenlosen Angebots</li>
+            <li><strong>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</strong> — für die technische Bereitstellung und Sicherheit unserer Apps und für die Beantwortung Ihrer Anfragen; in den Spielen zusätzlich für den Abruf der Konfiguration und nicht-personalisierte Werbung zur Finanzierung des kostenlosen Angebots</li>
+            <li><strong>§ 25 Abs. 2 Nr. 2 TDDDG (unbedingt erforderlich)</strong> — für das Speichern der von Ihnen erfassten Daten auf Ihrem Gerät in Meter Scout. Dafür ist keine Einwilligung nötig, weil die App ohne diese Speicherung ihren Zweck nicht erfüllen kann.</li>
+            <li><strong>Art. 6 Abs. 1 lit. b und c DSGVO (Vertrag, rechtliche Verpflichtung)</strong> — für die Abwicklung von Käufen über Google Play und die Aufbewahrung der zugehörigen Bestellangaben</li>
         </ul>
 
         <h2>3. Weitergabe von Daten</h2>
-        <p>In den Apps werden Daten an folgende Dienste weitergegeben:</p>
+        <p>In unseren Spielen werden Daten an folgende Dienste weitergegeben:</p>
         <ul>
             <li>Google AdMob</li>
             <li>Google Firebase</li>
             <li>Google Play Games Services</li>
         </ul>
+
+        <p><strong>Meter Scout</strong> gibt an diese Dienste keine Daten weiter. Beteiligt ist Google Play allein beim Kauf von Pro und beim Bewertungsdialog — Näheres im Unterabschnitt <a href="#meter-scout-de">„Meter Scout“</a>.</p>
 
         <p>Willigen Sie in personalisierte Werbung ein, können neben Google auch dessen Werbepartner Daten verarbeiten. Die vollständige und jeweils aktuelle Liste dieser Partner ist direkt in der Einwilligungsabfrage der App unter „Liste der Partner“ abrufbar. Lehnen Sie ab, findet keine Weitergabe an Werbepartner zum Zweck personalisierter Werbung statt.</p>
 
@@ -357,7 +405,7 @@
         <p>Bunny Fonts und GoatCounter werden auf Servern innerhalb der EU betrieben; hier findet keine Drittlandübermittlung statt.</p>
 
         <h2>5. Speicherdauer</h2>
-        <p>Wir speichern personenbezogene Daten nur so lange, wie es für die unter Punkt 1 und 3 genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen dies vorschreiben. Danach werden sie gelöscht oder anonymisiert.</p>
+        <p>Wir speichern personenbezogene Daten nur so lange, wie es für die unter Punkt 1 und 3 genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen dies vorschreiben. Danach werden sie gelöscht oder anonymisiert. Die in Meter Scout erfassten Zählerdaten liegen ausschließlich auf Ihrem Gerät; wie lange sie dort bleiben, entscheiden Sie selbst.</p>
 
         <p>Die konkrete Dauer richtet sich nach dem jeweiligen Dienst: Absturzberichte werden nicht länger aufbewahrt, als zur Fehleranalyse nötig; technische Protokolldaten der Infrastruktur unterliegen den Fristen von GitHub und Cloudflare; die Statistiken von GoatCounter enthalten von vornherein keine IP-Adressen. Da wir auf die Aufbewahrungsfristen der eingesetzten Anbieter keinen Einfluss haben, verweisen wir insoweit auf deren Datenschutzhinweise.</p>
 
@@ -378,7 +426,7 @@
         <p>Zur Ausübung genügt eine formlose E-Mail an <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>.</p>
 
         <h3>Löschung von App-Daten beantragen</h3>
-        <p>Möchten Sie die zu Ihnen gespeicherten Daten aus einer unserer Apps löschen lassen, genügt eine E-Mail mit dem Namen der App an <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>. Wir bestätigen den Eingang und löschen die Daten, soweit sie unserem Zugriff unterliegen. Spielstände, Bestenlisten-Einträge und Erfolge werden von Google Play Games verwaltet und lassen sich zusätzlich über Ihr Google-Konto entfernen.</p>
+        <p>Möchten Sie die zu Ihnen gespeicherten Daten aus einer unserer Apps löschen lassen, genügt eine E-Mail mit dem Namen der App an <a href="mailto:contact@veriatax.com">contact@veriatax.com</a>. Wir bestätigen den Eingang und löschen die Daten, soweit sie unserem Zugriff unterliegen. Spielstände, Bestenlisten-Einträge und Erfolge werden von Google Play Games verwaltet und lassen sich zusätzlich über Ihr Google-Konto entfernen. Bei Meter Scout liegen uns keine Zählerdaten vor: Diese löschen Sie in der App selbst oder über die App-Einstellungen von Android.</p>
 
         <h3>Datenschutzrechte für Nutzer in den USA</h3>
         <p>In den USA gelten Datenschutzgesetze auf Ebene der einzelnen Bundesstaaten. Je nach Wohnsitzstaat können Ihnen dadurch zusätzliche Rechte zustehen — insbesondere das Recht, der Weitergabe personenbezogener Daten für personalisierte Werbung zu widersprechen. Die Gesetze verwenden dafür unterschiedliche Begriffe: Kalifornien spricht von „sale“ und „sharing“, Texas und die meisten übrigen Staaten von „sale“ und „targeted advertising“.</p>
@@ -389,7 +437,7 @@
 
         <div class="objection">
             <h3>Widerspruchsrecht nach Art. 21 DSGVO</h3>
-            <p>Soweit wir Ihre Daten auf Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten — das betrifft den Betrieb dieser Website, die Schriftarten-Einbindung und die Reichweitenmessung — haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</p>
+            <p>Soweit wir Ihre Daten auf Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten — das betrifft den Betrieb dieser Website, die Schriftarten-Einbindung, die Reichweitenmessung und die Beantwortung Ihrer Anfragen — haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</p>
             <p>Wir verarbeiten die betreffenden Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen. Ein Widerspruch genügt formlos per E-Mail.</p>
         </div>
 
@@ -432,19 +480,47 @@
 <script>
 let currentLang = 'en';
 
+// Die App oeffnet #meter-scout-de bzw. #meter-scout-en, die Play Console
+// #meter-scout ohne Sprache. Ein Anker im ausgeblendeten Sprachblock springt
+// nicht, deshalb waehlt das Script erst die Sprache und scrollt dann selbst.
+const METER_HASH = /^#meter-scout(?:-(de|en))?$/;
+
+function jumpToMeterScout() {
+    const el = document.getElementById('meter-scout-' + currentLang);
+    if (!el) return;
+    // erst nach dem Zeichnen springen, sonst stimmt die Position nicht
+    requestAnimationFrame(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }));
+}
+
 function initLang() {
+    const hash = location.hash.match(METER_HASH);
     try {
         const s = localStorage.getItem('veriatax-lang');
-        if (s === 'de' || s === 'en') currentLang = s;
+        if (hash && hash[1]) currentLang = hash[1];
+        else if (s === 'de' || s === 'en') currentLang = s;
         else currentLang = (navigator.language || '').startsWith('de') ? 'de' : 'en';
-    } catch(e) { currentLang = 'en'; }
+    } catch(e) { currentLang = (hash && hash[1]) ? hash[1] : 'en'; }
     applyLang(currentLang);
+    if (hash) jumpToMeterScout();
 }
+
+// Wird der Link erneut angetippt, waehrend die Seite schon offen ist
+window.addEventListener('hashchange', () => {
+    const hash = location.hash.match(METER_HASH);
+    if (!hash) return;
+    if (hash[1] && hash[1] !== currentLang) {
+        currentLang = hash[1];
+        applyLang(currentLang);
+    }
+    jumpToMeterScout();
+});
 
 function toggleLang() {
     currentLang = currentLang === 'en' ? 'de' : 'en';
     applyLang(currentLang);
     try { localStorage.setItem('veriatax-lang', currentLang); } catch(e) {}
+    // Wer ueber den Anker kam, soll nach dem Wechsel denselben Abschnitt sehen
+    if (METER_HASH.test(location.hash)) jumpToMeterScout();
 }
 
 function applyLang(lang) {
