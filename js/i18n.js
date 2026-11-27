@@ -98,7 +98,7 @@ const translations = {
         "status.dev": "In Dev", "status.live": "Live",
         "status.planned": "Planned",
         "fll.genre": "One-Tap Arcade Game",
-        "fll.desc": "Tap to jump through fire rings! Free one-tap arcade game with 5 characters, global leaderboards, power-ups, and boss rings. Easy to learn, tough to master.",
+        "fll.desc": "Tap to jump through fire rings! Free one-tap arcade game with 6 characters, global leaderboards, daily challenges, power-ups and boss rings. Easy to learn, tough to master.",
         "fll.cta": "Get it on Google Play →",
         "mf.genre": "Puzzle Collection",
         "mf.tag2": "Crossmath",

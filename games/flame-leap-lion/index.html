@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flame Leap Lion: Circus Run – Free One-Tap Arcade Game</title>
-    <meta name="description" content="Tap to make your circus lion leap through blazing fire rings. Free one-tap arcade game for Android with five characters, global leaderboards, power-ups and boss rings.">
+    <meta name="description" content="Tap to make your circus lion leap through blazing fire rings. Free one-tap arcade game for Android with six characters, three difficulty levels, global leaderboards, daily challenges, power-ups and boss rings.">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <meta name="theme-color" content="#070a12">
@@ -12,8 +12,8 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Flame Leap Lion: Circus Run – Free One-Tap Arcade Game">
-    <meta property="og:description" content="Tap to leap through blazing fire rings. Five characters, global leaderboards, power-ups and boss rings — free on Google Play.">
-    <meta property="og:image" content="https://veriatax.com/images/fll/og-card.jpg">
+    <meta property="og:description" content="Tap to leap through blazing fire rings. Six characters, global leaderboards, daily challenges, power-ups and boss rings — free on Google Play.">
+    <meta property="og:image" content="https://veriatax.com/images/fll/og-card-v12.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://veriatax.com/games/flame-leap-lion/">
@@ -27,8 +27,8 @@
   "@type": "VideoGame",
   "name": "Flame Leap Lion: Circus Run",
   "url": "https://veriatax.com/games/flame-leap-lion/",
-  "image": "https://veriatax.com/images/fll/og-card.jpg",
-  "description": "Tap to make your circus lion leap through blazing fire rings. Free one-tap arcade game with five characters, global leaderboards, power-ups and boss rings.",
+  "image": "https://veriatax.com/images/fll/og-card-v12.jpg",
+  "description": "Tap to make your circus lion leap through blazing fire rings. Free one-tap arcade game with six characters, three difficulty levels, global leaderboards, daily challenges, power-ups and boss rings.",
   "applicationCategory": "GameApplication",
   "genre": [
     "Arcade",
@@ -47,19 +47,21 @@
     "priceCurrency": "EUR"
   },
   "screenshot": [
-    "https://veriatax.com/images/fll/shot-1-start.jpg",
-    "https://veriatax.com/images/fll/shot-2-rings.jpg",
-    "https://veriatax.com/images/fll/shot-3-powerup.jpg",
-    "https://veriatax.com/images/fll/shot-4-boss.jpg",
-    "https://veriatax.com/images/fll/shot-5-characters.jpg"
+    "https://veriatax.com/images/fll/shot-1-play.jpg",
+    "https://veriatax.com/images/fll/shot-2-rainbow.jpg",
+    "https://veriatax.com/images/fll/shot-3-boss.jpg",
+    "https://veriatax.com/images/fll/shot-4-record.jpg",
+    "https://veriatax.com/images/fll/shot-5-shop.jpg",
+    "https://veriatax.com/images/fll/shot-6-menu.jpg",
+    "https://veriatax.com/images/fll/shot-7-achievements.jpg"
   ],
   "trailer": {
     "@type": "VideoObject",
     "name": "Flame Leap Lion: Circus Run — Gameplay",
-    "description": "Gameplay footage showing the lion leaping through fire rings.",
-    "thumbnailUrl": "https://veriatax.com/videos/fll-poster.jpg",
-    "contentUrl": "https://veriatax.com/videos/fll-gameplay.mp4",
-    "uploadDate": "2026-07-28"
+    "description": "Gameplay from the main menu through fire rings and combos to a new high score.",
+    "thumbnailUrl": "https://veriatax.com/videos/fll-poster-v12.jpg",
+    "contentUrl": "https://veriatax.com/videos/fll-gameplay-v12.mp4",
+    "uploadDate": "2026-11-27"
   }
 }
     </script>
@@ -356,8 +358,11 @@
         <div class="phone-frame">
             <video id="gameplayVideo" autoplay loop muted playsinline preload="metadata"
                    width="540" height="960"
-                   poster="../../videos/fll-poster.jpg" aria-label="Flame Leap Lion gameplay">
-                <source src="../../videos/fll-gameplay.mp4" type="video/mp4">
+                   poster="../../videos/fll-poster-v12.jpg"
+                   data-src-en="../../videos/fll-gameplay-v12.mp4" data-src-de="../../videos/fll-gameplay-v12-de.mp4"
+                   data-poster-en="../../videos/fll-poster-v12.jpg" data-poster-de="../../videos/fll-poster-v12-de.jpg"
+                   aria-label="Flame Leap Lion gameplay">
+                <source src="../../videos/fll-gameplay-v12.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -365,11 +370,13 @@
     <div class="shots">
         <h3 data-i18n="shots">Screenshots</h3>
         <div class="shots-scroll">
-            <div class="shot" tabindex="0" role="button"><img src="../../images/fll/shot-1-start.jpg" alt="Tap to leap — the lion waits on the circus pedestal" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/fll/shot-2-rings.jpg" alt="The lion leaps through a blazing fire ring" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/fll/shot-3-powerup.jpg" alt="Rainbow power-up active during an 8x combo" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/fll/shot-4-boss.jpg" alt="A boss ring blocks the way" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/fll/shot-5-characters.jpg" alt="Character selection with lion, tiger and panther" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="The lion leaps through tilted fire rings during a 5x combo" data-alt-en="The lion leaps through tilted fire rings during a 5x combo" data-alt-de="Der Löwe springt bei 5x-Kombo durch schräge Feuerringe"><img src="../../images/fll/shot-1-play.jpg" data-src-en="../../images/fll/shot-1-play.jpg" data-src-de="../../images/fll/shot-1-play-de.jpg" data-alt-en="The lion leaps through tilted fire rings during a 5x combo" data-alt-de="Der Löwe springt bei 5x-Kombo durch schräge Feuerringe" alt="The lion leaps through tilted fire rings during a 5x combo" width="540" height="1080" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Rainbow bonus round with a row of fire rings" data-alt-en="Rainbow bonus round with a row of fire rings" data-alt-de="Regenbogen-Bonus mit einer Reihe von Feuerringen"><img src="../../images/fll/shot-2-rainbow.jpg" data-src-en="../../images/fll/shot-2-rainbow.jpg" data-src-de="../../images/fll/shot-2-rainbow-de.jpg" data-alt-en="Rainbow bonus round with a row of fire rings" data-alt-de="Regenbogen-Bonus mit einer Reihe von Feuerringen" alt="Rainbow bonus round with a row of fire rings" width="540" height="1080" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="A spiked boss ring blocks the way" data-alt-en="A spiked boss ring blocks the way" data-alt-de="Ein stacheliger Boss-Ring stellt sich in den Weg"><img src="../../images/fll/shot-3-boss.jpg" data-src-en="../../images/fll/shot-3-boss.jpg" data-src-de="../../images/fll/shot-3-boss-de.jpg" data-alt-en="A spiked boss ring blocks the way" data-alt-de="Ein stacheliger Boss-Ring stellt sich in den Weg" alt="A spiked boss ring blocks the way" width="540" height="1080" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Game over screen with a new record and earned coins" data-alt-en="Game over screen with a new record and earned coins" data-alt-de="Spielende mit neuem Rekord und verdienten Münzen"><img src="../../images/fll/shot-4-record.jpg" data-src-en="../../images/fll/shot-4-record.jpg" data-src-de="../../images/fll/shot-4-record-de.jpg" data-alt-en="Game over screen with a new record and earned coins" data-alt-de="Spielende mit neuem Rekord und verdienten Münzen" alt="Game over screen with a new record and earned coins" width="540" height="1080" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Character shop with Leo, Tara and Ziggy" data-alt-en="Character shop with Leo, Tara and Ziggy" data-alt-de="Figuren-Shop mit Leo, Tara und Ziggy"><img src="../../images/fll/shot-5-shop.jpg" data-src-en="../../images/fll/shot-5-shop.jpg" data-src-de="../../images/fll/shot-5-shop-de.jpg" data-alt-en="Character shop with Leo, Tara and Ziggy" data-alt-de="Figuren-Shop mit Leo, Tara und Ziggy" alt="Character shop with Leo, Tara and Ziggy" width="540" height="1080" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Main menu with difficulty levels, daily reward and challenges" data-alt-en="Main menu with difficulty levels, daily reward and challenges" data-alt-de="Hauptmenü mit Schwierigkeitsgraden, Tagesbelohnung und Challenges"><img src="../../images/fll/shot-6-menu.jpg" data-src-en="../../images/fll/shot-6-menu.jpg" data-src-de="../../images/fll/shot-6-menu-de.jpg" data-alt-en="Main menu with difficulty levels, daily reward and challenges" data-alt-de="Hauptmenü mit Schwierigkeitsgraden, Tagesbelohnung und Challenges" alt="Main menu with difficulty levels, daily reward and challenges" width="540" height="1080" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Achievements list with 27 achievements" data-alt-en="Achievements list with 27 achievements" data-alt-de="Liste mit 27 Erfolgen"><img src="../../images/fll/shot-7-achievements.jpg" data-src-en="../../images/fll/shot-7-achievements.jpg" data-src-de="../../images/fll/shot-7-achievements-de.jpg" data-alt-en="Achievements list with 27 achievements" data-alt-de="Liste mit 27 Erfolgen" alt="Achievements list with 27 achievements" width="540" height="1080" loading="lazy"></div>
         </div>
     </div>
 
@@ -377,32 +384,47 @@
         <div class="feature">
             <div class="feature-icon">🔥</div>
             <h3 data-i18n="f1t">One-Tap Controls</h3>
-            <p data-i18n="f1d">Simple tap to jump through fire rings. Aim for the center, build combos, and watch your score soar. Four difficulty levels from beginner to expert.</p>
+            <p data-i18n="f1d">Tap to leap through the fire rings. Aim for the centre, build combos and watch your score soar. Three difficulty levels: Easy, Normal and Hard.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🦁</div>
-            <h3 data-i18n="f2t">5 Characters</h3>
-            <p data-i18n="f2d">Unlock and play as a lion, tiger, panther, white tiger, and a fiery phoenix. Collect coins to unlock them all.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🏆</div>
-            <h3 data-i18n="f3t">Leaderboards & Achievements</h3>
-            <p data-i18n="f3d">Climb the global leaderboards via Google Play Games and unlock achievements as you master the game.</p>
+            <h3 data-i18n="f2t">6 Characters</h3>
+            <p data-i18n="f2d">Leo the Lion, Tara the Tiger, Ziggy the Zebra, Shadow the Panther, Frost the White Tiger and Blaze the Phoenix. Collect coins and unlock them in the shop.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">💥</div>
             <h3 data-i18n="f4t">Power-Ups & Boss Rings</h3>
-            <p data-i18n="f4d">Shield, slow, magnet, rainbow rush, and ghost mode. Take on challenging boss rings as the action speeds up.</p>
+            <p data-i18n="f4d">Shield, Slow, Magnet, Mini, Giant and Rescue Bounce. Boss rings block the way, and the rainbow bonus pays out extra points.</p>
         </div>
         <div class="feature">
-            <div class="feature-icon">⚡</div>
-            <h3 data-i18n="f5t">Smooth Performance</h3>
-            <p data-i18n="f5d">Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.</p>
+            <div class="feature-icon">📅</div>
+            <h3 data-i18n="f7t">Daily Reward & Challenges</h3>
+            <p data-i18n="f7d">A daily reward with a seven-day streak, plus daily challenges that earn you extra coins.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🏆</div>
+            <h3 data-i18n="f3t">Leaderboards & Achievements</h3>
+            <p data-i18n="f3d">Four leaderboards via Google Play Games, one per difficulty plus best combo, and 27 achievements to unlock.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">📊</div>
+            <h3 data-i18n="f8t">Statistics</h3>
+            <p data-i18n="f8d">Games played, rings passed, jumps, coins collected and your best combo at a glance.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🌍</div>
+            <h3 data-i18n="f9t">German & English</h3>
+            <p data-i18n="f9d">The whole game is available in German and English.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🎵</div>
             <h3 data-i18n="f6t">Original Soundtrack</h3>
             <p data-i18n="f6d">An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3 data-i18n="f5t">Smooth Performance</h3>
+            <p data-i18n="f5d">Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.</p>
         </div>
     </div>
 
@@ -452,18 +474,24 @@ const pageTrans = {
         "shots": "Bildschirmfotos",
         "cta": "▶ Jetzt auf Google Play",
         "f1t": "Ein-Tipp-Steuerung",
-        "f1d": "Einfaches Tippen zum Springen durch Feuerringe. Ziele auf die Mitte, baue Kombos auf und sieh deinen Score steigen. Vier Schwierigkeitsgrade vom Einsteiger bis zum Profi.",
-        "f2t": "5 Charaktere",
-        "f2d": "Schalte frei und spiele als Löwe, Tiger, Panther, Weißer Tiger und feuriger Phönix. Sammle Münzen, um alle freizuschalten.",
+        "f1d": "Tippen und durch die Feuerringe springen. Ziele auf die Mitte, baue Kombos auf und sieh deinen Punktestand steigen. Drei Schwierigkeitsgrade: Einfach, Normal und Schwer.",
+        "f2t": "6 Charaktere",
+        "f2d": "Leo der Löwe, Tara der Tiger, Ziggy das Zebra, Shadow der Panther, Frost der Weiße Tiger und Blaze der Phönix. Sammle Münzen und schalte sie im Shop frei.",
         "f3t": "Bestenlisten & Erfolge",
-        "f3d": "Klettere in den globalen Bestenlisten über Google Play Games und schalte Erfolge frei, je besser du wirst.",
+        "f3d": "Vier Bestenlisten über Google Play Games, je eine pro Schwierigkeitsgrad und eine für die beste Kombo, dazu 27 Erfolge zum Freischalten.",
         "f4t": "Power-Ups & Boss-Ringe",
-        "f4d": "Schild, Langsam, Magnet, Regenbogen und Geistermodus. Stelle dich herausfordernden Boss-Ringen, während das Tempo anzieht.",
+        "f4d": "Schild, Langsam, Magnet, Mini, Riese und Rettungssprung. Boss-Ringe stellen sich in den Weg, und der Regenbogen-Bonus bringt Extrapunkte.",
         "f5t": "Flüssige Performance",
         "f5d": "Gebaut mit React + Capacitor für butterweiche 60fps auf modernen Android-Geräten. Kurze Runden, perfekt für zwischendurch.",
         "f6t": "Eigener Soundtrack",
         "f6d": "Ein instrumentaler Soundtrack im Zirkus-Thema, eigens für das Spiel komponiert — ohne Gesang, gemacht für die Manege statt für die Playlist.",
-        "end.line": "Kostenlos spielbar, kein Konto nötig — einfach tippen und springen."
+        "end.line": "Kostenlos spielbar, kein Konto nötig — einfach tippen und springen.",
+        "f7t": "Tagesbelohnung & Challenges",
+        "f7d": "Eine Tagesbelohnung mit Sieben-Tage-Serie und tägliche Challenges, die zusätzliche Münzen bringen.",
+        "f8t": "Statistik",
+        "f8d": "Gespielte Runden, passierte Ringe, Sprünge, gesammelte Münzen und deine beste Kombo auf einen Blick.",
+        "f9t": "Deutsch & Englisch",
+        "f9d": "Das ganze Spiel gibt es auf Deutsch und Englisch."
     },
     en: {
         "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
@@ -475,18 +503,24 @@ const pageTrans = {
         "shots": "Screenshots",
         "cta": "▶ Get it on Google Play",
         "f1t": "One-Tap Controls",
-        "f1d": "Simple tap to jump through fire rings. Aim for the center, build combos, and watch your score soar. Four difficulty levels from beginner to expert.",
-        "f2t": "5 Characters",
-        "f2d": "Unlock and play as a lion, tiger, panther, white tiger, and a fiery phoenix. Collect coins to unlock them all.",
+        "f1d": "Tap to leap through the fire rings. Aim for the centre, build combos and watch your score soar. Three difficulty levels: Easy, Normal and Hard.",
+        "f2t": "6 Characters",
+        "f2d": "Leo the Lion, Tara the Tiger, Ziggy the Zebra, Shadow the Panther, Frost the White Tiger and Blaze the Phoenix. Collect coins and unlock them in the shop.",
         "f3t": "Leaderboards & Achievements",
-        "f3d": "Climb the global leaderboards via Google Play Games and unlock achievements as you master the game.",
+        "f3d": "Four leaderboards via Google Play Games, one per difficulty plus best combo, and 27 achievements to unlock.",
         "f4t": "Power-Ups & Boss Rings",
-        "f4d": "Shield, slow, magnet, rainbow rush, and ghost mode. Take on challenging boss rings as the action speeds up.",
+        "f4d": "Shield, Slow, Magnet, Mini, Giant and Rescue Bounce. Boss rings block the way, and the rainbow bonus pays out extra points.",
         "f5t": "Smooth Performance",
         "f5d": "Built with React + Capacitor for buttery smooth 60fps on modern Android devices. Quick sessions, perfect for short breaks.",
         "f6t": "Original Soundtrack",
         "f6d": "An instrumental circus-themed soundtrack composed specifically for the game — no vocals, made for the big top rather than the playlist.",
-        "end.line": "Free to play, no account required — just tap and leap."
+        "end.line": "Free to play, no account required — just tap and leap.",
+        "f7t": "Daily Reward & Challenges",
+        "f7d": "A daily reward with a seven-day streak, plus daily challenges that earn you extra coins.",
+        "f8t": "Statistics",
+        "f8d": "Games played, rings passed, jumps, coins collected and your best combo at a glance.",
+        "f9t": "German & English",
+        "f9d": "The whole game is available in German and English."
     }
 };
 let currentLang = 'en';
@@ -509,37 +543,67 @@ function applyLang(lang) {
         const k = el.getAttribute('data-i18n');
         if (d[k]) el.textContent = d[k];
     });
+    // Bildschirmfotos und Video zeigen das Spiel in der gewaehlten Sprache
+    document.querySelectorAll('img[data-src-' + lang + ']').forEach(img => {
+        img.src = img.getAttribute('data-src-' + lang);
+        const alt = img.getAttribute('data-alt-' + lang);
+        if (alt) img.alt = alt;
+    });
+    document.querySelectorAll('.shot[data-alt-' + lang + ']').forEach(el => {
+        el.setAttribute('aria-label', el.getAttribute('data-alt-' + lang));
+    });
+    setVideoLang(lang);
     const btn = document.getElementById('langToggle');
     if (btn) { btn.textContent = lang === 'en' ? 'DE' : 'EN'; }
     document.documentElement.lang = lang;
+}
+function setVideoLang(lang) {
+    const v = document.getElementById('gameplayVideo');
+    const s = v && v.querySelector('source');
+    const src = v && v.getAttribute('data-src-' + lang);
+    if (!s || !src || s.getAttribute('src') === src) return;
+    s.setAttribute('src', src);
+    v.setAttribute('poster', v.getAttribute('data-poster-' + lang));
+    v.load();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) v.play().catch(() => {});
 }
 
 // Mobile nav
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 if (navToggle) {
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+    navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }));
 }
 
 // Screenshot-Lightbox
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lightboxImg');
-function openLightbox(src, alt) {
+let lastShot = null;
+function openLightbox(src, alt, from) {
     lbImg.src = src;
     lbImg.alt = alt || '';
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
+    lastShot = from || null;
+    document.getElementById('lightboxClose').focus();
 }
 function closeLightbox() {
     lb.classList.remove('open');
     lbImg.src = '';
     document.body.style.overflow = '';
+    if (lastShot) lastShot.focus();
 }
 document.querySelectorAll('.shot').forEach(el => {
     const open = () => {
         const img = el.querySelector('img');
-        if (img) openLightbox(img.src, img.alt);
+        if (img) openLightbox(img.src, img.alt, el);
     };
     el.addEventListener('click', open);
     el.addEventListener('keydown', e => {
