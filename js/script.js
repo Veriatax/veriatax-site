@@ -4,13 +4,6 @@ document.documentElement.classList.add('js');
    VERIATAX INTERACTIVE — Scripts
    ============================================ */
 
-// Loading Screen
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('loadingScreen').classList.add('hidden');
-    }, 800);
-});
-
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 

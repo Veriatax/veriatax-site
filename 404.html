@@ -8,13 +8,32 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#06080f">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/exo-2-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
     <style>
+        /* Schriften vom eigenen Server (SIL OFL 1.1, siehe fonts/LICENSE-*.txt) */
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(/fonts/rajdhani-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(/fonts/rajdhani-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/rajdhani-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/rajdhani-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:600;src:url(/fonts/rajdhani-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:600;src:url(/fonts/rajdhani-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:700;src:url(/fonts/rajdhani-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:700;src:url(/fonts/rajdhani-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:300;src:url(/fonts/exo-2-latin-ext-300-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:300;src:url(/fonts/exo-2-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:400;src:url(/fonts/exo-2-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:400;src:url(/fonts/exo-2-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/exo-2-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/exo-2-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(/fonts/exo-2-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(/fonts/exo-2-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(/fonts/exo-2-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(/fonts/exo-2-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg: #06080f; --accent: #f0a030; --accent-cyan: #00d4ff; --accent-magenta: #ff3090;
-            --text: #eef2f7; --text-dim: rgba(238,242,247,0.6); --text-muted: rgba(238,242,247,0.3);
+            --text: #eef2f7; --text-dim: rgba(238,242,247,0.6); --text-muted: rgba(238,242,247,0.5);
             --glass: rgba(255,255,255,0.05); --border: rgba(255,255,255,0.07);
         }
         body {
@@ -111,9 +130,14 @@
             .error-links { flex-direction: column; }
             .error-btn { width: 100%; justify-content: center; }
         }
+        .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10000; padding: 10px 18px; border-radius: 8px; background: #f0a030; color: #0a0a0a; font-size: 14px; font-weight: 700; text-decoration: none; transition: top 0.2s ease; }
+        .skip-link:focus { top: 12px; }
+        main:focus { outline: none; }
+        main { flex: 1; display: flex; flex-direction: column; }
     </style>
 </head>
 <body>
+<a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
 
 <div class="ambient">
     <div class="orb orb-1"></div>
@@ -123,7 +147,7 @@
 <header class="navbar">
     <div class="nav-inner">
         <a href="/" class="logo">
-            <img src="/images/logo.png" alt="Veriatax Interactive" class="logo-img">
+            <img src="/images/logo-120.webp" alt="Veriatax Interactive" class="logo-img" width="38" height="38">
             <span class="logo-text">VERIATAX</span>
         </a>
         <nav class="nav-links">
@@ -137,6 +161,7 @@
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
 </header>
+<main id="main" tabindex="-1">
 
 <div class="error-wrap">
     <div class="error-box">
@@ -151,25 +176,26 @@
     </div>
 </div>
 
+</main>
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;text-align:center">
 <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
-<img src="/images/logo.png" alt="Veriatax" style="width:24px;height:24px;border-radius:4px">
+<img src="/images/logo-120.webp" alt="Veriatax" style="width:24px;height:24px;border-radius:4px" width="24" height="24">
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
 <div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.home">Home</a>
-<a href="/privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
-<a href="/impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
-<a href="/licenses/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
+<a href="/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.home">Home</a>
+<a href="/privacy/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
+<a href="/impressum/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Impressum</a>
+<a href="/licenses/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
 </div>
-<p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive. All rights reserved.</p>
-<p style="font-size:11px;color:rgba(238,242,247,0.2);margin-top:6px">&#128274; <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
+<p style="font-size:11px;color:rgba(238,242,247,0.5)">&copy; 2026 Veriatax Interactive. <span data-i18n="footer.rights">All rights reserved.</span></p>
+<p style="font-size:11px;color:rgba(238,242,247,0.5);margin-top:6px">&#128274; <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
 </footer>
 
 <script>
 const pageTrans = {
     de: {
-        "footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "\u00dcber uns",
+        "footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "footer.rights": "Alle Rechte vorbehalten.", "skip": "Zum Inhalt springen", "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "\u00dcber uns",
         "e.title": "Diese Seite ist falsch abgebogen",
         "e.text": "Die gesuchte Seite existiert nicht oder wurde verschoben. Keine Karten, keine Pl\u00e4ne \u2014 aber zur\u00fcck auf die Strecke geht immer.",
         "e.home": "Zur Startseite",
@@ -177,7 +203,7 @@ const pageTrans = {
         "e.games": "Spiele entdecken"
     },
     en: {
-        "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
+        "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "footer.rights": "All rights reserved.", "skip": "Skip to content", "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
         "e.title": "This page took a wrong turn",
         "e.text": "The page you were looking for doesn't exist or has moved. No maps, no plans \u2014 but we can get you back on the road.",
         "e.home": "Back to Home",

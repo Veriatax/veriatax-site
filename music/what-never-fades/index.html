@@ -17,8 +17,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#06080f">
     <link rel="canonical" href="https://veriatax.com/music/what-never-fades/">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="../../fonts/exo-2-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,10 +49,29 @@
 }
     </script>
     <style>
+        /* Schriften vom eigenen Server (SIL OFL 1.1, siehe fonts/LICENSE-*.txt) */
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(../../fonts/rajdhani-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(../../fonts/rajdhani-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(../../fonts/rajdhani-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(../../fonts/rajdhani-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:600;src:url(../../fonts/rajdhani-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:600;src:url(../../fonts/rajdhani-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:700;src:url(../../fonts/rajdhani-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:700;src:url(../../fonts/rajdhani-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:300;src:url(../../fonts/exo-2-latin-ext-300-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:300;src:url(../../fonts/exo-2-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:400;src:url(../../fonts/exo-2-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:400;src:url(../../fonts/exo-2-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:500;src:url(../../fonts/exo-2-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:500;src:url(../../fonts/exo-2-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(../../fonts/exo-2-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(../../fonts/exo-2-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(../../fonts/exo-2-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(../../fonts/exo-2-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg: #06080f; --accent: #f0a030; --accent-cyan: #00d4ff; --accent-magenta: #ff3090;
-            --text: #eef2f7; --text-dim: rgba(238,242,247,0.6); --text-muted: rgba(238,242,247,0.3);
+            --text: #eef2f7; --text-dim: rgba(238,242,247,0.6); --text-muted: rgba(238,242,247,0.5);
             --glass: rgba(255,255,255,0.05); --border: rgba(255,255,255,0.07);
         }
         body {
@@ -104,7 +123,7 @@
             font-family: 'Exo 2', sans-serif; font-size: 14px; font-weight: 600;
             border-radius: 10px; text-decoration: none; transition: all 0.3s ease;
         }
-        .btn-spotify { background: #1db954; }
+        .btn-spotify { background: #1db954; color: #000; }
         .btn-spotify:hover {
             background: #1ed760; transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(29,185,84,0.3); text-decoration: none;
@@ -153,7 +172,7 @@
         }
 
         .more-section { margin-top: 60px; }
-        .more-section h3 {
+        .more-section h2 {
             font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 600;
             margin-bottom: 16px; color: var(--text-dim);
         }
@@ -236,9 +255,13 @@
             .nav-link::after { display: none; }
             .lang-toggle { align-self: flex-start; margin: 12px 0 4px 0; padding: 8px 20px; font-size: 12px; }
         }
+        .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10000; padding: 10px 18px; border-radius: 8px; background: #f0a030; color: #0a0a0a; font-size: 14px; font-weight: 700; text-decoration: none; transition: top 0.2s ease; }
+        .skip-link:focus { top: 12px; }
+        main:focus { outline: none; }
     </style>
 </head>
 <body>
+<a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
 
 <div class="ambient">
     <div class="orb orb-1"></div>
@@ -248,7 +271,7 @@
 <header class="navbar" id="navbar">
     <div class="nav-inner">
         <a href="../../" class="logo">
-            <img src="../../images/logo.png" alt="Veriatax Interactive" class="logo-img" width="38" height="38">
+            <img src="../../images/logo-120.webp" alt="Veriatax Interactive" class="logo-img" width="38" height="38">
             <span class="logo-text">VERIATAX</span>
         </a>
         <nav class="nav-links" id="navLinks">
@@ -264,6 +287,7 @@
         </button>
     </div>
 </header>
+<main id="main" tabindex="-1">
 
 <div class="page">
     <div class="track-layout">
@@ -298,43 +322,44 @@
     </div>
 
     <div class="more-section">
-        <h3 data-i18n="more">More from Veriatax Interactive</h3>
+        <h2 data-i18n="more">More from Veriatax Interactive</h2>
         <div class="more-grid">
-            <a href="../one-more-sunset/" class="more-item"><img src="../../images/thumbs/one-more-sunset.jpg" alt="One More Sunset" width="48" height="48" loading="lazy"><span>One More Sunset</span></a>
-            <a href="../unshaken/" class="more-item"><img src="../../images/thumbs/unshaken.jpg" alt="Unshaken" width="48" height="48" loading="lazy"><span>Unshaken</span></a>
-            <a href="../riverside-light/" class="more-item"><img src="../../images/thumbs/riverside-light.jpg" alt="Riverside Light" width="48" height="48" loading="lazy"><span>Riverside Light</span></a>
-            <a href="../golden-motion/" class="more-item"><img src="../../images/thumbs/golden-motion.jpg" alt="Golden Motion" width="48" height="48" loading="lazy"><span>Golden Motion</span></a>
-            <a href="../move-with-me/" class="more-item"><img src="../../images/thumbs/move-with-me.jpg" alt="Move With Me" width="48" height="48" loading="lazy"><span>Move With Me</span></a>
-            <a href="../control-the-night/" class="more-item"><img src="../../images/thumbs/control-the-night.jpg" alt="Control the Night" width="48" height="48" loading="lazy"><span>Control the Night</span></a>
-            <a href="../golden-pulse/" class="more-item"><img src="../../images/thumbs/golden-pulse.jpg" alt="Golden Pulse" width="48" height="48" loading="lazy"><span>Golden Pulse</span></a>
-            <a href="../only-with-my-team/" class="more-item"><img src="../../images/thumbs/only-with-my-team.jpg" alt="Only With My Team" width="48" height="48" loading="lazy"><span>Only With My Team</span></a>
-            <a href="../neon-monsoon/" class="more-item"><img src="../../images/thumbs/neon-monsoon.jpg" alt="Neon Monsoon" width="48" height="48" loading="lazy"><span>Neon Monsoon</span></a>
-            <a href="../saigon-sunrise/" class="more-item"><img src="../../images/thumbs/saigon-sunrise.jpg" alt="Saigon Sunrise (You &amp; Me)" width="48" height="48" loading="lazy"><span>Saigon Sunrise (You &amp; Me)</span></a>
-            <a href="../midnight-motorbike/" class="more-item"><img src="../../images/thumbs/midnight-motorbike.jpg" alt="Midnight Motorbike" width="48" height="48" loading="lazy"><span>Midnight Motorbike</span></a>
+            <a href="../one-more-sunset/" class="more-item"><img src="../../images/thumbs/one-more-sunset.jpg" alt="" width="48" height="48" loading="lazy"><span>One More Sunset</span></a>
+            <a href="../unshaken/" class="more-item"><img src="../../images/thumbs/unshaken.jpg" alt="" width="48" height="48" loading="lazy"><span>Unshaken</span></a>
+            <a href="../riverside-light/" class="more-item"><img src="../../images/thumbs/riverside-light.jpg" alt="" width="48" height="48" loading="lazy"><span>Riverside Light</span></a>
+            <a href="../golden-motion/" class="more-item"><img src="../../images/thumbs/golden-motion.jpg" alt="" width="48" height="48" loading="lazy"><span>Golden Motion</span></a>
+            <a href="../move-with-me/" class="more-item"><img src="../../images/thumbs/move-with-me.jpg" alt="" width="48" height="48" loading="lazy"><span>Move With Me</span></a>
+            <a href="../control-the-night/" class="more-item"><img src="../../images/thumbs/control-the-night.jpg" alt="" width="48" height="48" loading="lazy"><span>Control the Night</span></a>
+            <a href="../golden-pulse/" class="more-item"><img src="../../images/thumbs/golden-pulse.jpg" alt="" width="48" height="48" loading="lazy"><span>Golden Pulse</span></a>
+            <a href="../only-with-my-team/" class="more-item"><img src="../../images/thumbs/only-with-my-team.jpg" alt="" width="48" height="48" loading="lazy"><span>Only With My Team</span></a>
+            <a href="../neon-monsoon/" class="more-item"><img src="../../images/thumbs/neon-monsoon.jpg" alt="" width="48" height="48" loading="lazy"><span>Neon Monsoon</span></a>
+            <a href="../saigon-sunrise/" class="more-item"><img src="../../images/thumbs/saigon-sunrise.jpg" alt="" width="48" height="48" loading="lazy"><span>Saigon Sunrise (You &amp; Me)</span></a>
+            <a href="../midnight-motorbike/" class="more-item"><img src="../../images/thumbs/midnight-motorbike.jpg" alt="" width="48" height="48" loading="lazy"><span>Midnight Motorbike</span></a>
         </div>
     </div>
 </div>
 
+</main>
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
 <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
-<img src="../../images/logo.png" alt="Veriatax" style="width:24px;height:24px;border-radius:4px" width="24" height="24">
+<img src="../../images/logo-120.webp" alt="Veriatax" style="width:24px;height:24px;border-radius:4px" width="24" height="24">
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
 <div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.home">Home</a>
-<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
-<a href="../../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
-<a href="../../licenses/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
+<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.home">Home</a>
+<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
+<a href="../../impressum/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Impressum</a>
+<a href="../../licenses/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
 </div>
 <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
-<a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Spotify</a>
-<a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Apple Music</a>
-<a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Amazon Music</a>
-<a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Instagram</a>
-<a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">YouTube</a>
+<a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Spotify</a>
+<a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Apple Music</a>
+<a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Amazon Music</a>
+<a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Instagram</a>
+<a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">YouTube</a>
 </div>
-<p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive. All rights reserved.</p>
-<p style="font-size:11px;color:rgba(238,242,247,0.2);margin-top:6px">&#128274; <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
+<p style="font-size:11px;color:rgba(238,242,247,0.5)">&copy; 2026 Veriatax Interactive. <span data-i18n="footer.rights">All rights reserved.</span></p>
+<p style="font-size:11px;color:rgba(238,242,247,0.5);margin-top:6px">&#128274; <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
 </footer>
 
 <script data-goatcounter="https://veriatax.goatcounter.com/count"
@@ -343,7 +368,7 @@
 const pageTrans = {
     de: {
         "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "\u00dcber uns",
-        "footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.",
+        "footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "footer.rights": "Alle Rechte vorbehalten.", "skip": "Zum Inhalt springen",
         "label": "Single",
         "genre": "Cinematic Chill / Nachdenkliche Ballade",
         "desc": "Eine nasse Bergstraße im ersten Licht, Scherben hinter dir, ein Kompass, der weiter nach vorn zeigt. Über das Loslassen dessen, was nie bleiben sollte — denn Freiheit heißt nicht, alles zu verlieren, sondern zu wissen, was man behält.",
@@ -359,7 +384,7 @@ const pageTrans = {
     },
     en: {
         "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
-        "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.",
+        "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "footer.rights": "All rights reserved.", "skip": "Skip to content",
         "label": "Single",
         "genre": "Cinematic Chill / Reflective Ballad",
         "desc": "A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay — because freedom isn't losing everything, it's knowing what to save.",

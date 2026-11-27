@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum – Veriatax Interactive</title>
+    <meta name="description" content="Impressum (legal notice) of Veriatax Interactive – provider information under § 5 DDG and § 18 Abs. 2 MStV.">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <meta name="theme-color" content="#070a12">
@@ -14,14 +15,32 @@
     <meta property="og:description" content="Legal information for Veriatax Interactive under § 5 DDG.">
     <meta property="og:image" content="https://veriatax.com/images/hero-banner.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    
-    <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="../fonts/exo-2-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
     <style>
+        /* Schriften vom eigenen Server (SIL OFL 1.1, siehe fonts/LICENSE-*.txt) */
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(../fonts/rajdhani-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(../fonts/rajdhani-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(../fonts/rajdhani-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(../fonts/rajdhani-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:600;src:url(../fonts/rajdhani-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:600;src:url(../fonts/rajdhani-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:700;src:url(../fonts/rajdhani-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:700;src:url(../fonts/rajdhani-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:300;src:url(../fonts/exo-2-latin-ext-300-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:300;src:url(../fonts/exo-2-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:400;src:url(../fonts/exo-2-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:400;src:url(../fonts/exo-2-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:500;src:url(../fonts/exo-2-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:500;src:url(../fonts/exo-2-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(../fonts/exo-2-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(../fonts/exo-2-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(../fonts/exo-2-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(../fonts/exo-2-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg: #070a12; --accent: #f0a030; --accent-cyan: #00d4ff;
-            --text: #eaf0f6; --text-dim: rgba(234,240,246,0.6); --text-muted: rgba(234,240,246,0.35);
+            --text: #eaf0f6; --text-dim: rgba(234,240,246,0.6); --text-muted: rgba(234,240,246,0.5);
         }
         body {
             font-family: 'Exo 2', sans-serif; background: var(--bg); color: var(--text);
@@ -48,7 +67,7 @@
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
             border-radius: 12px; padding: 32px; margin-top: 24px;
         }
-        .info-block h3 {
+        .info-block h2 {
             font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 600;
             background: linear-gradient(135deg, #f0a030, #ff3090); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px;
         }
@@ -109,14 +128,18 @@
             .nav-link::after { display: none; }
             .lang-toggle { align-self: flex-start; margin: 12px 0 4px 0; padding: 8px 20px; font-size: 12px; }
         }
+        .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10000; padding: 10px 18px; border-radius: 8px; background: #f0a030; color: #0a0a0a; font-size: 14px; font-weight: 700; text-decoration: none; transition: top 0.2s ease; }
+        .skip-link:focus { top: 12px; }
+        main:focus { outline: none; }
     </style>
 </head>
 <body>
+<a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
 
 <header class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="../" class="logo">
-                <img src="../images/logo.png" alt="Veriatax Interactive" class="logo-img">
+                <img src="../images/logo-120.webp" alt="Veriatax Interactive" class="logo-img" width="38" height="38">
                 <span class="logo-text">VERIATAX</span>
             </a>
             <nav class="nav-links" id="navLinks">
@@ -132,6 +155,7 @@
             </button>
         </div>
     </header>
+<main id="main" tabindex="-1">
 
 <div class="content">
 
@@ -139,7 +163,7 @@
 <p class="legal-note">Angaben gemäß § 5 DDG</p>
 
 <div class="info-block">
-    <h3>Veriatax Interactive</h3>
+    <h2>Veriatax Interactive</h2>
     <p>
         Inhaber: Sven Martin Laschke<br><br>
         c/o flexdienst – #20292<br>
@@ -150,7 +174,7 @@
 </div>
 
 <div class="info-block">
-    <h3>Kontakt</h3>
+    <h2>Kontakt</h2>
     <p>
         E-Mail: <a href="mailto:contact@veriatax.com">contact@veriatax.com</a><br>
         Telefon: <a href="tel:+4917689184303">+49 176 89184303</a>
@@ -158,7 +182,7 @@
 </div>
 
 <div class="info-block">
-    <h3>Umsatzsteuer</h3>
+    <h2>Umsatzsteuer</h2>
     <p>
         Kleinunternehmer gemäß § 19 UStG.<br>
         Es wird keine Umsatzsteuer erhoben und keine Umsatzsteuer-ID verwendet.
@@ -166,7 +190,7 @@
 </div>
 
 <div class="info-block">
-    <h3>Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV</h3>
+    <h2>Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV</h2>
     <p>
         Sven Martin Laschke<br>
         c/o flexdienst – #20292<br>
@@ -177,59 +201,60 @@
 </div>
 
 <div class="info-block">
-    <h3>Haftung für Inhalte</h3>
+    <h2>Haftung für Inhalte</h2>
     <p>
         Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
     </p>
 </div>
 
 <div class="info-block">
-    <h3>Haftung für Links</h3>
+    <h2>Haftung für Links</h2>
     <p>
         Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
     </p>
 </div>
 
 <div class="info-block">
-    <h3>Urheberrecht</h3>
+    <h2>Urheberrecht</h2>
     <p>
         Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Jede Verwertung außerhalb der gesetzlichen Grenzen bedarf der vorherigen schriftlichen Zustimmung des jeweiligen Autors. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
     </p>
 </div>
 
 <div class="info-block">
-    <h3>Verbraucherstreitbeilegung</h3>
+    <h2>Verbraucherstreitbeilegung</h2>
     <p>
         Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
     </p>
 </div>
 
 </div>
+</main>
 <footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
 <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
-<img src="../images/logo.png" alt="Veriatax" style="width:24px;height:24px;border-radius:4px">
+<img src="../images/logo-120.webp" alt="Veriatax" style="width:24px;height:24px;border-radius:4px" width="24" height="24">
 <span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
 </div>
 <div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="../" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.home">Home</a>
-<a href="../privacy/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
-<a href="../impressum/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Impressum</a>
-<a href="../licenses/" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
+<a href="../" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.home">Home</a>
+<a href="../privacy/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
+<a href="../impressum/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Impressum</a>
+<a href="../licenses/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
 </div>
 <div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
-<a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Spotify</a>
-<a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Apple Music</a>
-<a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Amazon Music</a>
-<a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">Instagram</a>
-<a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.3);text-decoration:none">YouTube</a>
+<a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Spotify</a>
+<a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Apple Music</a>
+<a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Amazon Music</a>
+<a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Instagram</a>
+<a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">YouTube</a>
 </div>
-<p style="font-size:11px;color:rgba(238,242,247,0.2)">&copy; 2026 Veriatax Interactive. All rights reserved.</p>
-<p style="font-size:11px;color:rgba(238,242,247,0.2);margin-top:6px">🔒 <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
+<p style="font-size:11px;color:rgba(238,242,247,0.5)">&copy; 2026 Veriatax Interactive. <span data-i18n="footer.rights">All rights reserved.</span></p>
+<p style="font-size:11px;color:rgba(238,242,247,0.5);margin-top:6px">🔒 <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
 </footer>
 <script>
 const pageTrans = {
-    de: {"footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "back": "\u2190 Zur\u00fcck zur Startseite"},
-    en: {"footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "back": "\u2190 Back to Home"}
+    de: {"footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "footer.rights": "Alle Rechte vorbehalten.", "skip": "Zum Inhalt springen", "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "back": "\u2190 Zur\u00fcck zur Startseite"},
+    en: {"footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "footer.rights": "All rights reserved.", "skip": "Skip to content", "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "back": "\u2190 Back to Home"}
 };
 let currentLang="en";
 function initLang(){try{const s=localStorage.getItem("veriatax-lang");if(s==="de"||s==="en")currentLang=s;else currentLang=(navigator.language||"").startsWith("de")?"de":"en"}catch(e){currentLang="en"}applyLang(currentLang)}
