@@ -714,6 +714,12 @@ a {
 }
 
 /* Compact grid */
+.music-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
 .music-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
