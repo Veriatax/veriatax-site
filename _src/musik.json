@@ -1,0 +1,273 @@
+[
+  {
+    "slug": "what-never-fades",
+    "titel": "What Never Fades",
+    "titelZusatz": "Cinematic Chill",
+    "datum": "2026-09-11",
+    "genre": {
+      "de": "Cinematic Chill / Nachdenkliche Ballade",
+      "en": "Cinematic Chill / Reflective Ballad"
+    },
+    "text": {
+      "de": "Eine nasse Bergstraße im ersten Licht, Scherben hinter dir, ein Kompass, der weiter nach vorn zeigt. Über das Loslassen dessen, was nie bleiben sollte — denn Freiheit heißt nicht, alles zu verlieren, sondern zu wissen, was man behält.",
+      "en": "A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay — because freedom isn't losing everything, it's knowing what to save."
+    },
+    "spotify": "https://open.spotify.com/track/1ka7Fg7vv5jjiDLxN6CX8w",
+    "apple": "https://music.apple.com/de/song/what-never-fades/6802401824",
+    "kurz": {
+      "de": "Eine nasse Bergstraße im ersten Licht, Scherben hinter dir, ein Kompass, der weiter nach vorn zeigt. Über das Loslassen dessen, was nie bleiben sollte.",
+      "en": "A wet mountain road at first light, broken glass behind you, a compass still pointing forward. About letting go of what was never meant to stay."
+    },
+    "aehnlich": [
+      "one-more-sunset",
+      "unshaken",
+      "riverside-light",
+      "golden-motion"
+    ]
+  },
+  {
+    "slug": "unshaken",
+    "titel": "Unshaken",
+    "titelZusatz": "Anthemic EDM / Uplifting House",
+    "datum": "2026-08-18",
+    "genre": {
+      "de": "Anthemic EDM / Uplifting House",
+      "en": "Anthemic EDM / Uplifting House"
+    },
+    "text": {
+      "de": "Allein auf der Brücke, den Blick zur Skyline, für niemanden aus dem Weg. Eine trotzige Hymne über das Vertrauen in die eigene Stimme — jede Narbe eine Lektion, und keine tausend Stimmen nötig, um stolz zu sein.",
+      "en": "Alone on the bridge, facing the skyline, not moving for anyone. A defiant anthem about trusting your own voice — every scar a lesson, and no need for a thousand voices to feel proud."
+    },
+    "spotify": "https://open.spotify.com/track/4mEce2BVNrN7y2v9zAZ8zS",
+    "apple": "https://music.apple.com/de/song/unshaken/6802751915",
+    "kurz": {
+      "de": "Allein auf der Brücke, den Blick zur Skyline, für niemanden aus dem Weg. Eine trotzige Hymne über das Vertrauen in die eigene Stimme.",
+      "en": "Alone on the bridge, facing the skyline, not moving for anyone. A defiant anthem about trusting your own voice."
+    },
+    "aehnlich": [
+      "what-never-fades",
+      "control-the-night",
+      "golden-pulse"
+    ]
+  },
+  {
+    "slug": "riverside-light",
+    "titel": "Riverside Light",
+    "titelZusatz": "Summer House / Feel-Good EDM",
+    "datum": "2026-08-07",
+    "genre": {
+      "de": "Summer House / Feel-Good EDM",
+      "en": "Summer House / Feel-Good EDM"
+    },
+    "text": {
+      "de": "Volleyball am Ufer, kalte Dosen im Sand, jemand zündet den Grill an, während der Rhein golden wird. Ende Juli, keiner schaut auf die Uhr — nichts geplant, und irgendwie alles.",
+      "en": "Volleyball by the shore, cold cans in the sand, somebody lighting the grill while the Rhine turns to gold. Late July, nobody checking the time — nothing planned, and somehow everything."
+    },
+    "spotify": "https://open.spotify.com/track/7IC7piGICaMaV3Ho9WO88M",
+    "apple": "https://music.apple.com/de/song/riverside-light/6793584170",
+    "aehnlich": [
+      "move-with-me",
+      "golden-pulse",
+      "golden-motion",
+      "one-more-sunset"
+    ]
+  },
+  {
+    "slug": "one-more-sunset",
+    "titel": "One More Sunset",
+    "titelZusatz": "Melodic Chill / Sunset Ballad",
+    "datum": "2026-07-22",
+    "genre": {
+      "de": "Melodic Chill / Sunset-Ballade",
+      "en": "Melodic Chill / Sunset Ballad"
+    },
+    "text": {
+      "de": "Goldenes Licht über den Wellen und niemand spricht vom Abschied. Eine warme, ruhige Bitte, den Tag noch etwas offen zu halten — bleib für immer hier, in dem Licht, das wir gemacht haben.",
+      "en": "Golden light across the waves and nobody talking about goodbye. A warm, unhurried plea to hold the day open a little longer — stay here forever, in the light we made."
+    },
+    "spotify": "https://open.spotify.com/track/08F3YixemqYQIJ7nQX5QlK",
+    "apple": "https://music.apple.com/de/song/one-more-sunset/6793642507",
+    "aehnlich": [
+      "what-never-fades",
+      "riverside-light",
+      "move-with-me",
+      "golden-motion"
+    ]
+  },
+  {
+    "slug": "move-with-me",
+    "titel": "Move With Me",
+    "titelZusatz": "Tropical House / Sunset Drive",
+    "datum": "2026-05-15",
+    "genre": {
+      "de": "Tropical House / Sunset Drive",
+      "en": "Tropical House / Sunset Drive"
+    },
+    "text": {
+      "de": "Marmor glüht in der Dämmerung, Palmen neigen sich im Wind, Motoren kühlen am Meer ab. Sag kein Wort — beweg dich einfach. Ein Track über die Art von Verständnis, die keine Erklärung braucht.",
+      "en": "Marble glowing in the dusk, palm trees leaning in the wind, engines cooling by the sea. Don't say a word — just move. A track about the kind of understanding that needs no explaining."
+    },
+    "spotify": "https://open.spotify.com/track/0oigyN8cFrEZKB6NmYbafX",
+    "apple": "https://music.apple.com/de/song/move-with-me/6762905946",
+    "aehnlich": [
+      "golden-motion",
+      "riverside-light",
+      "saigon-sunrise",
+      "golden-pulse"
+    ]
+  },
+  {
+    "slug": "control-the-night",
+    "titel": "Control the Night",
+    "titelZusatz": "Dark Synthwave",
+    "datum": "2026-04-20",
+    "genre": {
+      "de": "Dark Synthwave / Night Drive",
+      "en": "Dark Synthwave / Night Drive"
+    },
+    "text": {
+      "de": "Mitternacht ruft, der Motor läuft leise, kein Ziel — nur die Straße. Kein Track darüber, der Nacht hinterherzujagen, sondern sie zu beherrschen: jeder Zug berechnet, kein Zögern, nichts mehr zu beweisen.",
+      "en": "Midnight calling, engine low, no destination — just the road. Not a track about chasing the night but owning it: every move calculated, no second guess, nothing left to prove."
+    },
+    "spotify": "https://open.spotify.com/track/4Bgt8RmLC0arDYwUWYGcYZ",
+    "apple": "https://music.apple.com/de/song/control-the-night/1892844954",
+    "aehnlich": [
+      "midnight-motorbike",
+      "neon-monsoon",
+      "unshaken",
+      "only-with-my-team"
+    ]
+  },
+  {
+    "slug": "golden-motion",
+    "titel": "Golden Motion",
+    "titelZusatz": "Tropical House / Melodic EDM",
+    "datum": "2026-04-03",
+    "genre": {
+      "de": "Tropical House / Melodic EDM",
+      "en": "Tropical House / Melodic EDM"
+    },
+    "text": {
+      "de": "Neon verblasst zu etwas Neuem, Straßenlaternen verlieren ihr Leuchten, der Morgen steigt sanft und langsam. Der Moment, in dem die Nacht die Stadt ans Tageslicht übergibt — und es dich bis zur Küste trägt.",
+      "en": "Neon fading into something new, streetlights losing their glow, morning rising soft and slow. The moment the night hands the city over to the daylight — and it carries you all the way to the shoreline."
+    },
+    "spotify": "https://open.spotify.com/track/34xKCSHQrxlJ1MZfNd9Y1F",
+    "apple": "https://music.apple.com/de/song/golden-motion/1884151047",
+    "aehnlich": [
+      "golden-pulse",
+      "move-with-me",
+      "saigon-sunrise",
+      "riverside-light"
+    ]
+  },
+  {
+    "slug": "golden-pulse",
+    "titel": "Golden Pulse",
+    "titelZusatz": "Melodic House",
+    "datum": "2026-03-06",
+    "genre": {
+      "de": "Melodic House",
+      "en": "Melodic House"
+    },
+    "text": {
+      "de": "Goldenes Licht die Straße hinunter, Salz und Sonne auf der Haut, die Stadt hellwach und in Bewegung. Kein Zurückspulen, kein Zurückblicken — nur der Rhythmus von der Skyline bis zum Ufer. Auf mehreren redaktionellen Playlists.",
+      "en": "Golden light down the avenue, salt and sunlight on your skin, the city wide awake and moving. No rewind, no looking back — just the rhythm from the skyline to the shore. Featured on multiple editorial playlists."
+    },
+    "spotify": "https://open.spotify.com/track/0nmbtBR1yJ4WoTTTi3lpNV",
+    "apple": "https://music.apple.com/de/song/golden-pulse/1880938458",
+    "aehnlich": [
+      "golden-motion",
+      "move-with-me",
+      "unshaken",
+      "riverside-light"
+    ]
+  },
+  {
+    "slug": "only-with-my-team",
+    "titel": "Only With My Team",
+    "titelZusatz": "Neon Cyberpunk EDM",
+    "datum": "2026-02-10",
+    "genre": {
+      "de": "Neon Cyberpunk EDM",
+      "en": "Neon Cyberpunk EDM"
+    },
+    "text": {
+      "de": "Motorräder in einer Reihe, Neon rinnt die Gasse hinunter, eine Crew, die sich wie eine einzige Maschine bewegt. Wenn die Welt kalt wird und die Nacht dazwischenkommt — fährst du das nicht allein.",
+      "en": "Motorbikes in a single line, neon bleeding down the lane, a crew that moves like one machine. When the world turns cold and the night gets in between — you don't ride it alone."
+    },
+    "spotify": "https://open.spotify.com/track/26E2aybcNMEQOpPJVQNK6T",
+    "apple": "https://music.apple.com/de/song/only-with-my-team/1876661368",
+    "aehnlich": [
+      "neon-monsoon",
+      "midnight-motorbike",
+      "unshaken",
+      "control-the-night"
+    ]
+  },
+  {
+    "slug": "neon-monsoon",
+    "titel": "Neon Monsoon",
+    "titelZusatz": "Synthwave / Dark EDM",
+    "datum": "2026-02-09",
+    "genre": {
+      "de": "Synthwave / Dark EDM",
+      "en": "Synthwave / Dark EDM"
+    },
+    "text": {
+      "de": "Monsunregen prasselt auf die Straße, Blitze zerreißen den Himmel, Motorräder ziehen in silbernen Strömen. Der Sturm treibt hier niemanden auseinander — er schweißt alle zu einem einzigen leuchtenden Taifun zusammen.",
+      "en": "Monsoon rain hammering the avenue, lightning tearing across the sky, motorbikes moving in silver streams. The storm doesn't scatter anyone here — it pulls them together into one bright typhoon."
+    },
+    "spotify": "https://open.spotify.com/track/6Ro5RZsmvYuEYaQwvJ22Ke",
+    "apple": "https://music.apple.com/de/song/neon-monsoon/1876280134",
+    "aehnlich": [
+      "midnight-motorbike",
+      "only-with-my-team",
+      "control-the-night",
+      "saigon-sunrise"
+    ]
+  },
+  {
+    "slug": "saigon-sunrise",
+    "titel": "Saigon Sunrise (You & Me)",
+    "titelZusatz": "Tropical Melodic",
+    "datum": "2026-02-08",
+    "genre": {
+      "de": "Tropical Melodic",
+      "en": "Tropical Melodic"
+    },
+    "text": {
+      "de": "Palmenlichter am Boulevard, Motorräder summen wie ein Herzschlag, Straßenküchen-Dampf in der warmen Nachtluft. Ein Liebeslied, das von einer glühenden Mitternacht in Saigon bis zum ersten Licht über dem Fluss fährt.",
+      "en": "Palm lights on the boulevard, motorbikes humming like a heartbeat, street food steam in the warm night air. A love song that rides from a glowing Saigon midnight all the way to first light over the river."
+    },
+    "spotify": "https://open.spotify.com/track/6YLdejZPhgLVcsusKGd563",
+    "apple": "https://music.apple.com/de/song/saigon-sunrise-you-me/1876236350",
+    "aehnlich": [
+      "midnight-motorbike",
+      "move-with-me",
+      "neon-monsoon",
+      "golden-motion"
+    ]
+  },
+  {
+    "slug": "midnight-motorbike",
+    "titel": "Midnight Motorbike",
+    "titelZusatz": "Night Drive / Chillwave",
+    "datum": "2026-02-08",
+    "genre": {
+      "de": "Night Drive / Chillwave",
+      "en": "Night Drive / Chillwave"
+    },
+    "text": {
+      "de": "Der Motor summt wie eine ferne Trommel, Scheinwerfer schneiden durch die Dunkelheit. Eine Fahrt von der Stadt bis zur Küste — vorbei an Laternenstraßen, über leuchtende Brücken, durch Berge und Regen, bis der Morgen euch einholt.",
+      "en": "Engine humming like a distant drum, headlights cutting through the dark. A ride from the city to the coast — past lantern-lit streets, over glowing bridges, through mountains and rain until dawn catches up."
+    },
+    "spotify": "https://open.spotify.com/track/3BAUYnghlBmVKJnVbDeQpI",
+    "apple": "https://music.apple.com/de/song/midnight-motorbike/1876036459",
+    "aehnlich": [
+      "neon-monsoon",
+      "control-the-night",
+      "saigon-sunrise",
+      "only-with-my-team"
+    ]
+  }
+]
