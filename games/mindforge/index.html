@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindForge – Sudoku, Crossmath & Crossword for Android</title>
-    <meta name="description" content="MindForge — three puzzle types in one Android app: Sudoku, Crossmath and Crossword. With a daily challenge, achievements and Google Play leaderboards.">
+    <meta name="description" content="MindForge — three puzzle types in one Android app: Sudoku, Crossmath and Crossword. With three daily puzzles, 16 designs, a Zen mode, achievements and Google Play leaderboards.">
 
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="MindForge – Sudoku, Crossmath & Crossword">
-    <meta property="og:description" content="Three puzzle types in one app — Sudoku, Crossmath and Crossword — with a daily challenge, achievements and leaderboards.">
-    <meta property="og:image" content="https://veriatax.com/images/mf/og-card.jpg">
+    <meta property="og:description" content="Three puzzle types in one app — Sudoku, Crossmath and Crossword — with daily puzzles, 16 designs, achievements and leaderboards.">
+    <meta property="og:image" content="https://veriatax.com/images/mf/og-card-v2.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://veriatax.com/games/mindforge/">
@@ -29,8 +29,8 @@
   "@type": "VideoGame",
   "name": "MindForge",
   "url": "https://veriatax.com/games/mindforge/",
-  "image": "https://veriatax.com/images/mf/og-card.jpg",
-  "description": "Three puzzle types in one Android app: Sudoku, Crossmath and Crossword. Daily challenge, achievements and Google Play leaderboards.",
+  "image": "https://veriatax.com/images/mf/og-card-v2.jpg",
+  "description": "Three puzzle types in one Android app: Sudoku, Crossmath and Crossword. Three daily puzzles, 16 designs, a Zen mode, achievements and Google Play leaderboards.",
   "applicationCategory": "GameApplication",
   "genre": [
     "Puzzle",
@@ -49,12 +49,15 @@
     "priceCurrency": "EUR"
   },
   "screenshot": [
-    "https://veriatax.com/images/mf/shot-1-menu.jpg",
-    "https://veriatax.com/images/mf/shot-2-sudoku.jpg",
-    "https://veriatax.com/images/mf/shot-3-crossmath.jpg",
-    "https://veriatax.com/images/mf/shot-4-crossword.jpg",
-    "https://veriatax.com/images/mf/shot-5-achievements.jpg",
-    "https://veriatax.com/images/mf/shot-6-leaderboard.jpg"
+    "https://veriatax.com/images/mf/v2-menu.jpg",
+    "https://veriatax.com/images/mf/v2-sudoku.jpg",
+    "https://veriatax.com/images/mf/v2-crossmath.jpg",
+    "https://veriatax.com/images/mf/v2-crossword.jpg",
+    "https://veriatax.com/images/mf/v2-daily.jpg",
+    "https://veriatax.com/images/mf/v2-designs.jpg",
+    "https://veriatax.com/images/mf/v2-achievements.jpg",
+    "https://veriatax.com/images/mf/v2-forge-fire.jpg",
+    "https://veriatax.com/images/mf/v2-aurora.jpg"
   ]
 }
     </script>
@@ -337,6 +340,7 @@
                 <span class="badge">Android</span>
                 <span class="badge" data-i18n="f2p">Free to Play</span>
                 <span class="badge" data-i18n="badge.modes">3 Puzzle Modes</span>
+                <span class="badge" data-i18n="badge.designs">16 Designs</span>
                 <span class="badge" data-i18n="badge.lang">German &amp; English</span>
             </div>
 
@@ -346,23 +350,27 @@
         </div>
 
         <div class="phone-frame">
-            <img id="heroShot" src="../../images/mf/shot-1-menu.jpg"
-                 data-src-en="../../images/mf/shot-1-menu.jpg"
-                 data-src-de="../../images/mf/shot-1-menu-de.jpg"
-                 alt="MindForge main menu with Sudoku, Crossmath and Crossword"
-                 width="540" height="1063">
+            <img id="heroShot" src="../../images/mf/v2-menu.jpg"
+                 data-src-en="../../images/mf/v2-menu.jpg"
+                 data-src-de="../../images/mf/v2-menu-de.jpg"
+                 data-alt-en="MindForge main menu with the daily challenge and the three puzzle types"
+                 data-alt-de="MindForge-Hauptmenü mit Tagesherausforderung und den drei Rätselarten"
+                 alt="MindForge main menu with the daily challenge and the three puzzle types"
+                 width="540" height="1171">
         </div>
     </div>
 
     <div class="shots">
         <h3 data-i18n="shots">Screenshots</h3>
         <div class="shots-scroll">
-            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-2-sudoku.jpg" alt="Sudoku grid on medium difficulty with notes and undo" width="540" height="1063" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-3-crossmath.jpg" alt="Crossmath grid with numbers and operators" width="540" height="1063" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-4-crossword.jpg" alt="Crossword grid with in-cell clues and letter keyboard" width="540" height="1063" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-1-menu-de.jpg" alt="MindForge main menu in German — the app runs in both languages" width="540" height="1063" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-5-achievements.jpg" alt="Achievements list with coin rewards" width="540" height="1063" loading="lazy"></div>
-            <div class="shot" tabindex="0" role="button"><img src="../../images/mf/shot-6-leaderboard.jpg" alt="Leaderboards connected to Google Play Games" width="540" height="1063" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Sudoku on Medium with lives, notes and auto-notes" data-alt-en="Sudoku on Medium with lives, notes and auto-notes" data-alt-de="Sudoku auf Mittel mit Leben, Notizen und Auto-Notizen"><img src="../../images/mf/v2-sudoku.jpg" data-src-en="../../images/mf/v2-sudoku.jpg" data-src-de="../../images/mf/v2-sudoku-de.jpg" data-alt-en="Sudoku on Medium with lives, notes and auto-notes" data-alt-de="Sudoku auf Mittel mit Leben, Notizen und Auto-Notizen" alt="Sudoku on Medium with lives, notes and auto-notes" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Crossmath grid: fill in the missing numbers" data-alt-en="Crossmath grid: fill in the missing numbers" data-alt-de="Mathe-Rätsel: die fehlenden Zahlen einsetzen"><img src="../../images/mf/v2-crossmath.jpg" data-src-en="../../images/mf/v2-crossmath.jpg" data-src-de="../../images/mf/v2-crossmath-de.jpg" data-alt-en="Crossmath grid: fill in the missing numbers" data-alt-de="Mathe-Rätsel: die fehlenden Zahlen einsetzen" alt="Crossmath grid: fill in the missing numbers" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Swedish-style crossword with clues in the grid" data-alt-en="Swedish-style crossword with clues in the grid" data-alt-de="Schwedenrätsel mit Hinweisen im Gitter"><img src="../../images/mf/v2-crossword.jpg" data-src-en="../../images/mf/v2-crossword.jpg" data-src-de="../../images/mf/v2-crossword-de.jpg" data-alt-en="Swedish-style crossword with clues in the grid" data-alt-de="Schwedenrätsel mit Hinweisen im Gitter" alt="Swedish-style crossword with clues in the grid" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Daily challenge with three puzzles, streak and archive" data-alt-en="Daily challenge with three puzzles, streak and archive" data-alt-de="Tägliche Herausforderung mit drei Rätseln, Serie und Archiv"><img src="../../images/mf/v2-daily.jpg" data-src-en="../../images/mf/v2-daily.jpg" data-src-de="../../images/mf/v2-daily-de.jpg" data-alt-en="Daily challenge with three puzzles, streak and archive" data-alt-de="Tägliche Herausforderung mit drei Rätseln, Serie und Archiv" alt="Daily challenge with three puzzles, streak and archive" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Shop with special designs and their background motifs" data-alt-en="Shop with special designs and their background motifs" data-alt-de="Shop mit Special-Designs und ihren Motiven"><img src="../../images/mf/v2-designs.jpg" data-src-en="../../images/mf/v2-designs.jpg" data-src-de="../../images/mf/v2-designs-de.jpg" data-alt-en="Shop with special designs and their background motifs" data-alt-de="Shop mit Special-Designs und ihren Motiven" alt="Shop with special designs and their background motifs" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Achievements with progress bars" data-alt-en="Achievements with progress bars" data-alt-de="Erfolge mit Fortschrittsbalken"><img src="../../images/mf/v2-achievements.jpg" data-src-en="../../images/mf/v2-achievements.jpg" data-src-de="../../images/mf/v2-achievements-de.jpg" data-alt-en="Achievements with progress bars" data-alt-de="Erfolge mit Fortschrittsbalken" alt="Achievements with progress bars" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Main menu in the Forge Fire special design" data-alt-en="Main menu in the Forge Fire special design" data-alt-de="Hauptmenü im Special-Design Schmiedefeuer"><img src="../../images/mf/v2-forge-fire.jpg" data-src-en="../../images/mf/v2-forge-fire.jpg" data-src-de="../../images/mf/v2-forge-fire-de.jpg" data-alt-en="Main menu in the Forge Fire special design" data-alt-de="Hauptmenü im Special-Design Schmiedefeuer" alt="Main menu in the Forge Fire special design" width="540" height="1171" loading="lazy"></div>
+            <div class="shot" tabindex="0" role="button" aria-label="Sudoku in the Aurora special design" data-alt-en="Sudoku in the Aurora special design" data-alt-de="Sudoku im Special-Design Polarlicht"><img src="../../images/mf/v2-aurora.jpg" data-src-en="../../images/mf/v2-aurora.jpg" data-src-de="../../images/mf/v2-aurora-de.jpg" data-alt-en="Sudoku in the Aurora special design" data-alt-de="Sudoku im Special-Design Polarlicht" alt="Sudoku in the Aurora special design" width="540" height="1171" loading="lazy"></div>
         </div>
     </div>
 
@@ -370,12 +378,12 @@
         <div class="feature">
             <div class="feature-icon">🔢</div>
             <h3 data-i18n="f1t">Sudoku</h3>
-            <p data-i18n="f1d">Classic 9×9 grids with a notes mode, undo and redo. Three lives per round — every mistake counts.</p>
+            <p data-i18n="f1d">Classic 9×9 grids with notes, auto-notes, undo and redo. Three lives per round — every mistake counts.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">➕</div>
             <h3 data-i18n="f2t">Crossmath</h3>
-            <p data-i18n="f2d">Arithmetic instead of letters: place numbers and operators so every row and column adds up.</p>
+            <p data-i18n="f2d">Arithmetic instead of letters: fill in the missing numbers so every equation across and down works out.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">📝</div>
@@ -384,18 +392,28 @@
         </div>
         <div class="feature">
             <div class="feature-icon">📅</div>
-            <h3 data-i18n="f4t">Daily Challenge</h3>
-            <p data-i18n="f4d">One new puzzle every day — the same one for everyone, with its own leaderboard and streak counter.</p>
+            <h3 data-i18n="f4t">Three Daily Puzzles</h3>
+            <p data-i18n="f4d">One Sudoku, one Crossmath and one Crossword every day — the same for everyone. With a streak counter, best-time leaderboards and an archive of past days.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3 data-i18n="f8t">16 Designs</h3>
+            <p data-i18n="f8d">Eight colour themes and eight special designs with a background motif, such as Aurora, Deep Sea or Forge Fire. Four of them can also be unlocked for free through play.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🧘</div>
+            <h3 data-i18n="f9t">Zen Mode</h3>
+            <p data-i18n="f9d">No timer, no lives — just relax. Available on every difficulty level.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🏆</div>
             <h3 data-i18n="f5t">Leaderboards & Achievements</h3>
-            <p data-i18n="f5d">Google Play Games integration: puzzles solved, hardcore ranking, daily streak and best times per mode.</p>
+            <p data-i18n="f5d">33 achievements and seven Google Play leaderboards: puzzles solved, solved with hearts, hard puzzles, daily streak and the best daily time for each puzzle type.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🪙</div>
             <h3 data-i18n="f6t">Coins & Hints</h3>
-            <p data-i18n="f6d">Earn coins from achievements and spend them on hints when a puzzle refuses to budge.</p>
+            <p data-i18n="f6d">Earn coins from puzzles, daily rewards and achievements, and spend them on hints or new designs. Prefer no ads? A one-time purchase makes the game ad-free forever.</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🌍</div>
@@ -448,7 +466,7 @@ const pageTrans = {
         "nav.about": "Über uns",
         "tagline": "Trainiere Dein Gehirn",
         "genre": "Rätselsammlung — Sudoku, Mathe-Rätsel & Kreuzworträtsel",
-        "desc": "Drei Rätselarten in einer App, jede mit eigener Levelfolge und drei Schwierigkeitsgraden. Dazu eine tägliche Herausforderung, Erfolge und Google-Play-Bestenlisten.",
+        "desc": "Drei Rätselarten in einer App, jede mit eigener Levelfolge, drei Schwierigkeitsgraden und einem entspannten Zen-Modus. Dazu drei Tagesrätsel, 16 Designs, Erfolge und Google-Play-Bestenlisten.",
         "status": "In Entwicklung",
         "f2p": "Free to Play",
         "badge.modes": "3 Rätselarten",
@@ -456,21 +474,26 @@ const pageTrans = {
         "cta": "Demnächst auf Google Play",
         "shots": "Bildschirmfotos",
         "f1t": "Sudoku",
-        "f1d": "Klassische 9×9-Gitter mit Notizmodus, Undo und Redo. Drei Leben pro Runde — jeder Fehler zählt.",
+        "f1d": "Klassische 9×9-Gitter mit Notizen, Auto-Notizen, Rückgängig und Wiederholen. Drei Leben pro Runde — jeder Fehler zählt.",
         "f2t": "Mathe-Rätsel",
-        "f2d": "Rechnen statt Buchstaben: Zahlen und Operatoren so setzen, dass jede Zeile und Spalte aufgeht.",
+        "f2d": "Rechnen statt Buchstaben: Setze die fehlenden Zahlen so ein, dass jede Rechnung waagerecht und senkrecht aufgeht.",
         "f3t": "Kreuzworträtsel",
         "f3d": "Die Hinweise stehen direkt im Gitter, dazu eine Bildschirmtastatur fürs Lösen mit einer Hand.",
-        "f4t": "Tägliche Herausforderung",
-        "f4d": "Jeden Tag ein neues Rätsel — für alle dasselbe, mit eigener Bestenliste und Tagesserie.",
+        "f4t": "Drei Tagesrätsel",
+        "f4d": "Jeden Tag ein Sudoku, ein Mathe-Rätsel und ein Kreuzworträtsel — für alle dieselben. Mit Tagesserie, Bestzeit-Bestenlisten und einem Archiv früherer Tage.",
         "f5t": "Bestenlisten & Erfolge",
-        "f5d": "Google Play Games ist angebunden: gelöste Rätsel, Hartgesotten-Wertung, Tagesserie und Bestzeiten pro Modus.",
+        "f5d": "33 Erfolge und sieben Bestenlisten über Google Play Games: gelöste Rätsel, mit Herzen gelöst, schwere Rätsel, Tagesserie und die beste Tageszeit je Rätselart.",
         "f6t": "Münzen & Hinweise",
-        "f6d": "Münzen aus Erfolgen sammeln und in Hinweise investieren, wenn ein Rätsel partout nicht aufgehen will.",
+        "f6d": "Münzen gibt es für Rätsel, Tagesbelohnungen und Erfolge — einzusetzen für Hinweise oder neue Designs. Lieber ohne Werbung? Ein Einmalkauf macht das Spiel für immer werbefrei.",
         "f7t": "Deutsch & Englisch",
         "f7d": "Die komplette App läuft in beiden Sprachen — Menüs, Hinweise und Rätselnamen inklusive.",
         "end.line": "MindForge ist noch in Entwicklung. Bis dahin — unser Arcade-Spiel ist bereits da:",
-        "end.cta": "\ud83e\udd81 Flame Leap Lion spielen →"
+        "end.cta": "\ud83e\udd81 Flame Leap Lion spielen →",
+        "badge.designs": "16 Designs",
+        "f8t": "16 Designs",
+        "f8d": "Acht Farbthemen und acht Special-Designs mit Motiv im Hintergrund, etwa Polarlicht, Tiefsee oder Schmiedefeuer. Vier davon lassen sich auch gratis freispielen.",
+        "f9t": "Zen-Modus",
+        "f9d": "Kein Timer, keine Leben — einfach entspannen. Auf jedem Schwierigkeitsgrad."
     },
     en: {
         "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "nav.home": "Home",
@@ -479,7 +502,7 @@ const pageTrans = {
         "nav.about": "About",
         "tagline": "Train Your Brain",
         "genre": "Puzzle Collection — Sudoku, Crossmath & Crossword",
-        "desc": "Three puzzle types in one app, each with its own level progression and three difficulty settings. Plus a daily challenge, achievements and Google Play leaderboards.",
+        "desc": "Three puzzle types in one app, each with its own level progression, three difficulty levels and a relaxed Zen mode. Plus three daily puzzles, 16 designs, achievements and Google Play leaderboards.",
         "status": "In Development",
         "f2p": "Free to Play",
         "badge.modes": "3 Puzzle Modes",
@@ -487,21 +510,26 @@ const pageTrans = {
         "cta": "Coming Soon on Google Play",
         "shots": "Screenshots",
         "f1t": "Sudoku",
-        "f1d": "Classic 9×9 grids with a notes mode, undo and redo. Three lives per round — every mistake counts.",
+        "f1d": "Classic 9×9 grids with notes, auto-notes, undo and redo. Three lives per round — every mistake counts.",
         "f2t": "Crossmath",
-        "f2d": "Arithmetic instead of letters: place numbers and operators so every row and column adds up.",
+        "f2d": "Arithmetic instead of letters: fill in the missing numbers so every equation across and down works out.",
         "f3t": "Crossword",
         "f3d": "Clues sit directly in the grid, with an on-screen keyboard built for one-handed solving.",
-        "f4t": "Daily Challenge",
-        "f4d": "One new puzzle every day — the same one for everyone, with its own leaderboard and streak counter.",
+        "f4t": "Three Daily Puzzles",
+        "f4d": "One Sudoku, one Crossmath and one Crossword every day — the same for everyone. With a streak counter, best-time leaderboards and an archive of past days.",
         "f5t": "Leaderboards & Achievements",
-        "f5d": "Google Play Games integration: puzzles solved, hardcore ranking, daily streak and best times per mode.",
+        "f5d": "33 achievements and seven Google Play leaderboards: puzzles solved, solved with hearts, hard puzzles, daily streak and the best daily time for each puzzle type.",
         "f6t": "Coins & Hints",
-        "f6d": "Earn coins from achievements and spend them on hints when a puzzle refuses to budge.",
+        "f6d": "Earn coins from puzzles, daily rewards and achievements, and spend them on hints or new designs. Prefer no ads? A one-time purchase makes the game ad-free forever.",
         "f7t": "German & English",
         "f7d": "The whole app runs in either language — menus, clues and puzzle names included. Crossmath is called Mathe-Rätsel on the German side.",
         "end.line": "MindForge is still in development. In the meantime, our arcade game is out now:",
-        "end.cta": "\ud83e\udd81 Play Flame Leap Lion →"
+        "end.cta": "\ud83e\udd81 Play Flame Leap Lion →",
+        "badge.designs": "16 Designs",
+        "f8t": "16 Designs",
+        "f8d": "Eight colour themes and eight special designs with a background motif, such as Aurora, Deep Sea or Forge Fire. Four of them can also be unlocked for free through play.",
+        "f9t": "Zen Mode",
+        "f9d": "No timer, no lives — just relax. Available on every difficulty level."
     }
 };
 let currentLang = 'en';
@@ -524,11 +552,15 @@ function applyLang(lang) {
         const k = el.getAttribute('data-i18n');
         if (d[k]) el.textContent = d[k];
     });
-    const hs = document.getElementById('heroShot');
-    if (hs) {
-        const s = hs.getAttribute('data-src-' + lang);
-        if (s) hs.src = s;
-    }
+    // Alle Bildschirmfotos zeigen die App in der gewaehlten Sprache
+    document.querySelectorAll('img[data-src-' + lang + ']').forEach(img => {
+        img.src = img.getAttribute('data-src-' + lang);
+        const alt = img.getAttribute('data-alt-' + lang);
+        if (alt) img.alt = alt;
+    });
+    document.querySelectorAll('.shot[data-alt-' + lang + ']').forEach(el => {
+        el.setAttribute('aria-label', el.getAttribute('data-alt-' + lang));
+    });
     const btn = document.getElementById('langToggle');
     if (btn) { btn.textContent = lang === 'en' ? 'DE' : 'EN'; }
     document.documentElement.lang = lang;
@@ -538,24 +570,34 @@ function applyLang(lang) {
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 if (navToggle) {
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+    navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }));
 }
 
 // Screenshot-Lightbox
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lightboxImg');
-function openLightbox(src, alt) {
+let lastShot = null;
+function openLightbox(src, alt, from) {
     lbImg.src = src; lbImg.alt = alt || '';
     lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    lastShot = from || null;
+    document.getElementById('lightboxClose').focus();
 }
 function closeLightbox() {
     lb.classList.remove('open'); lbImg.src = ''; document.body.style.overflow = '';
+    if (lastShot) lastShot.focus();
 }
 document.querySelectorAll('.shot').forEach(el => {
     const open = () => {
         const img = el.querySelector('img');
-        if (img) openLightbox(img.src, img.alt);
+        if (img) openLightbox(img.src, img.alt, el);
     };
     el.addEventListener('click', open);
     el.addEventListener('keydown', e => {
