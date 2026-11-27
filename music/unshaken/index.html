@@ -17,8 +17,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#06080f">
     <link rel="canonical" href="https://veriatax.com/music/unshaken/">
+    <!-- gemeinsam:schriften-vorladen -->
     <link rel="preload" href="../../fonts/exo-2-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- /gemeinsam:schriften-vorladen -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,7 +51,7 @@
 }
     </script>
     <style>
-        /* Schriften vom eigenen Server (SIL OFL 1.1, siehe fonts/LICENSE-*.txt) */
+        /* gemeinsam:schriften */
         @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(../../fonts/rajdhani-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
         @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:400;src:url(../../fonts/rajdhani-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
         @font-face{font-family:'Rajdhani';font-style:normal;font-display:swap;font-weight:500;src:url(../../fonts/rajdhani-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -68,6 +70,7 @@
         @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:600;src:url(../../fonts/exo-2-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
         @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(../../fonts/exo-2-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
         @font-face{font-family:'Exo 2';font-style:normal;font-display:swap;font-weight:700;src:url(../../fonts/exo-2-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        /* /gemeinsam:schriften */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg: #06080f; --accent: #f0a030; --accent-cyan: #00d4ff; --accent-magenta: #ff3090;
@@ -255,9 +258,30 @@
             .nav-link::after { display: none; }
             .lang-toggle { align-self: flex-start; margin: 12px 0 4px 0; padding: 8px 20px; font-size: 12px; }
         }
+        /* gemeinsam:sprunglink-css */
         .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10000; padding: 10px 18px; border-radius: 8px; background: #f0a030; color: #0a0a0a; font-size: 14px; font-weight: 700; text-decoration: none; transition: top 0.2s ease; }
         .skip-link:focus { top: 12px; }
         main:focus { outline: none; }
+        /* /gemeinsam:sprunglink-css */
+        /* gemeinsam:fusszeile-css */
+        .site-footer { border-top: 1px solid rgba(255,255,255,0.04); padding: 32px 24px; margin-top: 60px; text-align: center; }
+        .site-footer.flach { margin-top: 0; }
+        .site-footer-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; }
+        .site-footer-brand img { border-radius: 4px; }
+        .site-footer-brand span { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, #f0a030, #ff3090); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .site-footer-row { display: flex; gap: 20px; justify-content: center; margin-bottom: 10px; flex-wrap: wrap; }
+        .site-footer-row a { font-size: 12px; color: rgba(238,242,247,0.5); text-decoration: none; }
+        .site-footer-row a:hover { color: #f0a030; text-decoration: none; }
+        .site-footer-row.social { gap: 16px; margin-bottom: 16px; }
+        .site-footer p { font-size: 11px; color: rgba(238,242,247,0.5); margin: 0; }
+        .site-footer p + p { margin-top: 6px; }
+        /* /gemeinsam:fusszeile-css */
+        /* gemeinsam:menue-css */
+        @media (max-width: 640px) {
+            .nav-links { align-items: stretch; }
+            .navbar:has(.nav-links.open) { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(6,8,15,0.97); }
+        }
+        /* /gemeinsam:menue-css */
     </style>
 </head>
 <body>
@@ -268,6 +292,7 @@
     <div class="orb orb-2"></div>
 </div>
 
+<!-- gemeinsam:navigation -->
 <header class="navbar" id="navbar">
     <div class="nav-inner">
         <a href="../../" class="logo">
@@ -287,6 +312,7 @@
         </button>
     </div>
 </header>
+<!-- /gemeinsam:navigation -->
 <main id="main" tabindex="-1">
 
 <div class="page">
@@ -339,35 +365,44 @@
 </div>
 
 </main>
-<footer style="border-top:1px solid rgba(255,255,255,0.04);padding:32px 24px;margin-top:60px;text-align:center">
-<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px">
-<img src="../../images/logo-120.webp" alt="Veriatax" style="width:24px;height:24px;border-radius:4px" width="24" height="24">
-<span style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#f0a030,#ff3090);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VERIATAX INTERACTIVE</span>
-</div>
-<div style="display:flex;gap:20px;justify-content:center;margin-bottom:10px;flex-wrap:wrap">
-<a href="../../" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.home">Home</a>
-<a href="../../privacy/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
-<a href="../../impressum/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Impressum</a>
-<a href="../../licenses/" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none" data-i18n="footer.licenses">Open-source licenses</a>
-</div>
-<div style="display:flex;gap:16px;justify-content:center;margin-bottom:16px;flex-wrap:wrap">
-<a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Spotify</a>
-<a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Apple Music</a>
-<a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Amazon Music</a>
-<a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">Instagram</a>
-<a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener" style="font-size:12px;color:rgba(238,242,247,0.5);text-decoration:none">YouTube</a>
-</div>
-<p style="font-size:11px;color:rgba(238,242,247,0.5)">&copy; 2026 Veriatax Interactive. <span data-i18n="footer.rights">All rights reserved.</span></p>
-<p style="font-size:11px;color:rgba(238,242,247,0.5);margin-top:6px">&#128274; <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
+<!-- gemeinsam:fusszeile -->
+<footer class="site-footer">
+    <div class="site-footer-brand">
+        <img src="../../images/logo-120.webp" alt="Veriatax" width="24" height="24">
+        <span>VERIATAX INTERACTIVE</span>
+    </div>
+    <div class="site-footer-row">
+        <a href="../../" data-i18n="footer.home">Home</a>
+        <a href="../../privacy/" data-i18n="footer.privacy">Privacy</a>
+        <a href="../../impressum/">Impressum</a>
+        <a href="../../licenses/" data-i18n="footer.licenses">Open-source licenses</a>
+    </div>
+    <div class="site-footer-row social">
+        <a href="https://open.spotify.com/artist/7hwHYyhlmqEi4v1PnidxcT" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://music.apple.com/de/artist/veriatax-interactive/1875692825" target="_blank" rel="noopener">Apple Music</a>
+        <a href="https://music.amazon.de/artists/B0GMD7WFGG" target="_blank" rel="noopener">Amazon Music</a>
+        <a href="https://www.instagram.com/veriataxinteractive/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/@veriataxinteractive" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <p>&copy; 2026 Veriatax Interactive. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    <p>&#128274; <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
 </footer>
+<!-- /gemeinsam:fusszeile -->
 
+<!-- gemeinsam:statistik -->
 <script data-goatcounter="https://veriatax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<!-- /gemeinsam:statistik -->
 <script>
+/* gemeinsam:texte */
+const COMMON_TRANS = {
+    de: {"nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "Über uns", "footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "footer.rights": "Alle Rechte vorbehalten.", "skip": "Zum Inhalt springen"},
+    en: {"nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About", "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "footer.rights": "All rights reserved.", "skip": "Skip to content"},
+};
+/* /gemeinsam:texte */
 const pageTrans = {
     de: {
-        "nav.home": "Startseite", "nav.games": "Spiele", "nav.music": "Musik", "nav.about": "\u00dcber uns",
-        "footer.home": "Startseite", "footer.privacy": "Datenschutz", "footer.licenses": "Open-Source-Lizenzen", "footer.notrack": "Es werden keine Tracking- oder Werbe-Cookies verwendet.", "footer.rights": "Alle Rechte vorbehalten.", "skip": "Zum Inhalt springen",
+        ...COMMON_TRANS.de,
         "label": "Single",
         "genre": "Anthemic EDM / Uplifting House",
         "desc": "Allein auf der Brücke, den Blick zur Skyline, für niemanden aus dem Weg. Eine trotzige Hymne über das Vertrauen in die eigene Stimme — jede Narbe eine Lektion, und keine tausend Stimmen nötig, um stolz zu sein.",
@@ -382,8 +417,7 @@ const pageTrans = {
         "follow.cta": "+ Veriatax auf Spotify folgen"
     },
     en: {
-        "nav.home": "Home", "nav.games": "Games", "nav.music": "Music", "nav.about": "About",
-        "footer.home": "Home", "footer.privacy": "Privacy", "footer.licenses": "Open-source licenses", "footer.notrack": "No tracking or advertising cookies are used.", "footer.rights": "All rights reserved.", "skip": "Skip to content",
+        ...COMMON_TRANS.en,
         "label": "Single",
         "genre": "Anthemic EDM / Uplifting House",
         "desc": "Alone on the bridge, facing the skyline, not moving for anyone. A defiant anthem about trusting your own voice — every scar a lesson, and no need for a thousand voices to feel proud.",
