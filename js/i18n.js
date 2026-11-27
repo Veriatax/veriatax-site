@@ -49,8 +49,13 @@ const translations = {
 
         // Tools
         "tools.title": "Tools",
-        "tools.subtitle": "Wohin sich Veriatax Interactive als Nächstes entwickelt",
-        "tools.desc": "Privatsphärefreundliche Apps und Web-Tools sind das nächste Kapitel für das Studio. Gleiches Prinzip wie überall hier — kein Tracking, keine Werbung, einfach nützliche Software.",
+        "tools.subtitle": "Nützliche Apps — ohne Tracking, ohne Werbung",
+        "tools.desc": "Weitere privatsphärefreundliche Apps und Web-Tools sind in Planung. Gleiches Prinzip wie bei Meter Scout: kein Tracking, keine Werbung, einfach nützliche Software.",
+        "tools.more": "Weitere Tools",
+        "ms.genre": "Zählerstände & Abschlag-Check",
+        "ms.desc": "Zählerstände für Strom, Gas, Wasser und Wärme erfassen und sehen, ob dein Abschlag bis zur Jahresabrechnung reicht. Offline, ohne Konto und ohne Werbung.",
+        "ms.tag1": "Abschlag-Check",
+        "ms.cta": "Details ansehen →",
         "tools.soon": "In Planung",
 
         // About
@@ -118,8 +123,13 @@ const translations = {
         "music.apple": "Follow on Apple Music",
 
         "tools.title": "Tools",
-        "tools.subtitle": "Where Veriatax Interactive is heading next",
-        "tools.desc": "Privacy-respecting utility apps and web tools are the next chapter for the studio. Same principle as everything else here — no tracking, no ads, just useful software.",
+        "tools.subtitle": "Useful apps — no tracking, no ads",
+        "tools.desc": "More privacy-respecting apps and web tools are in the works. Same principle as Meter Scout: no tracking, no ads, just useful software.",
+        "tools.more": "More Tools",
+        "ms.genre": "Meter Readings & Bill Check",
+        "ms.desc": "Record electricity, gas, water and heat readings and see whether your monthly payments will cover the annual bill. Offline, no account, no ads.",
+        "ms.tag1": "Bill Check",
+        "ms.cta": "View Details →",
         "tools.soon": "In Planning",
 
         "about.title": "About",
