@@ -29,10 +29,9 @@
     <meta name="theme-color" content="#070a12">
     <link rel="canonical" href="https://veriatax.com/">
 
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    
-    <link href="https://fonts.bunny.net/css2?family=Rajdhani:400,500,600,700|Exo+2:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261127b">
+    <link rel="preload" href="fonts/exo-2-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css?v=20261127c">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,12 +62,6 @@
 </head>
 <body>
 
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loader-ring"></div>
-        <div class="loading-text">VERIATAX</div>
-    </div>
-
     <!-- Ambient Background -->
     <div class="ambient-bg">
         <div class="orb orb-1"></div>
@@ -89,11 +82,11 @@
     <div class="grid-overlay"></div>
 
     <!-- Navigation -->
-    <a href="#games" class="skip-link">Zum Inhalt springen</a>
+    <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
     <header class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="#" class="logo" onclick="scrollToTop(event)">
-                <img src="images/logo.png" alt="Veriatax Interactive" class="logo-img">
+                <img src="images/logo-120.webp" alt="Veriatax Interactive" class="logo-img" width="38" height="38">
                 <span class="logo-text">VERIATAX</span>
             </a>
             <nav class="nav-links" id="navLinks">
@@ -109,6 +102,8 @@
             </button>
         </div>
     </header>
+
+    <main id="main" tabindex="-1">
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -126,7 +121,10 @@
             </div>
         </div>
         <div class="hero-visual">
-            <img src="images/hero-banner.jpg" alt="Veriatax Interactive — Games, Music, Tools" class="hero-banner-img">
+            <picture>
+                <source type="image/webp" srcset="images/hero-banner-560.webp 560w, images/hero-banner-800.webp 800w, images/hero-banner-1120.webp 1120w" sizes="(max-width: 900px) 100vw, 560px">
+                <img src="images/hero-banner.jpg" alt="Veriatax Interactive — Games, Music, Tools" class="hero-banner-img" width="1120" height="747" fetchpriority="high">
+            </picture>
         </div>
     </section>
 
@@ -376,7 +374,7 @@
                         <img src="images/logo.png" alt="Veriatax Interactive" class="about-logo-img">
                     </div>
                     <h3 data-i18n="about.heading">One Person. Many Passions.</h3>
-                    <p><span data-i18n="about.p1">Veriatax Interactive is an independent creative studio based in Germany, founded by Sven Laschke. What started as a game development project has grown into a multi-discipline brand spanning mobile games, electronic music production, and software tools.</p>
+                    <p><span data-i18n="about.p1">Veriatax Interactive is an independent creative studio based in Germany, founded by Sven Laschke. What started as a game development project has grown into a multi-discipline brand spanning mobile games, electronic music production, and software tools.</span></p>
                     <p data-i18n="about.p2">Every game, every track, and every tool is crafted with attention to quality and a genuine love for building things. No corporate committee — just direct creator-to-user experiences.</p>
                     <div class="about-stack">
                         <span class="stack-label" data-i18n="about.built">Built with</span>
@@ -400,7 +398,7 @@
                 <div class="about-stats">
                     <div class="stat-card glass">
                         <div class="stat-value" data-target="3">3</div>
-                        <div class="stat-label" data-i18n="stat.games">Games in Pipeline</div>
+                        <div class="stat-label" data-i18n="stat.games">Games</div>
                     </div>
                     <div class="stat-card glass">
                         <div class="stat-value" data-target="12">12</div>
@@ -408,7 +406,7 @@
                     </div>
                     <div class="stat-card glass">
                         <div class="stat-value">1</div>
-                        <div class="stat-label" data-i18n="stat.dev">Indie Developer</div>
+                        <div class="stat-label" data-i18n="stat.tools">Tool</div>
                     </div>
                     <div class="stat-card glass">
                         <div class="stat-value">∞</div>
@@ -419,12 +417,14 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Veriatax Interactive" class="footer-logo-img">
+                    <img src="images/logo-120.webp" alt="Veriatax Interactive" class="footer-logo-img" width="32" height="32">
                     <span>VERIATAX INTERACTIVE</span>
                 </div>
                 <p class="footer-tagline" data-i18n="footer.tagline">Games · Music · Tools — Made in Germany</p>
@@ -432,10 +432,10 @@
             <div class="footer-links">
                 <div class="footer-col">
                     <h4 data-i18n="footer.explore">Explore</h4>
-                    <a href="#games">Games</a>
-                    <a href="#music">Music</a>
+                    <a href="#games" data-i18n="nav.games">Games</a>
+                    <a href="#music" data-i18n="nav.music">Music</a>
                     <a href="#tools">Tools</a>
-                    <a href="#about">About</a>
+                    <a href="#about" data-i18n="nav.about">About</a>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer.legal">Legal</h4>
@@ -457,14 +457,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Veriatax Interactive. All rights reserved.</p>
-                <p style="font-size:11px;color:rgba(238,242,247,0.2);margin-top:6px">🔒 <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
+                <p>© 2026 Veriatax Interactive. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <p style="font-size:11px;color:rgba(238,242,247,0.5);margin-top:6px">🔒 <span data-i18n="footer.notrack">No tracking or advertising cookies are used.</span></p>
             </div>
         </div>
     </footer>
 
-    <script src="js/i18n.js?v=20261127b"></script>
-    <script src="js/script.js?v=20261127b"></script>
+    <script src="js/i18n.js?v=20261127c"></script>
+    <script src="js/script.js?v=20261127c"></script>
 <script data-goatcounter="https://veriatax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
